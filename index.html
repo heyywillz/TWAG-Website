@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="True Worshippers A/G — A vibrant Assemblies of God church in Old Tafo-Abono, Ghana. Join us for Sunday worship, Bible studies, and community fellowship.">
+  <title>True Worshippers A/G — Home</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181' },
+            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58' },
+            cream: '#F7F6E4',
+            surface: '#FEFEFE',
+            muted: '#475467',
+            borderSubtle: '#D0D5DD',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            sora: ['Sora', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Pure Tailwind Helper & Animation Styles -->
+  <style>
+    @keyframes heroZoom {
+      from { transform: scale(1); }
+      to   { transform: scale(1.08); }
+    }
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero__slide { opacity: 0; transition: opacity 1.2s ease-in-out; }
+    .hero__slide--active { opacity: 1; }
+    .hero__slide--active img { animation: heroZoom 8s ease-out forwards; }
+    .hero__progress-btn--active { width: 56px !important; background-color: rgba(254, 254, 254, 0.15) !important; }
+
+    /* ── Navbar ── */
+    .navbar--hidden { transform: translateY(-100%); }
+    .navbar__link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 18px;
+      right: 18px;
+      height: 1.5px;
+      background-color: #FACC15;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.35s ease;
+    }
+    .navbar__link:hover::after,
+    .navbar__link--active::after {
+      transform: scaleX(1);
+    }
+    .navbar__link--active {
+      color: #FEFEFE;
+      font-weight: 500;
+    }
+
+    /* ── Mobile Menu Toggle Bars ── */
+    .navbar__toggle--active .navbar__toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
+    .navbar__toggle--active .navbar__toggle-bar:nth-child(2) { opacity: 0 !important; width: 0 !important; }
+    .navbar__toggle--active .navbar__toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
+
+    /* ── Mobile Overlay ── */
+    .navbar__mobile-overlay--active { opacity: 1 !important; pointer-events: auto !important; }
+
+    /* ── Mobile Drawer ── */
+    .navbar__mobile-menu--open { transform: translateX(0) !important; }
+    .navbar__mobile-menu--open .navbar__mobile-link,
+    .navbar__mobile-menu--open .navbar__mobile-cta,
+    .navbar__mobile-menu--open .navbar__mobile-social { opacity: 1 !important; transform: translateX(0) !important; }
+
+    /* ── Mobile Active Link ── */
+    .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600 !important; }
+
+    .hero__kicker { animation: heroFadeUp 0.8s ease-out 0.3s forwards; }
+    .hero__title { animation: heroFadeUp 0.8s ease-out 0.5s forwards; }
+    .hero__subtitle { animation: heroFadeUp 0.8s ease-out 0.7s forwards; }
+    .hero__actions { animation: heroFadeUp 0.8s ease-out 0.9s forwards; }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/twag-icon.png">
+</head>
+<body class="font-sora font-normal bg-cream text-navy leading-relaxed overflow-x-hidden">
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="fixed top-0 left-0 right-0 z-[1000] h-[64px] sm:h-[76px] lg:h-[84px] bg-navy transition-transform duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[rgba(250,204,21,0.25)] after:to-transparent" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-12">
+
+      <!-- Logo & Brand Name -->
+      <a href="index.html" class="flex items-center gap-0 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
+        <img src="images/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
+        <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
+          <span class="font-sora text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
+          <span class="font-sora text-[12px] sm:text-[15px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Visible md:flex - 768px and up) -->
+      <div class="hidden md:flex items-center gap-1 lg:gap-2 xl:gap-3" id="navbar-links">
+        <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="home">Home</a>
+        <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="about">About Us</a>
+        <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="events">Events</a>
+        <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="devotions">Devotions</a>
+        <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="departments">Departments</a>
+        <a href="give.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="give">Give</a>
+      </div>
+
+      <!-- CTA Button -->
+      <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(250,204,21,0.3)] active:translate-y-0">Contact Us</a>
+
+      <!-- Mobile Toggle (Visible on screens < md) -->
+      <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-transparent border-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm transition-all duration-300"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="fixed inset-0 bg-navy/50 backdrop-blur-sm z-[999] opacity-0 transition-opacity duration-300 pointer-events-none navbar__mobile-overlay" id="navbar-mobile-overlay"></div>
+
+  <!-- Mobile Drawer Menu (With Minimal Top-Right Close Button) -->
+  <nav class="fixed top-0 right-0 w-[min(340px,85vw)] h-screen bg-navy z-[1005] flex flex-col pt-[56px] sm:pt-[64px] px-[24px] sm:px-[32px] pb-[32px] translate-x-full transition-transform duration-300 overflow-y-auto navbar__mobile-menu" id="navbar-mobile-menu" aria-label="Mobile navigation">
+    <!-- Minimal Close Button -->
+    <button class="absolute top-4 right-5 p-2 text-white/80 hover:text-gold transition-colors cursor-pointer" id="navbar-mobile-close" aria-label="Close menu">
+      <i class="fa-solid fa-xmark text-[22px]"></i>
+    </button>
+
+    <!-- Reduced Mobile Nav Links -->
+    <div class="flex flex-col mt-4">
+      <a href="index.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="home">Home</a>
+      <a href="about.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="about">About Us</a>
+      <a href="events.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="events">Events</a>
+      <a href="devotions.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="devotions">Devotions</a>
+      <a href="departments.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="departments">Departments</a>
+      <a href="give.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="give">Give</a>
+      <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary">Contact Us</a>
+    </div>
+
+    <!-- Mobile Social Links -->
+    <div class="navbar__mobile-social flex items-center gap-[16px] mt-auto pt-[24px]">
+      <a href="https://web.facebook.com/TrueWorshippersAG" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/trueworshippersag?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@trueworshippersag" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@trueworshippersag?_t=8hndCD1LnrZ&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://x.com/tworshippersag?s=21&t=5ZdW-Zt8BpcS0OkZSeLOjw" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO SECTION ═══════════════ -->
+  <section class="relative w-full h-[110vh] min-h-[600px] overflow-hidden -mt-[64px] sm:-mt-[76px] lg:-mt-[84px]" id="hero">
+
+    <!-- Background Slideshow -->
+    <div class="absolute inset-0 z-[1]" id="hero-slides">
+      <div class="hero__slide hero__slide--active absolute inset-0">
+        <img src="images/hero-choir.jpg" alt="True Worshippers A/G worship choir singing praises" class="w-full h-full object-cover object-[center_30%]">
+      </div>
+      <div class="hero__slide absolute inset-0">
+        <img src="images/hero-congregation.jpg" alt="Church congregation gathered for worship service" class="w-full h-full object-cover object-[center_30%]">
+      </div>
+      <div class="hero__slide absolute inset-0">
+        <img src="images/hero-worship.jpg" alt="Church members worshipping together" class="w-full h-full object-cover object-[center_30%]">
+      </div>
+      <div class="hero__slide absolute inset-0">
+        <img src="images/hero-preaching.jpg" alt="Rev. Prof. Paul Frimpong Manso preaching at the pulpit" class="w-full h-full object-cover object-[center_30%]">
+      </div>
+      <div class="hero__slide absolute inset-0">
+        <img src="images/hero-group.jpg" alt="Church leadership and congregation group photo" class="w-full h-full object-cover object-[center_30%]">
+      </div>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 z-[2] bg-gradient-to-b from-[#01000F]/55 via-[#01000F]/70 to-[#01000F]/85"></div>
+
+    <!-- Centered Content -->
+    <div class="relative z-[3] flex flex-col items-center justify-center h-full pt-[128px] px-6 pb-[80px] text-center max-w-[860px] mx-auto">
+      <p class="hero__kicker inline-flex items-center gap-[8px] font-sora text-[14px] font-semibold uppercase tracking-[3px] text-gold mb-[12px] opacity-0 translate-y-[20px]">
+        Assemblies of God, Old Tafo-Abono
+      </p>
+
+      <h1 class="hero__title font-sora text-[clamp(36px,5vw,60px)] font-bold text-white leading-[1.1] mb-[20px] opacity-0 translate-y-[20px]">Welcome to<br>True Worshippers A/G</h1>
+
+      <p class="hero__subtitle font-inter text-[clamp(15px,1.8vw,18px)] font-normal text-white/80 leading-[1.7] max-w-[580px] mb-[36px] opacity-0 translate-y-[20px]">
+        A vibrant Assemblies of God church established in 1995 under the leadership of 
+        Rev. Prof. Paul Frimpong Manso. Shepherd of souls, anchored in faith.
+      </p>
+
+      <div class="hero__actions flex items-center justify-center gap-[16px] flex-wrap opacity-0 translate-y-[20px]">
+        <a href="about.html" class="inline-flex items-center justify-center gap-[8px] px-[32px] py-[14px] font-sora text-[14px] font-semibold rounded-lg tracking-[0.3px] whitespace-nowrap text-navy bg-gold hover:bg-gold-secondary hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(250,204,21,0.3)] transition-all duration-200">Join Us Sunday</a>
+        <a href="#" class="inline-flex items-center justify-center gap-[8px] px-[32px] py-[14px] font-sora text-[14px] font-semibold rounded-lg tracking-[0.3px] whitespace-nowrap text-white bg-transparent border-[1.5px] border-white/35 hover:border-white hover:bg-white/10 hover:-translate-y-[2px] transition-all duration-200">
+          <i class="fa-solid fa-play text-[12px]"></i>
+          Watch Live
+        </a>
+      </div>
+    </div>
+
+    <!-- Progress Indicators -->
+    <div class="absolute bottom-[40px] left-1/2 -translate-x-1/2 z-[4] flex items-center gap-[8px]" id="hero-progress">
+      <button class="hero__progress-btn hero__progress-btn--active w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="0" aria-label="Slide 1">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      </button>
+      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="1" aria-label="Slide 2">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      </button>
+      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="2" aria-label="Slide 3">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      </button>
+      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="3" aria-label="Slide 4">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      </button>
+      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="4" aria-label="Slide 5">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════ PASTOR & VISITOR WELCOME SECTION ═══════════════ -->
+  <main class="py-20 md:py-28 bg-cream border-b border-borderSubtle/40">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+
+        <!-- Left Column: Lead Pastor Master Photo Card (Fixed Heights Defining Master Height) -->
+        <div class="lg:col-span-5 relative group flex flex-col justify-center items-center lg:items-start shrink-0">
+          <!-- Decorative Background Accent -->
+          <div class="absolute -inset-3 bg-gradient-to-tr from-gold/30 via-navy/20 to-gold/10 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+          <!-- Main Image Container with Responsive Height -->
+          <div class="relative w-full max-w-[490px] h-[380px] sm:h-[520px] lg:h-[620px] rounded-2xl overflow-hidden shadow-2xl bg-navy">
+            <img 
+              src="images/pastor-and-wife.jpg" 
+              alt="Rev. Elvis Kwadwo & Mrs. Cecilia Sarpong" 
+              class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
+            >
+            <!-- Perfect Seamless Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
+
+            <!-- Card Content Directly On Image Gradient -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-7 flex flex-col justify-end z-10">
+              <p class="font-sora text-[11px] font-bold text-gold uppercase tracking-[2.5px] mb-2 flex items-center gap-1.5">
+                Lead Pastor & First Lady
+              </p>
+              <h3 class="font-sora text-xl sm:text-2xl font-extrabold text-white leading-snug">
+                Rev. Elvis Kwadwo & Mrs. Cecilia Sarpong
+              </h3>
+              <p class="font-inter text-xs sm:text-sm text-white/75 mt-2 font-medium">
+                Shepherding True Worshippers A/G since inception
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Welcome Message Adapting to Image Height -->
+        <div class="lg:col-span-7 flex flex-col justify-between py-1">
+          
+          <div>
+            <!-- Kicker -->
+            <div class="inline-block w-max px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-2.5">
+              <span>OUR LEAD PASTOR</span>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="font-sora text-3xl md:text-4xl lg:text-[42px] font-bold text-navy leading-[1.2] mb-4">
+              A Warm Welcome to<br class="hidden sm:inline">True Worshippers A/G
+            </h2>
+
+            <!-- Quote Block -->
+            <div class="relative p-5 rounded-2xl bg-surface border border-borderSubtle/60 shadow-sm mb-5">
+              <i class="fa-solid fa-quote-left text-2xl text-gold/50 mb-2 block"></i>
+              <p class="font-inter text-navy/85 text-sm md:text-base leading-relaxed italic mb-3">
+                "Whether you are looking for a spiritual home, visiting Old Tafo-Abono for the first time, or searching for a community rooted in prayer and God's Word, we welcome you with open arms. Here at True Worshippers A/G, we believe every life can be transformed through genuine worship and authentic fellowship."
+              </p>
+              <div class="flex items-center justify-between pt-3 border-t border-borderSubtle/40">
+                <span class="font-sora text-xs font-bold text-navy">Rev. Elvis Kwadwo</span>
+                <span class="font-inter text-[11px] text-muted font-medium">Head Pastor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visitor Pillars / Features (Asymmetric 2-Column Layout) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 mb-5">
+            
+            <!-- Left Column: Tall Vertical Featured Card (Biblical Teaching) -->
+            <div class="p-5 rounded-2xl bg-surface/80 border border-borderSubtle/60 hover:border-gold/60 transition-all duration-300 flex flex-col justify-between shadow-sm group">
+              <div>
+                <div class="w-9 h-9 rounded-xl bg-navy flex items-center justify-center font-bold mb-3 shadow-sm group-hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-book-bible text-gold text-xs"></i>
+                </div>
+                <h4 class="font-sora text-base font-bold text-navy mb-1.5">Biblical Teaching</h4>
+                <p class="font-inter text-xs text-muted leading-relaxed">Grounded in the uncompromised, living Word of God to equip your Christian walk.</p>
+              </div>
+              <div class="pt-3 mt-3 border-t border-borderSubtle/40 flex items-center justify-between">
+                <span class="font-sora text-[10px] font-bold text-navy uppercase tracking-wider">Foundation of Faith</span>
+                <i class="fa-solid fa-arrow-right text-[10px] text-gold"></i>
+              </div>
+            </div>
+
+            <!-- Right Column: 2 Stacked Horizontal Cards -->
+            <div class="flex flex-col gap-3">
+              <!-- Top Stacked Card: Spirit-Filled Worship -->
+              <div class="p-4 rounded-2xl bg-surface/80 border border-borderSubtle/60 hover:border-gold/60 transition-all duration-300 flex items-start gap-3 shadow-sm flex-1 group">
+                <div class="w-9 h-9 rounded-xl bg-navy flex items-center justify-center font-bold shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-music text-gold text-xs"></i>
+                </div>
+                <div>
+                  <h4 class="font-sora text-xs sm:text-sm font-bold text-navy mb-0.5">Spirit-Filled Worship</h4>
+                  <p class="font-inter text-[11px] text-muted leading-relaxed">Exalting God in spirit and truth through heartfelt praise.</p>
+                </div>
+              </div>
+
+              <!-- Bottom Stacked Card: Loving Community -->
+              <div class="p-4 rounded-2xl bg-surface/80 border border-borderSubtle/60 hover:border-gold/60 transition-all duration-300 flex items-start gap-3 shadow-sm flex-1 group">
+                <div class="w-9 h-9 rounded-xl bg-navy flex items-center justify-center font-bold shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-handshake-angle text-gold text-xs"></i>
+                </div>
+                <div>
+                  <h4 class="font-sora text-xs sm:text-sm font-bold text-navy mb-0.5">Loving Community</h4>
+                  <p class="font-inter text-[11px] text-muted leading-relaxed">A welcoming family that cares for you and prays with you.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CTA Actions -->
+          <div class="flex items-center gap-4 flex-wrap">
+            <a href="about.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 font-sora text-xs font-semibold text-navy bg-gold rounded-lg shadow-md hover:bg-gold-secondary hover:-translate-y-0.5 transition-all">
+              <span>Learn More About Us</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════ THE CHURCH BOARD SECTION ═══════════════ -->
+  <section class="py-20 md:py-28 bg-surface border-b border-borderSubtle/40 overflow-hidden" id="church-board">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+
+      <!-- Header with Pill Badge & Navigation Arrows -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="inline-block w-max px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
+            CHURCH LEADERSHIP
+          </span>
+          <h2 class="font-sora text-3xl md:text-4xl font-bold text-navy leading-tight">
+            Meet Our Church Board
+          </h2>
+        </div>
+
+        <!-- Circular Navigation Controls -->
+        <div class="flex items-center gap-3 shrink-0">
+          <button id="board-prev" aria-label="Previous board member" class="w-12 h-12 rounded-full border border-borderSubtle bg-cream text-navy hover:bg-navy hover:text-white hover:border-navy flex items-center justify-center transition-all shadow-sm active:scale-95">
+            <i class="fa-solid fa-arrow-left text-sm"></i>
+          </button>
+          <button id="board-next" aria-label="Next board member" class="w-12 h-12 rounded-full bg-navy text-white hover:bg-gold hover:text-navy flex items-center justify-center transition-all shadow-sm active:scale-95">
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Board Member Cards Horizontal Slider -->
+      <div id="board-slider" class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pt-2 -mx-2 px-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+
+        <!-- Card 1: Pastor Georgina Mensah -->
+        <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
+          <img 
+            src="images/pastor-georgina-mensah.jpg" 
+            alt="Pastor Georgina Mensah" 
+            class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-7 flex flex-col justify-end z-10">
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Pastoral Leadership</span>
+            <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Pastor Georgina Mensah</h3>
+            <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Associate Pastor</p>
+            <p class="font-inter text-xs text-white/70 leading-relaxed">Assisting in pastoral care, spiritual counseling, and discipleship across the church family.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Deacon Kingsley Sarfo -->
+        <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
+          <img 
+            src="images/deacon-kingsley-sarfo.jpg" 
+            alt="Deacon Kingsley Sarfo" 
+            class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-7 flex flex-col justify-end z-10">
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Diaconate Board</span>
+            <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Kingsley Sarfo</h3>
+            <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Lead Deacon</p>
+            <p class="font-inter text-xs text-white/70 leading-relaxed">Overseeing diaconate ministries, service coordination, and member welfare services.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Deacon Moses Yeboah -->
+        <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
+          <img 
+            src="images/deacon-moses-yeboah.jpg" 
+            alt="Deacon Moses Yeboah" 
+            class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-7 flex flex-col justify-end z-10">
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Finance Board</span>
+            <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Moses Yeboah</h3>
+            <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Finance</p>
+            <p class="font-inter text-xs text-white/70 leading-relaxed">Managing financial stewardship, budgeting, and resource accountability.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Deacon Jerry Kyei -->
+        <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
+          <img 
+            src="images/deacon-jerry-kyei.jpg" 
+            alt="Deacon Jerry Kyei" 
+            class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-7 flex flex-col justify-end z-10">
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Events & Operations</span>
+            <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Jerry Kyei</h3>
+            <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Organizer</p>
+            <p class="font-inter text-xs text-white/70 leading-relaxed">Coordinating church events, service logistics, and special ministry programs.</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Deacon Emmanuel Fosu -->
+        <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
+          <img 
+            src="images/deacon-emmanuel-fosu.jpg" 
+            alt="Deacon Emmanuel Fosu" 
+            class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-7 flex flex-col justify-end z-10">
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Administration</span>
+            <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Emmanuel Fosu</h3>
+            <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Secretary</p>
+            <p class="font-inter text-xs text-white/70 leading-relaxed">Handling church administration, documentation, and official board records.</p>
+          </div>
+        </div>
+
+        <!-- Card 6: Deacon Emmanuel Osei -->
+        <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
+          <img 
+            src="images/deacon-emmanuel-osei.jpg" 
+            alt="Deacon Emmanuel Osei" 
+            class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-7 flex flex-col justify-end z-10">
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Youth Ministry</span>
+            <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Emmanuel Osei</h3>
+            <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Youth Pastor</p>
+            <p class="font-inter text-xs text-white/70 leading-relaxed">Empowering the youth ministry, young adults, and next-generation leadership.</p>
+          </div>
+        </div>
+
+        <!-- Card 7: Featured Scripture Card on Church Leadership (Last on Slide) -->
+        <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl bg-navy p-8 text-white flex flex-col justify-between shadow-xl relative overflow-hidden">
+          <div>
+            <span class="inline-block px-3.5 py-1.5 rounded-full bg-gold/20 text-gold font-sora text-[11px] font-bold uppercase tracking-wider mb-6">
+              SCRIPTURE GUIDE
+            </span>
+            <p class="font-inter text-sm sm:text-base text-white/95 leading-relaxed italic mb-6 font-normal">
+              "Be shepherds of God’s flock that is under your care, watching over them not because you must, but because you are willing, as God wants you to be; not pursuing dishonest gain, but eager to serve; not lording it over those entrusted to you, but being examples to the flock."
+            </p>
+            <p class="font-sora text-xs font-bold text-gold tracking-widest uppercase flex items-center gap-2">
+              1 Peter 5:2-3
+            </p>
+          </div>
+
+          <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+            <span class="font-sora text-[11px] font-bold text-white/80 uppercase tracking-widest">
+              Assemblies of God
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ 2026 CHURCH THEME SECTION ═══════════════ -->
+  <section class="py-20 md:py-28 bg-surface border-b border-borderSubtle/40 overflow-hidden" id="theme-2026">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Left Column: Theme Artwork Display -->
+        <div class="lg:col-span-6 relative group">
+          <!-- Ambient Glow Background Accent -->
+          <div class="absolute -inset-3 bg-gradient-to-tr from-gold/30 via-navy/30 to-gold/20 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-700"></div>
+          
+          <!-- Main Theme Image Container -->
+          <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-borderSubtle/60 bg-navy">
+            <img 
+              src="images/theme-of-the-year.jpg" 
+              alt="True Worshippers A/G 2026 Theme of the Year" 
+              class="w-full h-auto object-cover transform group-hover:scale-103 transition-transform duration-700 ease-out"
+            >
+            <!-- Soft Bottom Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent opacity-60"></div>
+          </div>
+        </div>
+
+        <!-- Right Column: Theme Details & Vision -->
+        <div class="lg:col-span-6 flex flex-col justify-center">
+          
+          <!-- Kicker Tag -->
+          <div class="inline-block w-max px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
+            <span>2026 CHURCH THEME</span>
+          </div>
+
+          <!-- Section Heading -->
+          <h2 class="font-sora text-3xl md:text-4xl lg:text-[42px] font-bold text-navy leading-[1.2] mb-3">
+            The Faith of Our Fathers
+          </h2>
+          <p class="font-sora text-base sm:text-lg font-bold text-gold-secondary uppercase tracking-wider mb-4">
+            For Authenticity & Greater Exploits
+          </p>
+
+          <p class="font-inter text-muted text-base md:text-lg leading-relaxed mb-6">
+            As a church family at True Worshippers A/G, our 2026 theme guides our spiritual direction, weekly sermons, prayer meetings, and community outreach as we walk in authentic faith and accomplish greater exploits for Christ.
+          </p>
+
+          <!-- Feature Highlights -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-2xl bg-cream/60 border border-borderSubtle/50 flex items-start gap-3.5 shadow-sm">
+              <div class="w-10 h-10 rounded-xl bg-navy text-white flex items-center justify-center font-bold shrink-0 shadow-sm">
+                <i class="fa-solid fa-fire text-sm text-gold"></i>
+              </div>
+              <div>
+                <h4 class="font-sora text-sm font-bold text-navy mb-1">Authentic Faith</h4>
+                <p class="font-inter text-xs text-muted leading-relaxed">Anchored in uncompromised biblical truth and earnest prayer.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-cream/60 border border-borderSubtle/50 flex items-start gap-3.5 shadow-sm">
+              <div class="w-10 h-10 rounded-xl bg-navy text-white flex items-center justify-center font-bold shrink-0 shadow-sm">
+                <i class="fa-solid fa-bolt text-sm text-gold"></i>
+              </div>
+              <div>
+                <h4 class="font-sora text-sm font-bold text-navy mb-1">Greater Exploits</h4>
+                <p class="font-inter text-xs text-muted leading-relaxed">Demonstrating God's power and expanding His kingdom.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FULL VIEWPORT AUTO-PLAYING VIDEO SECTION ═══════════════ -->
+  <section class="relative w-full h-screen min-h-[600px] max-h-[1080px] overflow-hidden bg-navy flex items-center justify-center" id="church-video">
+    
+    <!-- Background Video Covering 100% Viewport -->
+    <video 
+      autoplay 
+      muted 
+      loop 
+      playsinline 
+      class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+    >
+      <source src="images/landing-2026.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Subtle Ambient Dark Overlay Gradient -->
+    <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-navy/70 z-10"></div>
+
+    <!-- Viewport Centered Overlay Content -->
+    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center">
+      <h2 class="font-sora text-3xl sm:text-5xl md:text-7xl lg:text-[84px] font-bold text-white leading-[1.1] mb-4 sm:mb-5 drop-shadow-2xl uppercase tracking-wider">
+        2026<br>THE FAITH OF OUR FATHERS
+      </h2>
+      <p class="font-sora text-sm sm:text-lg md:text-xl text-gold-secondary font-medium max-w-2xl mx-auto leading-relaxed mb-5 sm:mb-6 drop-shadow tracking-wide">
+        For Authenticity & Greater Exploits
+      </p>
+      <div class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white/95 font-sora text-[11px] sm:text-sm font-semibold tracking-wider max-w-full text-center">
+        <span>HEBREWS 11 &nbsp;•&nbsp; JUDE 1 &nbsp;•&nbsp; JOHN 14:12</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════ THE GALLERY SECTION (PINTEREST MASONRY) ═══════════════ -->
+  <section class="py-20 md:py-28 bg-cream/40 border-b border-borderSubtle/40" id="gallery">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+
+      <!-- Gallery Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block w-max px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
+          MOMENTS IN HIS PRESENCE
+        </span>
+        <h2 class="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight mb-4">
+          Life at True Worshippers A/G
+        </h2>
+        <p class="font-inter text-muted text-base leading-relaxed">
+          Explore visual stories of worship, fellowship, prayer, and community impact captured across our church family.
+        </p>
+      </div>
+
+      <!-- Pinterest-Style Masonry Grid -->
+      <div id="gallery-masonry" class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-5 space-y-5">
+
+        <!-- Initial Display Pins (Batch 1: 8 Photos) -->
+
+        <!-- Pin 1: Church Choir -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+             data-src="images/church-choir.jpg"
+             data-title="True Worshippers Choir"
+             data-category="WORSHIP"
+             data-desc="Joyful choir rendering uplifting praises and songs of adoration during divine worship.">
+          <img src="images/church-choir.jpg" alt="True Worshippers Choir" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">WORSHIP</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">True Worshippers Choir</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Joyful choir rendering uplifting praises and songs of adoration.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 2: Communion Service -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+             data-src="images/communion-service.jpg"
+             data-title="Holy Communion Service"
+             data-category="SACRAMENT"
+             data-desc="Partaking in the Lord's Supper in remembrance of Christ's sacrifice and new covenant.">
+          <img src="images/communion-service.jpg" alt="Holy Communion Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">SACRAMENT</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Holy Communion Service</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Partaking in the Lord's Supper in remembrance of Christ.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 3: Preaching -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+             data-src="images/preaching.jpg"
+             data-title="Proclaiming the Gospel"
+             data-category="SERMON"
+             data-desc="Rev. Elvis Kwadwo preaching the uncompromised Word of God with clarity and power.">
+          <img src="images/preaching.jpg" alt="Proclaiming the Gospel" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">SERMON</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Proclaiming the Gospel</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Preaching the uncompromised Word of God with clarity and power.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 4: Anointing Service -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+             data-src="images/anointing-service.jpg"
+             data-title="Anointing & Healing Service"
+             data-category="PRAYER"
+             data-desc="Seeking divine unction, healing, and spiritual empowerment for God's people.">
+          <img src="images/anointing-service.jpg" alt="Anointing & Healing Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">PRAYER</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Anointing & Healing Service</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Seeking divine unction, healing, and spiritual empowerment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 5: Church Community Praising God -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+             data-src="images/church-community-praising-god.jpg"
+             data-title="Congregational Praise"
+             data-category="WORSHIP"
+             data-desc="Church family united in joyful praise and thanksgiving for the Lord's goodness.">
+          <img src="images/church-community-praising-god.jpg" alt="Congregational Praise" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">WORSHIP</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Congregational Praise</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Church family united in joyful praise and thanksgiving.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 6: Children Ministry -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+             data-src="images/children-ministry.jpg"
+             data-title="Children's Ministry"
+             data-category="MINISTRY"
+             data-desc="Nurturing young minds in Biblical truth, prayer, and Christian fellowship.">
+          <img src="images/children-ministry.jpg" alt="Children's Ministry" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">MINISTRY</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Children's Ministry</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Nurturing young minds in Biblical truth and Christian fellowship.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 7: Men's Ministry -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+             data-src="images/mens-ministry.jpg"
+             data-title="Men of Valor Fellowship"
+             data-category="FELLOWSHIP"
+             data-desc="Equipping Christian men to lead with godly integrity in their homes and community.">
+          <img src="images/mens-ministry.jpg" alt="Men of Valor Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">FELLOWSHIP</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Men of Valor Fellowship</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Equipping Christian men to lead with godly integrity.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 8: Women's Ministry -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+             data-src="images/womens-ministry.jpg"
+             data-title="Virtuous Women Fellowship"
+             data-category="FELLOWSHIP"
+             data-desc="Empowering women through prayer, biblical mentorship, and compassionate service.">
+          <img src="images/womens-ministry.jpg" alt="Virtuous Women Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">FELLOWSHIP</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Virtuous Women Fellowship</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Empowering women through prayer and biblical mentorship.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hidden Pins Revealed by "See More" Button -->
+
+        <!-- Pin 9: Royal Rangers -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/royal-rangers.jpg"
+             data-title="Royal Rangers Brigade"
+             data-category="YOUTH"
+             data-desc="Building spiritual character, outdoor skills, and servant leadership in young boys and girls.">
+          <img src="images/royal-rangers.jpg" alt="Royal Rangers Brigade" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">YOUTH</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Royal Rangers Brigade</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Building spiritual character and servant leadership in our youth.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 10: Children's Day Ceremony -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/childrens-day-ceremony.jpg"
+             data-title="Children's Day Celebration"
+             data-category="CELEBRATION"
+             data-desc="Celebrating our children with scripture recitations, songs, and special performances.">
+          <img src="images/childrens-day-ceremony.jpg" alt="Children's Day Celebration" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">CELEBRATION</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Children's Day Celebration</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Celebrating our children with scripture recitations and performances.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 11: Carols Night -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/carols-night.jpg"
+             data-title="Festival of Nine Lessons & Carols"
+             data-category="EVENTS"
+             data-desc="A memorable evening of festive Christmas carols, scripture readings, and holiday joy.">
+          <img src="images/carols-night.jpg" alt="Festival of Nine Lessons & Carols" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">EVENTS</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Festival of Nine Lessons & Carols</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">A memorable evening of festive Christmas carols and worship.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 12: Cultural Day -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/cultural-day.jpg"
+             data-title="Ghanaian Heritage & Cultural Day"
+             data-category="CULTURE"
+             data-desc="Celebrating God's blessings in rich Ghanaian traditional regalia and indigenous worship.">
+          <img src="images/cultural-day.jpg" alt="Ghanaian Heritage & Cultural Day" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">CULTURE</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Ghanaian Heritage & Cultural Day</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Celebrating God's blessings in rich traditional attire.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 13: Child Dedication -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/child-dedication.jpg"
+             data-title="Child Dedication Ceremony"
+             data-category="FAMILY"
+             data-desc="Presenting babies to the Lord for His guidance, wisdom, and lifelong protection.">
+          <img src="images/child-dedication.jpg" alt="Child Dedication Ceremony" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">FAMILY</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Child Dedication Ceremony</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Presenting babies to the Lord for His guidance and blessing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 14: Marital Blessing -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/marital-blessing.jpg"
+             data-title="Marital Blessing Service"
+             data-category="FAMILY"
+             data-desc="Honouring holy matrimony and committing Christian marriages to God's divine grace.">
+          <img src="images/marital-blessing.jpg" alt="Marital Blessing Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">FAMILY</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Marital Blessing Service</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Honouring holy matrimony and God's covenant foundation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 15: Church Awards -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/church-awards.jpg"
+             data-title="Leadership & Excellence Awards"
+             data-category="HONOUR"
+             data-desc="Recognizing faithful workers and dedicated servants in the house of the Lord.">
+          <img src="images/church-awards.jpg" alt="Leadership & Excellence Awards" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">HONOUR</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Leadership & Excellence Awards</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Recognizing faithful workers in the house of the Lord.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 16: Children's Home Donation -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/childrens-home-donation.jpg"
+             data-title="Community Benevolence Outreach"
+             data-category="OUTREACH"
+             data-desc="Sharing Christ's love through charitable giving, donations, and community support.">
+          <img src="images/childrens-home-donation.jpg" alt="Community Benevolence Outreach" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">OUTREACH</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Community Benevolence Outreach</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Sharing Christ's love through charitable giving and donations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 17: Theatre Play -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/theatre-play.jpg"
+             data-title="Kingdom Drama Production"
+             data-category="MINISTRY"
+             data-desc="Powerful gospel drama and theatrical storytelling depicting biblical truths.">
+          <img src="images/theatre-play.jpg" alt="Kingdom Drama Production" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">MINISTRY</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Kingdom Drama Production</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Powerful gospel drama depicting biblical truths.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 18: Church Fellowship 1 -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/church-fellowship-1.jpg"
+             data-title="Sunday Family Fellowship"
+             data-category="COMMUNITY"
+             data-desc="Members sharing joyful moments and warm kingdom fellowship after service.">
+          <img src="images/church-fellowship-1.jpg" alt="Sunday Family Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">COMMUNITY</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Sunday Family Fellowship</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Members sharing joyful moments and warm kingdom fellowship.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 19: Church Fellowship 2 -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/church-fellowship-2.jpg"
+             data-title="Kingdom Gathering"
+             data-category="COMMUNITY"
+             data-desc="Sharing smiles, testimonies, and spiritual encouragement across generations.">
+          <img src="images/church-fellowship-2.jpg" alt="Kingdom Gathering" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">COMMUNITY</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Kingdom Gathering</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Sharing smiles, testimonies, and spiritual encouragement.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 20: Birthday honouring -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/birthday-honouring.jpg"
+             data-title="Honorary Celebration"
+             data-category="CELEBRATION"
+             data-desc="Celebrating God's grace and faithfulness in the lives of our beloved church members.">
+          <img src="images/birthday-honouring.jpg" alt="Honorary Celebration" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">CELEBRATION</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Honorary Celebration</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Celebrating God's grace and faithfulness in members' lives.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 21: Funeral Thanksgiving -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/funeral-thanksgiving.jpg"
+             data-title="Memorial Thanksgiving Service"
+             data-category="THANKSGIVING"
+             data-desc="Giving glory to God for lives dedicated to the gospel and kingdom service.">
+          <img src="images/funeral-thanksgiving.jpg" alt="Memorial Thanksgiving Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">THANKSGIVING</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Memorial Thanksgiving Service</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Giving glory to God for lives dedicated to kingdom service.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 22: Old Lady praising God -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/old-lady-praising-god.jpg"
+             data-title="Joy in His Presence"
+             data-category="WORSHIP"
+             data-desc="Elderly saints expressing unhindered praise and gratitude to the Lord.">
+          <img src="images/old-lady-praising-god.jpg" alt="Joy in His Presence" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">WORSHIP</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Joy in His Presence</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Elderly saints expressing unhindered praise and gratitude.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 23: Presentation to head pastor -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/presentation-to-head-pastor.jpg"
+             data-title="Pastoral Appreciation Presentation"
+             data-category="HONOUR"
+             data-desc="Expressing heartfelt gratitude to Rev. Elvis Kwadwo for faithful leadership.">
+          <img src="images/presentation-to-head-pastor.jpg" alt="Pastoral Appreciation Presentation" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">HONOUR</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Pastoral Appreciation Presentation</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Expressing heartfelt gratitude to Rev. Elvis Kwadwo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 24: Scripture Reading -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/scripture-reading.jpg"
+             data-title="Public Reading of Scripture"
+             data-category="SERMON"
+             data-desc="Declaring Holy Scripture to inspire and anchor the faith of believers.">
+          <img src="images/scripture-reading.jpg" alt="Public Reading of Scripture" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">SERMON</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">Public Reading of Scripture</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Declaring Holy Scripture to inspire and anchor the faith.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 25: Praises -->
+        <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
+             data-src="images/praises.jpg"
+             data-title="High Praises & Exaltation"
+             data-category="WORSHIP"
+             data-desc="Exalting the Lord with songs of victory, clapping, and joyful praise.">
+          <img src="images/praises.jpg" alt="High Praises & Exaltation" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">WORSHIP</span>
+              <div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-gold hover:text-navy transition-colors">
+                <i class="fa-solid fa-expand text-xs"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-sora text-base font-bold text-white mb-1">High Praises & Exaltation</h3>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Exalting the Lord with songs of victory and joyful praise.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- See More Button Container -->
+      <div id="gallery-see-more-container" class="mt-14 text-center">
+        <button id="gallery-see-more-btn" type="button" class="inline-flex items-center justify-center gap-3 px-8 py-4 font-sora text-sm font-bold text-navy bg-gold rounded-full shadow-lg hover:bg-gold-secondary hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group cursor-pointer">
+          <span>See More Photos</span>
+          <i class="fa-solid fa-chevron-down text-xs group-hover:translate-y-0.5 transition-transform"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="bg-navy text-white pt-20 pb-10 border-t border-gold/30" role="contentinfo">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+      
+      <!-- Top Grid: 4 Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-white/10">
+        
+        <!-- Col 1: Logo & Church Info (lg:col-span-4) -->
+        <div class="lg:col-span-4 flex flex-col">
+          <a href="index.html" class="flex items-center gap-3 mb-6 no-underline" aria-label="True Worshippers A/G — Home">
+            <img src="images/twag-logo.png" alt="TWAG Logo" class="h-12 w-auto">
+            <div class="flex flex-col justify-center leading-tight">
+              <span class="font-sora text-xs font-semibold text-gold tracking-widest uppercase">Assemblies of God, Ghana</span>
+              <span class="font-sora text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
+            </div>
+          </a>
+
+          <p class="font-inter text-sm text-white/70 leading-relaxed mb-6">
+            A vibrant Assemblies of God church family in Old Tafo-Abono, Ghana. Established in 1995 to exalt Jesus Christ, equip believers, and transform communities through spirit-filled worship and authentic fellowship.
+          </p>
+
+          <!-- Social Media Links -->
+          <div class="flex items-center gap-3">
+            <a href="https://web.facebook.com/TrueWorshippersAG" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/trueworshippersag?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@trueworshippersag" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@trueworshippersag?_t=8hndCD1LnrZ&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://x.com/tworshippersag?s=21&t=5ZdW-Zt8BpcS0OkZSeLOjw" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (lg:col-span-2) -->
+        <div class="lg:col-span-2 flex flex-col">
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Quick Links</h4>
+          <ul class="space-y-3 font-inter text-sm text-white/70">
+            <li><a href="index.html" class="hover:text-gold transition-colors inline-block">Home</a></li>
+            <li><a href="about.html" class="hover:text-gold transition-colors inline-block">About Us</a></li>
+            <li><a href="events.html" class="hover:text-gold transition-colors inline-block">Events</a></li>
+            <li><a href="devotions.html" class="hover:text-gold transition-colors inline-block">Devotions</a></li>
+            <li><a href="give.html" class="hover:text-gold transition-colors inline-block">Give</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Service Times (lg:col-span-3) -->
+        <div class="lg:col-span-3 flex flex-col">
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Service Times</h4>
+          
+          <div class="space-y-4 font-inter text-sm text-white/80">
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Sunday Worship</strong>
+              <span>8:30 AM — 12:00 PM</span>
+            </div>
+
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Tuesday Bible Studies</strong>
+              <span>6:00 PM — 7:00 PM</span>
+            </div>
+
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Wednesday Miracle Service</strong>
+              <span>9:00 AM — 12:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact & Location (lg:col-span-3) -->
+        <div class="lg:col-span-3 flex flex-col">
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Contact Us</h4>
+          
+          <div class="space-y-4 font-inter text-sm text-white/80">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-gold text-base mt-0.5 shrink-0"></i>
+              <div>
+                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Phone</strong>
+                <a href="tel:+233593037700" class="hover:text-gold transition-colors">+233 59 303 7700</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-gold text-base mt-0.5 shrink-0"></i>
+              <div>
+                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Email</strong>
+                <a href="mailto:info@trueworshippersag.org" class="hover:text-gold transition-colors break-all">info@trueworshippersag.org</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 pt-2 border-t border-white/10 mt-3">
+              <i class="fa-solid fa-location-dot text-gold text-base mt-0.5 shrink-0"></i>
+              <div>
+                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Address</strong>
+                <span>AK-156-2334, Old Tafo-Abono, Kumasi, Ashanti Region, Ghana</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Copyright -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-inter text-xs text-white/60">
+        <p>© 2026 True Worshippers A/G, Old Tafo-Abono. All Rights Reserved.</p>
+        
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:text-gold transition-colors">Terms of Use</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button (Hidden on Hero, Visible when Scrolled) -->
+  <button 
+    id="back-to-top" 
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+    aria-label="Scroll back to top" 
+    class="fixed bottom-6 right-6 z-[990] w-12 h-12 rounded-full bg-navy/90 text-gold border-2 border-gold/40 shadow-2xl flex items-center justify-center cursor-pointer hover:bg-gold hover:text-navy hover:border-gold hover:scale-110 active:scale-95 transition-all duration-300 backdrop-blur-md opacity-0 pointer-events-none translate-y-4"
+  >
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+  <!-- Lightbox Modal (Expanded & Interactive with Prev/Next Navigation) -->
+  <div id="gallery-modal" class="fixed inset-0 z-[2000] hidden items-center justify-center p-3 sm:p-6 md:p-10">
+    <div id="gallery-modal-backdrop" class="absolute inset-0 bg-navy/95 backdrop-blur-md"></div>
+    
+    <div class="relative z-10 max-w-6xl w-full bg-surface rounded-2xl overflow-y-auto lg:overflow-hidden shadow-2xl border border-borderSubtle flex flex-col lg:flex-row max-h-[92vh]">
+      
+      <!-- Close Button -->
+      <button id="gallery-modal-close" aria-label="Close photo preview" class="absolute top-4 right-4 z-30 w-11 h-11 rounded-full bg-navy/80 text-white hover:bg-gold hover:text-navy flex items-center justify-center transition-all shadow-lg active:scale-95">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <!-- Image Display Stage with Prev & Next Arrow Controls -->
+      <div class="lg:w-3/5 xl:w-2/3 bg-navy flex items-center justify-center p-4 sm:p-6 relative min-h-[350px] lg:min-h-[550px] max-h-[65vh] lg:max-h-[85vh] overflow-hidden group">
+        
+        <!-- Prev Arrow -->
+        <button id="gallery-modal-prev" aria-label="Previous photo" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-navy/70 border border-white/20 text-white hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-xl active:scale-95">
+          <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+
+        <!-- Image -->
+        <img id="gallery-modal-img" src="" alt="" class="max-h-full max-w-full object-contain rounded-xl shadow-2xl transition-all duration-300">
+
+        <!-- Next Arrow -->
+        <button id="gallery-modal-next" aria-label="Next photo" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-navy/70 border border-white/20 text-white hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-xl active:scale-95">
+          <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+
+        <!-- Counter Indicator -->
+        <div class="absolute bottom-4 left-6 z-20 px-3 py-1 rounded-full bg-navy/80 border border-white/10 text-white/80 font-sora text-xs font-semibold">
+          <span id="gallery-modal-counter">1 / 25</span>
+        </div>
+      </div>
+
+      <!-- Info Details Panel -->
+      <div class="lg:w-2/5 xl:w-1/3 p-6 sm:p-8 flex flex-col justify-center bg-surface border-t lg:border-t-0 lg:border-l border-borderSubtle/60 shrink-0">
+        <span id="gallery-modal-category" class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent text-navy font-sora text-xs font-bold uppercase tracking-wider mb-4 w-max max-w-full truncate"></span>
+        <h3 id="gallery-modal-title" class="font-sora text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold text-navy leading-tight mb-4 break-words"></h3>
+        <p id="gallery-modal-desc" class="font-inter text-sm lg:text-base text-muted leading-relaxed mb-6"></p>
+        
+        <!-- Footer Branding -->
+        <div class="pt-6 border-t border-borderSubtle/40 flex items-center justify-between">
+          <span class="font-sora text-xs font-semibold text-muted uppercase tracking-wider">True Worshippers A/G</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="public/js/navbar.js"></script>
+  <script src="public/js/hero.js"></script>
+  <script src="public/js/board.js"></script>
+  <script src="public/js/gallery.js"></script>
+</body>
+</html>

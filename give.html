@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Support True Worshippers A/G — give tithes and offerings via Mobile Money or bank transfer. Every contribution makes a difference.">
+  <title>Give — True Worshippers A/G</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181' },
+            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58' },
+            cream: '#F7F6E4',
+            surface: '#FEFEFE',
+            muted: '#475467',
+            borderSubtle: '#D0D5DD',
+          },
+          fontFamily: {
+            sora: ['Sora', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Pure Tailwind Helper & Animation Styles -->
+  <style>
+    .navbar--hidden { transform: translateY(-100%); }
+    /* ── Mobile Menu Toggle Bars ── */
+    .navbar__toggle--active .navbar__toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
+    .navbar__toggle--active .navbar__toggle-bar:nth-child(2) { opacity: 0 !important; width: 0 !important; }
+    .navbar__toggle--active .navbar__toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
+
+    /* ── Mobile Overlay ── */
+    .navbar__mobile-overlay--active { opacity: 1 !important; pointer-events: auto !important; }
+
+    /* ── Mobile Drawer ── */
+    .navbar__mobile-menu--open { transform: translateX(0) !important; }
+    .navbar__mobile-menu--open .navbar__mobile-link,
+    .navbar__mobile-menu--open .navbar__mobile-cta,
+    .navbar__mobile-menu--open .navbar__mobile-social { opacity: 1 !important; transform: translateX(0) !important; }
+
+    /* ── Mobile Active Link ── */
+    .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600 !important; }
+    .navbar__link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 18px;
+      right: 18px;
+      height: 1.5px;
+      background-color: #FACC15;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.35s ease;
+    }
+    .navbar__link:hover::after,
+    .navbar__link--active::after {
+      transform: scaleX(1);
+    }
+    .navbar__link--active {
+      color: #FEFEFE;
+      font-weight: 500;
+    }
+    .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600; }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/twag-icon.png">
+</head>
+<body class="font-sora font-normal bg-cream text-navy leading-relaxed min-h-screen flex flex-col justify-between pt-[64px] sm:pt-[76px] lg:pt-[84px] overflow-x-hidden">
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="fixed top-0 left-0 right-0 z-[1000] h-[64px] sm:h-[76px] lg:h-[84px] bg-navy transition-transform duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[rgba(250,204,21,0.25)] after:to-transparent" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-12">
+
+      <!-- Logo & Brand Name -->
+      <a href="index.html" class="flex items-center gap-0 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
+        <img src="images/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
+        <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
+          <span class="font-sora text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
+          <span class="font-sora text-[12px] sm:text-[15px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Visible md:flex - 768px and up) -->
+      <div class="hidden md:flex items-center gap-1 lg:gap-2 xl:gap-3" id="navbar-links">
+        <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="home">Home</a>
+        <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="about">About Us</a>
+        <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="events">Events</a>
+        <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="devotions">Devotions</a>
+        <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="departments">Departments</a>
+        <a href="give.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="give">Give</a>
+      </div>
+
+      <!-- CTA Button -->
+      <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(250,204,21,0.3)] active:translate-y-0">Contact Us</a>
+
+      <!-- Mobile Toggle (Visible on screens < md) -->
+      <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-transparent border-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm transition-all duration-300"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="fixed inset-0 bg-navy/50 backdrop-blur-sm z-[999] opacity-0 transition-opacity duration-300 pointer-events-none navbar__mobile-overlay" id="navbar-mobile-overlay"></div>
+
+  <!-- Mobile Drawer Menu (With Minimal Top-Right Close Button) -->
+  <nav class="fixed top-0 right-0 w-[min(340px,85vw)] h-screen bg-navy z-[1005] flex flex-col pt-[56px] sm:pt-[64px] px-[24px] sm:px-[32px] pb-[32px] translate-x-full transition-transform duration-300 overflow-y-auto navbar__mobile-menu" id="navbar-mobile-menu" aria-label="Mobile navigation">
+    <!-- Minimal Close Button -->
+    <button class="absolute top-4 right-5 p-2 text-white/80 hover:text-gold transition-colors cursor-pointer" id="navbar-mobile-close" aria-label="Close menu">
+      <i class="fa-solid fa-xmark text-[22px]"></i>
+    </button>
+
+    <!-- Reduced Mobile Nav Links -->
+    <div class="flex flex-col mt-4">
+      <a href="index.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="home">Home</a>
+      <a href="about.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="about">About Us</a>
+      <a href="events.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="events">Events</a>
+      <a href="devotions.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="devotions">Devotions</a>
+      <a href="departments.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="departments">Departments</a>
+      <a href="give.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="give">Give</a>
+      <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary">Contact Us</a>
+    </div>
+
+    <!-- Mobile Social Links -->
+    <div class="navbar__mobile-social flex items-center gap-[16px] mt-auto pt-[24px]">
+      <a href="https://web.facebook.com/TrueWorshippersAG" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/trueworshippersag?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@trueworshippersag" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@trueworshippersag?_t=8hndCD1LnrZ&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://x.com/tworshippersag?s=21&t=5ZdW-Zt8BpcS0OkZSeLOjw" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE CONTENT ═══════════════ -->
+  <main class="py-16 sm:py-24 bg-cream flex-grow">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+      <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
+        GENEROSITY & STEWARDSHIP
+      </span>
+      <h1 class="font-sora text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-6">
+        Give & Tithing
+      </h1>
+      <p class="font-inter text-muted text-base md:text-lg leading-relaxed max-w-3xl">
+        Support the work of God’s ministry, kingdom expansion, and community outreach through Mobile Money (MoMo) or bank transfers.
+      </p>
+    </div>
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="bg-navy text-white pt-20 pb-10 border-t border-gold/30 mt-auto" role="contentinfo">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+      
+      <!-- Top Grid: 4 Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-white/10">
+        
+        <!-- Col 1: Logo & Church Info (lg:col-span-4) -->
+        <div class="lg:col-span-4 flex flex-col">
+          <a href="index.html" class="flex items-center gap-3 mb-6 no-underline" aria-label="True Worshippers A/G — Home">
+            <img src="images/twag-logo.png" alt="TWAG Logo" class="h-12 w-auto">
+            <div class="flex flex-col justify-center leading-tight">
+              <span class="font-sora text-xs font-semibold text-gold tracking-widest uppercase">Assemblies of God, Ghana</span>
+              <span class="font-sora text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
+            </div>
+          </a>
+
+          <p class="font-inter text-sm text-white/70 leading-relaxed mb-6">
+            A vibrant Assemblies of God church family in Old Tafo-Abono, Ghana. Established in 1995 to exalt Jesus Christ, equip believers, and transform communities through spirit-filled worship and authentic fellowship.
+          </p>
+
+          <!-- Social Media Links -->
+          <div class="flex items-center gap-3">
+            <a href="https://web.facebook.com/TrueWorshippersAG" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/trueworshippersag?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@trueworshippersag" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@trueworshippersag?_t=8hndCD1LnrZ&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://x.com/tworshippersag?s=21&t=5ZdW-Zt8BpcS0OkZSeLOjw" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/75 flex items-center justify-center text-sm transition-all duration-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (lg:col-span-2) -->
+        <div class="lg:col-span-2 flex flex-col">
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Quick Links</h4>
+          <ul class="space-y-3 font-inter text-sm text-white/70">
+            <li><a href="index.html" class="hover:text-gold transition-colors inline-block">Home</a></li>
+            <li><a href="about.html" class="hover:text-gold transition-colors inline-block">About Us</a></li>
+            <li><a href="events.html" class="hover:text-gold transition-colors inline-block">Events</a></li>
+            <li><a href="devotions.html" class="hover:text-gold transition-colors inline-block">Devotions</a></li>
+            <li><a href="give.html" class="hover:text-gold transition-colors inline-block">Give</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Service Times (lg:col-span-3) -->
+        <div class="lg:col-span-3 flex flex-col">
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Service Times</h4>
+          
+          <div class="space-y-4 font-inter text-sm text-white/80">
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Sunday Worship</strong>
+              <span>8:30 AM — 12:00 PM</span>
+            </div>
+
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Tuesday Bible Studies</strong>
+              <span>6:00 PM — 7:00 PM</span>
+            </div>
+
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Wednesday Miracle Service</strong>
+              <span>9:00 AM — 12:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact & Location (lg:col-span-3) -->
+        <div class="lg:col-span-3 flex flex-col">
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Contact Us</h4>
+          
+          <div class="space-y-4 font-inter text-sm text-white/80">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-gold text-base mt-0.5 shrink-0"></i>
+              <div>
+                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Phone</strong>
+                <a href="tel:+233593037700" class="hover:text-gold transition-colors">+233 59 303 7700</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-gold text-base mt-0.5 shrink-0"></i>
+              <div>
+                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Email</strong>
+                <a href="mailto:info@trueworshippersag.org" class="hover:text-gold transition-colors break-all">info@trueworshippersag.org</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 pt-2 border-t border-white/10 mt-3">
+              <i class="fa-solid fa-location-dot text-gold text-base mt-0.5 shrink-0"></i>
+              <div>
+                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Address</strong>
+                <span>AK-156-2334, Old Tafo-Abono, Kumasi, Ashanti Region, Ghana</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Copyright -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-inter text-xs text-white/60">
+        <p>© 2026 True Worshippers A/G, Old Tafo-Abono. All Rights Reserved.</p>
+        
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:text-gold transition-colors">Terms of Use</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button 
+    id="back-to-top" 
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+    aria-label="Scroll back to top" 
+    class="fixed bottom-6 right-6 z-[990] w-12 h-12 rounded-full bg-navy/90 text-gold border-2 border-gold/40 shadow-2xl flex items-center justify-center cursor-pointer hover:bg-gold hover:text-navy hover:border-gold hover:scale-110 active:scale-95 transition-all duration-300 backdrop-blur-md opacity-0 pointer-events-none translate-y-4"
+  >
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+  <script src="public/js/navbar.js"></script>
+</body>
+</html>
