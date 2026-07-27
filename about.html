@@ -96,10 +96,10 @@
         </div>
       </a>
 
-      <!-- Desktop Nav Links (Visible md:flex - 768px and up) -->
+      <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-1 lg:gap-2 xl:gap-3" id="navbar-links">
         <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="home">Home</a>
-        <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="about">About Us</a>
+        <a href="about.html" class="navbar__link navbar__link--active relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="about">About Us</a>
         <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="events">Events</a>
         <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="devotions">Devotions</a>
         <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="departments">Departments</a>
@@ -109,7 +109,7 @@
       <!-- CTA Button -->
       <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(250,204,21,0.3)] active:translate-y-0">Contact Us</a>
 
-      <!-- Mobile Toggle (Visible on screens < md) -->
+      <!-- Mobile Toggle -->
       <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-transparent border-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
         <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
@@ -121,17 +121,15 @@
   <!-- Mobile Overlay -->
   <div class="fixed inset-0 bg-navy/50 backdrop-blur-sm z-[999] opacity-0 transition-opacity duration-300 pointer-events-none navbar__mobile-overlay" id="navbar-mobile-overlay"></div>
 
-  <!-- Mobile Drawer Menu (With Minimal Top-Right Close Button) -->
+  <!-- Mobile Drawer Menu -->
   <nav class="fixed top-0 right-0 w-[min(340px,85vw)] h-screen bg-navy z-[1005] flex flex-col pt-[56px] sm:pt-[64px] px-[24px] sm:px-[32px] pb-[32px] translate-x-full transition-transform duration-300 overflow-y-auto navbar__mobile-menu" id="navbar-mobile-menu" aria-label="Mobile navigation">
-    <!-- Minimal Close Button -->
     <button class="absolute top-4 right-5 p-2 text-white/80 hover:text-gold transition-colors cursor-pointer" id="navbar-mobile-close" aria-label="Close menu">
       <i class="fa-solid fa-xmark text-[22px]"></i>
     </button>
 
-    <!-- Reduced Mobile Nav Links -->
     <div class="flex flex-col mt-4">
       <a href="index.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="home">Home</a>
-      <a href="about.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="about">About Us</a>
+      <a href="about.html" class="navbar__mobile-link navbar__mobile-link--active flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="about">About Us</a>
       <a href="events.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="events">Events</a>
       <a href="devotions.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="devotions">Devotions</a>
       <a href="departments.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="departments">Departments</a>
@@ -139,7 +137,6 @@
       <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary">Contact Us</a>
     </div>
 
-    <!-- Mobile Social Links -->
     <div class="navbar__mobile-social flex items-center gap-[16px] mt-auto pt-[24px]">
       <a href="https://web.facebook.com/TrueWorshippersAG" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="https://www.instagram.com/trueworshippersag?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-instagram"></i></a>
@@ -149,20 +146,288 @@
     </div>
   </nav>
 
-  <!-- ═══════════════ PAGE CONTENT ═══════════════ -->
-  <main class="py-16 sm:py-24 bg-cream flex-grow">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
-      <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
-        OUR STORY
+  <!-- ═══════════════ SHORT LANDSCAPE HERO SECTION ═══════════════ -->
+  <section class="relative w-full h-[260px] sm:h-[320px] lg:h-[360px] overflow-hidden flex items-center justify-center bg-navy" aria-label="About page hero section">
+    <!-- Landscape Background Image -->
+    <img src="images/hero-group.jpg" alt="True Worshippers A/G Church Family" class="absolute inset-0 w-full h-full object-cover object-[center_35%] filter brightness-90">
+    
+    <!-- Dark Gradient Overlay for Maximum Text Contrast -->
+    <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/90 z-[2]"></div>
+    
+    <!-- Subtle Bottom Gold Border Line -->
+    <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/40 to-transparent z-[3]"></div>
+
+    <!-- Hero Content Overlay -->
+    <div class="relative z-[3] text-center max-w-4xl mx-auto px-6 py-8">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold/40 bg-gold/10 backdrop-blur-md font-sora text-[11px] sm:text-xs font-semibold text-gold uppercase tracking-widest mb-3 sm:mb-4">
+        <i class="fa-solid fa-church text-[10px]"></i> Our Story & Heritage
       </span>
-      <h1 class="font-sora text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-6">
+
+      <h1 class="font-sora text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight mb-3 sm:mb-4 drop-shadow-md">
         About True Worshippers A/G
       </h1>
-      <p class="font-inter text-muted text-base md:text-lg leading-relaxed max-w-3xl">
-        Established in 1995 in Old Tafo-Abono under the visionary spiritual leadership of Rev. Prof. Paul Frimpong Manso, True Worshippers A/G is a vibrant Assemblies of God church committed to uncompromised biblical truth, authentic worship, and community transformation.
+
+      <p class="font-inter text-xs sm:text-base md:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
+        Rooted in faith, grounded in community, and committed to the glory of God over 30 years of faithful service in Old Tafo-Abono, Ghana.
       </p>
     </div>
+  </section>
+
+  <!-- ═══════════════ MAIN PAGE CONTENT ═══════════════ -->
+  <main class="py-12 sm:py-20 bg-cream flex-grow">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12 space-y-16 sm:space-y-24">
+
+      <!-- ── SECTION 1: HISTORY & FOUNDING ── -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Text Column -->
+        <div class="lg:col-span-7 flex flex-col">
+          <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4 w-max">
+            OUR FOUNDATION
+          </span>
+
+          <h2 class="font-sora text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy leading-tight mb-6">
+            History & Founding
+          </h2>
+
+          <p class="font-inter text-muted text-base md:text-lg leading-relaxed mb-6">
+            True Worshippers A/G was established in 1995 at Old Tafo-Abono, Ghana, under the visionary spiritual leadership of Rev. Prof. Paul Frimpong Manso. Since inception, Rev. Elvis Kwadwo has shepherded the congregation, growing it into a vibrant community of believers committed to God’s Word.
+          </p>
+
+          <p class="font-inter text-muted text-base md:text-lg leading-relaxed">
+            From humble beginnings in a modest structure, our church family has grown continuously in faith, outreach, and discipleship — empowering generations to live for Christ and shine as lights in our local community and beyond.
+          </p>
+        </div>
+
+        <!-- Historic Image Card -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden shadow-2xl border-4 border-surface bg-navy transition-all duration-300 hover:shadow-navy/20">
+            <img src="images/begining picture.jpg" alt="True Worshippers AG — Est. 1995" class="w-full h-[280px] sm:h-[340px] object-cover transition-transform duration-500 group-hover:scale-105">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+            
+            <div class="absolute bottom-4 left-4 right-4 text-center py-2.5 px-4 rounded-xl bg-navy/80 backdrop-blur-md border border-white/10">
+              <span class="font-sora text-xs sm:text-sm font-semibold text-gold tracking-wider uppercase">True Worshippers A/G — Est. 1995</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION 2: MISSION, VISION & VALUES ── -->
+      <section class="pt-8 border-t border-borderSubtle/50">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
+            WHAT WE STAND FOR
+          </span>
+
+          <h2 class="font-sora text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy leading-tight">
+            Mission, Vision & Values
+          </h2>
+        </div>
+
+        <!-- 3 Grid Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Card 1: Mission -->
+          <div class="bg-surface p-8 rounded-2xl border border-borderSubtle/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gold/15 text-navy border border-gold/40 flex items-center justify-center text-xl mb-6">
+                <i class="fa-solid fa-bullseye text-navy"></i>
+              </div>
+              <h3 class="font-sora text-xl font-bold text-navy mb-3">Mission</h3>
+              <p class="font-inter text-muted text-sm sm:text-base leading-relaxed">
+                To preach the Gospel, equip believers, and make disciples of all nations through spirit-filled worship, prayer, and authentic Christian fellowship.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Vision -->
+          <div class="bg-surface p-8 rounded-2xl border border-borderSubtle/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gold/15 text-navy border border-gold/40 flex items-center justify-center text-xl mb-6">
+                <i class="fa-solid fa-eye text-navy"></i>
+              </div>
+              <h3 class="font-sora text-xl font-bold text-navy mb-3">Vision</h3>
+              <p class="font-inter text-muted text-sm sm:text-base leading-relaxed">
+                A Spirit-filled church family transforming lives and communities for the Kingdom of God across Ghana and around the world.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Values -->
+          <div class="bg-surface p-8 rounded-2xl border border-borderSubtle/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gold/15 text-navy border border-gold/40 flex items-center justify-center text-xl mb-6">
+                <i class="fa-solid fa-heart text-navy"></i>
+              </div>
+              <h3 class="font-sora text-xl font-bold text-navy mb-3">Values</h3>
+              <p class="font-inter text-muted text-sm sm:text-base leading-relaxed">
+                Faith, Integrity, Uncompromising Biblical Truth, Love, Prayer, and the Supreme Authority of God’s Word in all things.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SECTION 3: SERVICE TIMES ── -->
+      <section class="pt-8 border-t border-borderSubtle/50">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
+            SERVICE TIMES
+          </span>
+
+          <h2 class="font-sora text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy leading-tight">
+            Join Us in Worship
+          </h2>
+        </div>
+
+        <!-- 4 Grid Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="bg-surface p-6 rounded-2xl border border-borderSubtle/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <h4 class="font-sora text-base font-bold text-navy mb-1">Sunday Service</h4>
+            <p class="font-inter text-xs text-muted mb-4">Main Worship Service</p>
+            <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-navy font-sora text-xs font-bold">8:30 AM | 12:00 PM</span>
+          </div>
+
+          <div class="bg-surface p-6 rounded-2xl border border-borderSubtle/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <h4 class="font-sora text-base font-bold text-navy mb-1">Tuesday Bible Studies</h4>
+            <p class="font-inter text-xs text-muted mb-4">Bible Studies & Teaching</p>
+            <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-navy font-sora text-xs font-bold">6:00 PM | 7:00 PM</span>
+          </div>
+
+          <div class="bg-surface p-6 rounded-2xl border border-borderSubtle/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <h4 class="font-sora text-base font-bold text-navy mb-1">Wednesday Prayers</h4>
+            <p class="font-inter text-xs text-muted mb-4">Miracle Service</p>
+            <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-navy font-sora text-xs font-bold">9:00 AM | 12:00 PM</span>
+          </div>
+
+          <div class="bg-surface p-6 rounded-2xl border border-borderSubtle/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <h4 class="font-sora text-base font-bold text-navy mb-1">First Sunday</h4>
+            <p class="font-inter text-xs text-muted mb-4">Holy Communion & Thanksgiving</p>
+            <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-navy font-sora text-xs font-bold">8:30 AM | 12:00 PM</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SECTION 4: PHOTO GALLERY ── -->
+      <section class="pt-8 border-t border-borderSubtle/50">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
+            PHOTO GALLERY
+          </span>
+
+          <h2 class="font-sora text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy leading-tight mb-4">
+            Our Church in Pictures
+          </h2>
+          <p class="font-inter text-muted text-sm sm:text-base">
+            Click on any photo to open the interactive lightbox photo viewer.
+          </p>
+        </div>
+
+        <!-- Gallery Grid (Interactive Pins for Lightbox) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+               data-src="images/church-choir.jpg"
+               data-title="True Worshippers Choir"
+               data-category="Worship & Praise"
+               data-desc="Our choir leading the congregation in uplifting worship and praises during service.">
+            <img src="images/church-choir.jpg" alt="True Worshippers Choir" class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Worship & Praise</span>
+              <h4 class="font-sora text-sm font-bold text-white truncate">True Worshippers Choir</h4>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+               data-src="images/childrens-day-ceremony.jpg"
+               data-title="Children's Ministry Celebration"
+               data-category="Children Department"
+               data-desc="Joyful celebrations and performances by the children of True Worshippers A/G.">
+            <img src="images/childrens-day-ceremony.jpg" alt="Children's Ministry Celebration" class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Children Department</span>
+              <h4 class="font-sora text-sm font-bold text-white truncate">Children's Day Ceremony</h4>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+               data-src="images/cultural-day.jpg"
+               data-title="Cultural Sunday Celebration"
+               data-category="Fellowship & Culture"
+               data-desc="Celebrating God's diversity in beautiful traditional attire and cultural praise.">
+            <img src="images/cultural-day.jpg" alt="Cultural Sunday Celebration" class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Fellowship & Culture</span>
+              <h4 class="font-sora text-sm font-bold text-white truncate">Cultural Sunday Celebration</h4>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
+               data-src="images/anointing-service.jpg"
+               data-title="Anointing & Miracle Service"
+               data-category="Prayer & Revival"
+               data-desc="Moments of powerful prayer, anointing, and spiritual renewal in the presence of God.">
+            <img src="images/anointing-service.jpg" alt="Anointing & Miracle Service" class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Prayer & Revival</span>
+              <h4 class="font-sora text-sm font-bold text-white truncate">Anointing & Miracle Service</h4>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
   </main>
+
+  <!-- ═══════════════ LIGHTBOX MODAL ═══════════════ -->
+  <div id="gallery-modal" class="fixed inset-0 z-[2000] hidden items-center justify-center p-3 sm:p-6 md:p-10">
+    <div id="gallery-modal-backdrop" class="absolute inset-0 bg-navy/95 backdrop-blur-md"></div>
+    
+    <div class="relative z-10 max-w-6xl w-full bg-surface rounded-2xl overflow-y-auto lg:overflow-hidden shadow-2xl border border-borderSubtle flex flex-col lg:flex-row max-h-[92vh]">
+      
+      <!-- Close Button -->
+      <button id="gallery-modal-close" aria-label="Close photo preview" class="absolute top-4 right-4 z-30 w-11 h-11 rounded-full bg-navy/80 text-white hover:bg-gold hover:text-navy flex items-center justify-center transition-all shadow-lg active:scale-95">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <!-- Image Stage -->
+      <div class="lg:w-3/5 xl:w-2/3 bg-navy flex items-center justify-center p-4 sm:p-6 relative min-h-[350px] lg:min-h-[550px] max-h-[65vh] lg:max-h-[85vh] overflow-hidden group">
+        <button id="gallery-modal-prev" aria-label="Previous photo" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-navy/70 border border-white/20 text-white hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-xl active:scale-95">
+          <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+
+        <img id="gallery-modal-img" src="" alt="" class="max-h-full max-w-full object-contain rounded-xl shadow-2xl transition-all duration-300">
+
+        <button id="gallery-modal-next" aria-label="Next photo" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-navy/70 border border-white/20 text-white hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-xl active:scale-95">
+          <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+
+        <div class="absolute bottom-4 left-6 z-20 px-3 py-1 rounded-full bg-navy/80 border border-white/10 text-white/80 font-sora text-xs font-semibold">
+          <span id="gallery-modal-counter">1 / 4</span>
+        </div>
+      </div>
+
+      <!-- Details Panel -->
+      <div class="lg:w-2/5 xl:w-1/3 p-6 sm:p-8 flex flex-col justify-center bg-surface border-t lg:border-t-0 lg:border-l border-borderSubtle/60 shrink-0">
+        <span id="gallery-modal-category" class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent text-navy font-sora text-xs font-bold uppercase tracking-wider mb-4 w-max max-w-full truncate"></span>
+        <h3 id="gallery-modal-title" class="font-sora text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold text-navy leading-tight mb-4 break-words"></h3>
+        <p id="gallery-modal-desc" class="font-inter text-sm lg:text-base text-muted leading-relaxed mb-6"></p>
+        
+        <div class="pt-6 border-t border-borderSubtle/40 flex items-center justify-between">
+          <span class="font-sora text-xs font-semibold text-muted uppercase tracking-wider">True Worshippers A/G</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="bg-navy text-white pt-20 pb-10 border-t border-gold/30 mt-auto" role="contentinfo">
@@ -171,7 +436,7 @@
       <!-- Top Grid: 4 Columns -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-white/10">
         
-        <!-- Col 1: Logo & Church Info (lg:col-span-4) -->
+        <!-- Col 1: Logo & Church Info -->
         <div class="lg:col-span-4 flex flex-col">
           <a href="index.html" class="flex items-center gap-3 mb-6 no-underline" aria-label="True Worshippers A/G — Home">
             <img src="images/twag-logo.png" alt="TWAG Logo" class="h-12 w-auto">
@@ -205,7 +470,7 @@
           </div>
         </div>
 
-        <!-- Col 2: Quick Links (lg:col-span-2) -->
+        <!-- Col 2: Quick Links -->
         <div class="lg:col-span-2 flex flex-col">
           <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Quick Links</h4>
           <ul class="space-y-3 font-inter text-sm text-white/70">
@@ -217,32 +482,30 @@
           </ul>
         </div>
 
-        <!-- Col 3: Service Times (lg:col-span-3) -->
+        <!-- Col 3: Service Times -->
         <div class="lg:col-span-3 flex flex-col">
           <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Service Times</h4>
-          
           <div class="space-y-4 font-inter text-sm text-white/80">
             <div>
               <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Sunday Worship</strong>
-              <span>8:30 AM — 12:00 PM</span>
+              <span>8:30 AM | 12:00 PM</span>
             </div>
 
             <div>
               <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Tuesday Bible Studies</strong>
-              <span>6:00 PM — 7:00 PM</span>
+              <span>6:00 PM | 7:00 PM</span>
             </div>
 
             <div>
               <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Wednesday Miracle Service</strong>
-              <span>9:00 AM — 12:00 PM</span>
+              <span>9:00 AM | 12:00 PM</span>
             </div>
           </div>
         </div>
 
-        <!-- Col 4: Contact & Location (lg:col-span-3) -->
+        <!-- Col 4: Contact & Location -->
         <div class="lg:col-span-3 flex flex-col">
           <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Contact Us</h4>
-          
           <div class="space-y-4 font-inter text-sm text-white/80">
             <div class="flex items-start gap-3">
               <i class="fa-solid fa-phone text-gold text-base mt-0.5 shrink-0"></i>
@@ -272,10 +535,9 @@
 
       </div>
 
-      <!-- Bottom Bar: Copyright -->
+      <!-- Bottom Bar -->
       <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-inter text-xs text-white/60">
         <p>© 2026 True Worshippers A/G, Old Tafo-Abono. All Rights Reserved.</p>
-        
         <div class="flex items-center gap-6">
           <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
           <span>•</span>
@@ -297,5 +559,6 @@
   </button>
 
   <script src="js/navbar.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 </html>
