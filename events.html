@@ -315,86 +315,158 @@
           </h2>
         </div>
 
-        <!-- 4 Grid Sermon Video Cards -->
+        <!-- 4 Grid Sermon Video Cards (Authentic YouTube Layout) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Video Card 1 -->
-          <div class="bg-surface rounded-2xl overflow-hidden border border-borderSubtle/60 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-            <div class="relative w-full aspect-video bg-black overflow-hidden">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/pk1P3WrcRVs" title="Youth Ministry Week Day 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="bg-surface rounded-2xl p-3 border border-borderSubtle/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden cursor-pointer" onclick="loadYtVideo(this, 'pk1P3WrcRVs')">
+              <img src="https://img.youtube.com/vi/pk1P3WrcRVs/hqdefault.jpg" alt="Youth Ministry Day Celebration Day 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              
+              <!-- Duration Badge -->
+              <span class="absolute bottom-2 right-2 bg-black/85 text-white font-inter text-[11px] font-medium px-2 py-0.5 rounded shadow">
+                2:14:35
+              </span>
+
+              <!-- Hover Play Overlay -->
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-base shadow-xl group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-play ml-0.5"></i>
+                </div>
+              </div>
             </div>
-            <div class="p-5 flex-grow flex flex-col justify-between">
-              <div>
-                <span class="inline-block px-2.5 py-1 rounded-md bg-gold/15 text-navy font-sora text-[10px] font-bold uppercase tracking-wider mb-2">
-                  YOUTH MINISTRY WEEK
-                </span>
-                <h4 class="font-sora text-sm sm:text-base font-bold text-navy leading-snug mb-2">
+
+            <!-- YouTube Metadata Row -->
+            <div class="flex gap-3 pt-3.5 px-1">
+              <div class="w-9 h-9 rounded-full bg-navy border border-gold/40 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                <img src="images/twag-logo.png" alt="TWAG Logo" class="w-5 h-auto">
+              </div>
+
+              <div class="flex-grow min-w-0">
+                <h4 class="font-sora text-xs sm:text-sm font-bold text-navy leading-snug line-clamp-2 mb-1 group-hover:text-gold transition-colors">
                   YOUTH MINISTRY DAY CELEBRATION | DAY 1
                 </h4>
+                <div class="font-inter text-xs text-muted flex flex-col gap-0.5">
+                  <span class="inline-flex items-center gap-1 font-medium text-navy/75">
+                    True Worshippers A/G <i class="fa-solid fa-circle-check text-[10px] text-muted"></i>
+                  </span>
+                  <span class="text-[11px] text-muted">1.8K views • 2 weeks ago</span>
+                </div>
               </div>
-              <a href="https://www.youtube.com/live/pk1P3WrcRVs?si=Xn-WuHAKC90y4qJS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-sora font-bold text-navy hover:text-gold transition-colors mt-3">
-                Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              </a>
             </div>
           </div>
 
           <!-- Video Card 2 -->
-          <div class="bg-surface rounded-2xl overflow-hidden border border-borderSubtle/60 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-            <div class="relative w-full aspect-video bg-black overflow-hidden">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/cAHZeLTkdu8" title="Youth Ministry Week Day 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="bg-surface rounded-2xl p-3 border border-borderSubtle/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden cursor-pointer" onclick="loadYtVideo(this, 'cAHZeLTkdu8')">
+              <img src="https://img.youtube.com/vi/cAHZeLTkdu8/hqdefault.jpg" alt="Youth Ministry Day Celebration Day 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              
+              <!-- Duration Badge -->
+              <span class="absolute bottom-2 right-2 bg-black/85 text-white font-inter text-[11px] font-medium px-2 py-0.5 rounded shadow">
+                1:58:10
+              </span>
+
+              <!-- Hover Play Overlay -->
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-base shadow-xl group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-play ml-0.5"></i>
+                </div>
+              </div>
             </div>
-            <div class="p-5 flex-grow flex flex-col justify-between">
-              <div>
-                <span class="inline-block px-2.5 py-1 rounded-md bg-gold/15 text-navy font-sora text-[10px] font-bold uppercase tracking-wider mb-2">
-                  YOUTH MINISTRY WEEK
-                </span>
-                <h4 class="font-sora text-sm sm:text-base font-bold text-navy leading-snug mb-2">
+
+            <!-- YouTube Metadata Row -->
+            <div class="flex gap-3 pt-3.5 px-1">
+              <div class="w-9 h-9 rounded-full bg-navy border border-gold/40 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                <img src="images/twag-logo.png" alt="TWAG Logo" class="w-5 h-auto">
+              </div>
+
+              <div class="flex-grow min-w-0">
+                <h4 class="font-sora text-xs sm:text-sm font-bold text-navy leading-snug line-clamp-2 mb-1 group-hover:text-gold transition-colors">
                   YOUTH MINISTRY DAY CELEBRATION | DAY 2
                 </h4>
+                <div class="font-inter text-xs text-muted flex flex-col gap-0.5">
+                  <span class="inline-flex items-center gap-1 font-medium text-navy/75">
+                    True Worshippers A/G <i class="fa-solid fa-circle-check text-[10px] text-muted"></i>
+                  </span>
+                  <span class="text-[11px] text-muted">2.3K views • 2 weeks ago</span>
+                </div>
               </div>
-              <a href="https://www.youtube.com/live/cAHZeLTkdu8?si=5BTRVzB3Vnm-7Row" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-sora font-bold text-navy hover:text-gold transition-colors mt-3">
-                Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              </a>
             </div>
           </div>
 
           <!-- Video Card 3 -->
-          <div class="bg-surface rounded-2xl overflow-hidden border border-borderSubtle/60 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-            <div class="relative w-full aspect-video bg-black overflow-hidden">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/Ux0BXqX14Ms" title="Sunday Service 12th July" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="bg-surface rounded-2xl p-3 border border-borderSubtle/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden cursor-pointer" onclick="loadYtVideo(this, 'Ux0BXqX14Ms')">
+              <img src="https://img.youtube.com/vi/Ux0BXqX14Ms/hqdefault.jpg" alt="Sunday Service 12th July" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              
+              <!-- Duration Badge -->
+              <span class="absolute bottom-2 right-2 bg-black/85 text-white font-inter text-[11px] font-medium px-2 py-0.5 rounded shadow">
+                2:45:00
+              </span>
+
+              <!-- Hover Play Overlay -->
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-base shadow-xl group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-play ml-0.5"></i>
+                </div>
+              </div>
             </div>
-            <div class="p-5 flex-grow flex flex-col justify-between">
-              <div>
-                <span class="inline-block px-2.5 py-1 rounded-md bg-navy/10 text-navy font-sora text-[10px] font-bold uppercase tracking-wider mb-2">
-                  SUNDAY SERVICE
-                </span>
-                <h4 class="font-sora text-sm sm:text-base font-bold text-navy leading-snug mb-2">
+
+            <!-- YouTube Metadata Row -->
+            <div class="flex gap-3 pt-3.5 px-1">
+              <div class="w-9 h-9 rounded-full bg-navy border border-gold/40 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                <img src="images/twag-logo.png" alt="TWAG Logo" class="w-5 h-auto">
+              </div>
+
+              <div class="flex-grow min-w-0">
+                <h4 class="font-sora text-xs sm:text-sm font-bold text-navy leading-snug line-clamp-2 mb-1 group-hover:text-gold transition-colors">
                   SUNDAY SERVICE | 12TH JULY 2024
                 </h4>
+                <div class="font-inter text-xs text-muted flex flex-col gap-0.5">
+                  <span class="inline-flex items-center gap-1 font-medium text-navy/75">
+                    True Worshippers A/G <i class="fa-solid fa-circle-check text-[10px] text-muted"></i>
+                  </span>
+                  <span class="text-[11px] text-muted">3.1K views • 3 weeks ago</span>
+                </div>
               </div>
-              <a href="https://www.youtube.com/live/Ux0BXqX14Ms?si=Cg4akuzz-bCPmY20" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-sora font-bold text-navy hover:text-gold transition-colors mt-3">
-                Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              </a>
             </div>
           </div>
 
           <!-- Video Card 4 -->
-          <div class="bg-surface rounded-2xl overflow-hidden border border-borderSubtle/60 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-            <div class="relative w-full aspect-video bg-black overflow-hidden">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/zl3Dwrtn1L8" title="Sunday Service 5th July" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="bg-surface rounded-2xl p-3 border border-borderSubtle/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden cursor-pointer" onclick="loadYtVideo(this, 'zl3Dwrtn1L8')">
+              <img src="https://img.youtube.com/vi/zl3Dwrtn1L8/hqdefault.jpg" alt="Sunday Service 5th July" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              
+              <!-- Duration Badge -->
+              <span class="absolute bottom-2 right-2 bg-black/85 text-white font-inter text-[11px] font-medium px-2 py-0.5 rounded shadow">
+                2:30:15
+              </span>
+
+              <!-- Hover Play Overlay -->
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-base shadow-xl group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-play ml-0.5"></i>
+                </div>
+              </div>
             </div>
-            <div class="p-5 flex-grow flex flex-col justify-between">
-              <div>
-                <span class="inline-block px-2.5 py-1 rounded-md bg-navy/10 text-navy font-sora text-[10px] font-bold uppercase tracking-wider mb-2">
-                  SUNDAY SERVICE
-                </span>
-                <h4 class="font-sora text-sm sm:text-base font-bold text-navy leading-snug mb-2">
+
+            <!-- YouTube Metadata Row -->
+            <div class="flex gap-3 pt-3.5 px-1">
+              <div class="w-9 h-9 rounded-full bg-navy border border-gold/40 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                <img src="images/twag-logo.png" alt="TWAG Logo" class="w-5 h-auto">
+              </div>
+
+              <div class="flex-grow min-w-0">
+                <h4 class="font-sora text-xs sm:text-sm font-bold text-navy leading-snug line-clamp-2 mb-1 group-hover:text-gold transition-colors">
                   SUNDAY SERVICE | 5TH JULY 2024
                 </h4>
+                <div class="font-inter text-xs text-muted flex flex-col gap-0.5">
+                  <span class="inline-flex items-center gap-1 font-medium text-navy/75">
+                    True Worshippers A/G <i class="fa-solid fa-circle-check text-[10px] text-muted"></i>
+                  </span>
+                  <span class="text-[11px] text-muted">2.9K views • 3 weeks ago</span>
+                </div>
               </div>
-              <a href="https://www.youtube.com/live/zl3Dwrtn1L8?si=_5PbXH6jICyyx4ZA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-sora font-bold text-navy hover:text-gold transition-colors mt-3">
-                Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              </a>
             </div>
           </div>
 
@@ -683,6 +755,10 @@
 
   <script src="js/navbar.js"></script>
   <script>
+    function loadYtVideo(container, videoId) {
+      container.innerHTML = `<iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/${videoId}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       function updateCountdown() {
         const now = new Date();
