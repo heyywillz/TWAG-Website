@@ -666,12 +666,20 @@
   <script src="js/navbar.js"></script>
   <script>
     function playSpotifyEpisode(event) {
+      if (event) event.preventDefault();
+      const iframe = document.getElementById('spotify-iframe');
       const iframeContainer = document.getElementById('spotify-iframe-container');
+      
+      if (iframe) {
+        // Set src with autoplay=1 to play audio directly on the site inside the embedded player
+        iframe.src = "https://open.spotify.com/embed/episode/0NUph0HZfafFyORsue02EM?utm_source=generator&autoplay=1";
+      }
+
       if (iframeContainer) {
         iframeContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        iframeContainer.classList.add('ring-4', 'ring-[#1DB954]/70', 'p-2');
+        iframeContainer.classList.add('ring-4', 'ring-[#1DB954]/70');
         setTimeout(() => {
-          iframeContainer.classList.remove('ring-4', 'ring-[#1DB954]/70', 'p-2');
+          iframeContainer.classList.remove('ring-4', 'ring-[#1DB954]/70');
         }, 2500);
       }
     }
