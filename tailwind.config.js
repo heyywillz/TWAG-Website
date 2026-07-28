@@ -36,8 +36,8 @@ module.exports = {
       },
       keyframes: {
         heroZoom: {
-          '0%': { transform: scale(1) },
-          '100%': { transform: scale(1.08) },
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.08)' },
         },
         heroFadeUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
@@ -46,12 +46,17 @@ module.exports = {
         scrollPulse: {
           '0%, 100%': { opacity: '0.4', transform: 'scaleY(1)' },
           '50%': { opacity: '1', transform: 'scaleY(1.2)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         }
       },
       animation: {
         'hero-zoom': 'heroZoom 8s ease-out forwards',
         'hero-fade-up': 'heroFadeUp 0.8s ease-out forwards',
         'scroll-pulse': 'scrollPulse 2s ease-in-out infinite',
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
       }
     },
   },
