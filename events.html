@@ -307,7 +307,7 @@
                 <i class="fa-brands fa-youtube text-xs"></i> YouTube
               </a>
 
-              <button onclick="copyLiveUrl(this)" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-white font-sora text-xs font-bold rounded-none transition-all border border-white/20 hover:scale-105 active:scale-95">
+              <button onclick="openShareModal()" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-white font-sora text-xs font-bold rounded-none transition-all border border-white/20 hover:scale-105 active:scale-95">
                 <i class="fa-solid fa-share-nodes text-[10px]"></i> Share
               </button>
             </div>
@@ -742,20 +742,105 @@
     <i class="fa-solid fa-arrow-up text-base"></i>
   </button>
 
+  <!-- ═══════════════ SHARE LIVE STREAM MODAL ═══════════════ -->
+  <div id="share-modal" onclick="if(event.target === this) closeShareModal()" class="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+    <div id="share-modal-card" class="bg-navy text-white rounded-3xl p-6 sm:p-8 max-w-md w-full mx-4 border border-white/15 shadow-2xl relative transform scale-95 transition-all duration-300">
+      
+      <!-- Close Button -->
+      <button onclick="closeShareModal()" aria-label="Close Modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white/70 hover:text-white flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-base"></i>
+      </button>
+
+      <h3 class="font-sora text-lg sm:text-xl font-bold text-white mb-1 flex items-center gap-2">
+        <i class="fa-solid fa-share-nodes text-gold"></i> Share Live Stream
+      </h3>
+      <p class="font-inter text-xs text-white/70 mb-6">
+        Share True Worshippers A/G Sunday Worship service with family & friends!
+      </p>
+
+      <!-- Social Media Share Grid -->
+      <div class="grid grid-cols-4 gap-3 mb-6">
+        <!-- WhatsApp -->
+        <a href="https://api.whatsapp.com/send?text=Watch%20True%20Worshippers%20A/G%20Sunday%20Service%20Live:%20https://www.youtube.com/live/FmM-iOfXy0Y?si=YIxm048rUsORiFcm" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-white/5 hover:bg-green-600/20 hover:border-green-500/40 border border-white/10 transition-all text-center group">
+          <i class="fa-brands fa-whatsapp text-2xl text-green-400 group-hover:scale-110 transition-transform"></i>
+          <span class="font-inter text-[11px] font-medium text-white/90">WhatsApp</span>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/live/FmM-iOfXy0Y?si=YIxm048rUsORiFcm" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-white/5 hover:bg-blue-600/20 hover:border-blue-500/40 border border-white/10 transition-all text-center group">
+          <i class="fa-brands fa-facebook text-2xl text-blue-400 group-hover:scale-110 transition-transform"></i>
+          <span class="font-inter text-[11px] font-medium text-white/90">Facebook</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/trueworshippersag" target="_blank" rel="noopener noreferrer" onclick="copyLiveUrlInput(this)" class="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-white/5 hover:bg-pink-600/20 hover:border-pink-500/40 border border-white/10 transition-all text-center group">
+          <i class="fa-brands fa-instagram text-2xl text-pink-400 group-hover:scale-110 transition-transform"></i>
+          <span class="font-inter text-[11px] font-medium text-white/90">Instagram</span>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a href="https://twitter.com/intent/tweet?url=https://www.youtube.com/live/FmM-iOfXy0Y?si=YIxm048rUsORiFcm&text=Watch%20True%20Worshippers%20A/G%20Sunday%20Service%20Live" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-white/5 hover:bg-white/20 border border-white/10 transition-all text-center group">
+          <i class="fa-brands fa-x-twitter text-2xl text-white group-hover:scale-110 transition-transform"></i>
+          <span class="font-inter text-[11px] font-medium text-white/90">Twitter</span>
+        </a>
+      </div>
+
+      <!-- Copy Link Input Box -->
+      <div>
+        <label class="block font-sora text-[11px] font-bold uppercase tracking-wider text-white/60 mb-1.5">Or Copy Link</label>
+        <div class="flex items-center gap-2 bg-black/40 border border-white/15 rounded-xl p-1.5 pl-3">
+          <input id="share-link-input" type="text" readonly value="https://www.youtube.com/live/FmM-iOfXy0Y?si=YIxm048rUsORiFcm" class="bg-transparent text-xs text-white/90 font-mono flex-grow focus:outline-none select-all truncate">
+          <button id="copy-modal-btn" onclick="copyLiveUrlInput(this)" class="px-4 py-2 bg-gold hover:bg-white text-navy font-sora text-xs font-bold rounded-lg transition-all shrink-0">
+            Copy
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script src="js/navbar.js"></script>
   <script>
     function loadYtVideo(container, videoId) {
       container.innerHTML = `<iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/${videoId}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
     }
 
-    function copyLiveUrl(btn) {
+    function openShareModal() {
+      const modal = document.getElementById('share-modal');
+      const card = document.getElementById('share-modal-card');
+      if (modal && card) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+        card.classList.remove('scale-95');
+        card.classList.add('scale-100');
+      }
+    }
+
+    function closeShareModal() {
+      const modal = document.getElementById('share-modal');
+      const card = document.getElementById('share-modal-card');
+      if (modal && card) {
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        card.classList.remove('scale-100');
+        card.classList.add('scale-95');
+      }
+    }
+
+    function copyLiveUrlInput(btn) {
       const liveUrl = 'https://www.youtube.com/live/FmM-iOfXy0Y?si=YIxm048rUsORiFcm';
       navigator.clipboard.writeText(liveUrl).then(() => {
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '<i class="fa-solid fa-check text-gold text-[10px]"></i> Copied!';
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-        }, 2000);
+        const copyBtn = document.getElementById('copy-modal-btn');
+        if (copyBtn) {
+          copyBtn.textContent = 'Copied!';
+          copyBtn.classList.remove('bg-gold', 'text-navy');
+          copyBtn.classList.add('bg-green-500', 'text-white');
+          setTimeout(() => {
+            copyBtn.textContent = 'Copy';
+            copyBtn.classList.remove('bg-green-500', 'text-white');
+            copyBtn.classList.add('bg-gold', 'text-navy');
+          }, 2000);
+        }
       }).catch(() => {
         alert('Live stream URL: ' + liveUrl);
       });
