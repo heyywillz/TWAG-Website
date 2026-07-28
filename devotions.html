@@ -255,7 +255,7 @@
                   <span class="font-mono text-xs text-white/50 font-semibold">03:46</span>
 
                   <!-- Play Button -->
-                  <a href="https://open.spotify.com/episode/0NUph0HZfafFyORsue02EM?go=1&sp_cid=e4d96f09-8d08-432f-a227-c46720953c95&utm_source=embed_player_p&utm_medium=desktop" target="_blank" rel="noopener noreferrer" aria-label="Play on Spotify" class="w-12 h-12 rounded-full bg-[#1DB954] hover:bg-[#1ed760] text-black flex items-center justify-center text-lg shadow-lg hover:scale-110 active:scale-95 transition-all">
+                  <a href="https://open.spotify.com/episode/0NUph0HZfafFyORsue02EM?go=1&sp_cid=e4d96f09-8d08-432f-a227-c46720953c95&utm_source=embed_player_p&utm_medium=desktop" target="_blank" rel="noopener noreferrer" onclick="playSpotifyEpisode(event)" aria-label="Play on Spotify" class="w-12 h-12 rounded-full bg-[#1DB954] hover:bg-[#1ed760] text-black flex items-center justify-center text-lg shadow-lg hover:scale-110 active:scale-95 transition-all cursor-pointer">
                     <i class="fa-solid fa-play ml-1"></i>
                   </a>
                 </div>
@@ -265,8 +265,8 @@
             </div>
 
             <!-- Spotify Embedded Audio Player Frame -->
-            <div class="mt-8 pt-6 border-t border-white/10">
-              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0NUph0HZfafFyORsue02EM?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div id="spotify-iframe-container" class="mt-8 pt-6 border-t border-white/10 rounded-2xl transition-all duration-500">
+              <iframe id="spotify-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/0NUph0HZfafFyORsue02EM?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
 
           </div>
@@ -665,6 +665,17 @@
 
   <script src="js/navbar.js"></script>
   <script>
+    function playSpotifyEpisode(event) {
+      const iframeContainer = document.getElementById('spotify-iframe-container');
+      if (iframeContainer) {
+        iframeContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        iframeContainer.classList.add('ring-4', 'ring-[#1DB954]/70', 'p-2');
+        setTimeout(() => {
+          iframeContainer.classList.remove('ring-4', 'ring-[#1DB954]/70', 'p-2');
+        }, 2500);
+      }
+    }
+
     function openShareModal() {
       const modal = document.getElementById('share-modal');
       const card = document.getElementById('share-modal-card');
