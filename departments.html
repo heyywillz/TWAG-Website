@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the ministries and departments at True Worshippers A/G | Worship, Youth, Women, Men, Outreach, and more.">
-  <title>Departments | True Worshippers A/G</title>
+  <meta name="description" content="Explore the ministries and departments at True Worshippers A/G | Worship, Youth, Women, Men, Outreach, Media, and more.">
+  <title>Departments & Ministries | True Worshippers A/G</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -54,8 +54,7 @@
     .navbar__mobile-menu--open .navbar__mobile-cta,
     .navbar__mobile-menu--open .navbar__mobile-social { opacity: 1 !important; transform: translateX(0) !important; }
 
-    /* ── Mobile Active Link ── */
-    .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600 !important; }
+    /* ── Nav Links ── */
     .navbar__link::after {
       content: '';
       position: absolute;
@@ -97,20 +96,20 @@
         </div>
       </a>
 
-      <!-- Desktop Nav Links (Visible md:flex - 768px and up) -->
+      <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-1 lg:gap-2 xl:gap-3" id="navbar-links">
         <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="home">Home</a>
         <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="about">About Us</a>
         <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="events">Events</a>
         <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="devotions">Devotions</a>
-        <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="departments">Departments</a>
+        <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white navbar__link--active" data-page="departments">Departments</a>
         <a href="give.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="give">Give</a>
       </div>
 
       <!-- CTA Button -->
       <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(250,204,21,0.3)] active:translate-y-0">Contact Us</a>
 
-      <!-- Mobile Toggle (Visible on screens < md) -->
+      <!-- Mobile Toggle -->
       <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-transparent border-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
         <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
@@ -122,25 +121,22 @@
   <!-- Mobile Overlay -->
   <div class="fixed inset-0 bg-navy/50 backdrop-blur-sm z-[999] opacity-0 transition-opacity duration-300 pointer-events-none navbar__mobile-overlay" id="navbar-mobile-overlay"></div>
 
-  <!-- Mobile Drawer Menu (With Minimal Top-Right Close Button) -->
+  <!-- Mobile Drawer Menu -->
   <nav class="fixed top-0 right-0 w-[min(340px,85vw)] h-screen bg-navy z-[1005] flex flex-col pt-[56px] sm:pt-[64px] px-[24px] sm:px-[32px] pb-[32px] translate-x-full transition-transform duration-300 overflow-y-auto navbar__mobile-menu" id="navbar-mobile-menu" aria-label="Mobile navigation">
-    <!-- Minimal Close Button -->
     <button class="absolute top-4 right-5 p-2 text-white/80 hover:text-gold transition-colors cursor-pointer" id="navbar-mobile-close" aria-label="Close menu">
       <i class="fa-solid fa-xmark text-[22px]"></i>
     </button>
 
-    <!-- Reduced Mobile Nav Links -->
     <div class="flex flex-col mt-4">
       <a href="index.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="home">Home</a>
       <a href="about.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="about">About Us</a>
       <a href="events.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="events">Events</a>
       <a href="devotions.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="devotions">Devotions</a>
-      <a href="departments.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="departments">Departments</a>
+      <a href="departments.html" class="navbar__mobile-link navbar__mobile-link--active flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="departments">Departments</a>
       <a href="give.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="give">Give</a>
       <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary">Contact Us</a>
     </div>
 
-    <!-- Mobile Social Links -->
     <div class="navbar__mobile-social flex items-center gap-[16px] mt-auto pt-[24px]">
       <a href="https://web.facebook.com/TrueWorshippersAG" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="https://www.instagram.com/trueworshippersag?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-instagram"></i></a>
@@ -150,20 +146,666 @@
     </div>
   </nav>
 
-  <!-- ═══════════════ PAGE CONTENT ═══════════════ -->
-  <main class="py-16 sm:py-24 bg-cream flex-grow">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
-      <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
-        OUR MINISTRIES
-      </span>
-      <h1 class="font-sora text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-6">
-        Church Departments & Ministries
-      </h1>
-      <p class="font-inter text-muted text-base md:text-lg leading-relaxed max-w-3xl">
-        Discover our active ministries — Worship Choir, Youth Ministry, Women’s Ministry, Men’s Ministry, Children’s Department, and Community Outreach.
-      </p>
-    </div>
+  <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+  <main class="flex-grow">
+    
+    <!-- ═══════════════ HERO BANNER SECTION ═══════════════ -->
+    <section class="relative py-20 sm:py-24 lg:py-28 text-white text-center overflow-hidden border-b border-white/10">
+      <!-- Background Worship Photo -->
+      <img src="Department Images/imageye___-_imgi_44_saphgroup.jpg" alt="True Worshippers A/G Departments" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
+      <!-- Subtle Navy Gradient Overlay (Events/Devotions style) -->
+      <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/60 to-navy/40 pointer-events-none"></div>
+
+      <div class="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10 text-center">
+        <!-- Glassmorphism Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-gold/40 bg-gold/15 backdrop-blur-md mb-4 font-sora text-xs font-bold text-gold uppercase tracking-wider">
+          MINISTRIES
+        </div>
+
+        <h1 class="font-sora text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-md">
+          Our Departments
+        </h1>
+
+        <p class="font-inter text-white/90 text-base md:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto drop-shadow-sm">
+          Every believer has a role. Find your place and serve in a ministry that matches your calling.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ DEPARTMENT CARDS SECTION ═══════════════ -->
+    <section class="py-16 sm:py-24 bg-cream relative">
+      <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
+            MINISTRIES
+          </span>
+
+          <h2 class="font-sora text-2xl sm:text-4xl md:text-5xl font-extrabold text-navy leading-tight">
+            Find Your Department
+          </h2>
+        </div>
+
+        <!-- Filter Category Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-12 sm:mb-16">
+          <button onclick="filterDepartments('all', this)" class="dept-filter-btn px-4 sm:px-5 py-2 rounded-full font-sora text-xs font-bold border transition-all duration-300 bg-navy text-gold border-navy shadow-md">
+            All Departments
+          </button>
+          <button onclick="filterDepartments('worship', this)" class="dept-filter-btn px-4 sm:px-5 py-2 rounded-full font-sora text-xs font-bold border transition-all duration-300 bg-surface text-navy border-borderSubtle/80 hover:bg-navy hover:text-white">
+            Worship & Music
+          </button>
+          <button onclick="filterDepartments('fellowship', this)" class="dept-filter-btn px-4 sm:px-5 py-2 rounded-full font-sora text-xs font-bold border transition-all duration-300 bg-surface text-navy border-borderSubtle/80 hover:bg-navy hover:text-white">
+            Fellowships & Discipleship
+          </button>
+          <button onclick="filterDepartments('youth', this)" class="dept-filter-btn px-4 sm:px-5 py-2 rounded-full font-sora text-xs font-bold border transition-all duration-300 bg-surface text-navy border-borderSubtle/80 hover:bg-navy hover:text-white">
+            Youth & Children
+          </button>
+          <button onclick="filterDepartments('men', this)" class="dept-filter-btn px-4 sm:px-5 py-2 rounded-full font-sora text-xs font-bold border transition-all duration-300 bg-surface text-navy border-borderSubtle/80 hover:bg-navy hover:text-white">
+            Men & Outdoor
+          </button>
+          <button onclick="filterDepartments('outreach', this)" class="dept-filter-btn px-4 sm:px-5 py-2 rounded-full font-sora text-xs font-bold border transition-all duration-300 bg-surface text-navy border-borderSubtle/80 hover:bg-navy hover:text-white">
+            Outreach & Service
+          </button>
+          <button onclick="filterDepartments('operations', this)" class="dept-filter-btn px-4 sm:px-5 py-2 rounded-full font-sora text-xs font-bold border transition-all duration-300 bg-surface text-navy border-borderSubtle/80 hover:bg-navy hover:text-white">
+            Operations & Media
+          </button>
+        </div>
+
+        <!-- 17 Department Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="dept-grid">
+
+          <!-- Card 1: THE SAPPHIRE -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="worship">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_44_saphgroup.jpg" alt="The Sapphire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-guitar mr-1"></i> Worship & Music
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  THE SAPPHIRE
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  The Sapphire is the primary worship team leading the congregation in praise and worship during services and special revivals.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Fridays 6:00 PM
+              </span>
+              <button onclick="openExecModal('sapphire')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: MELODIOUS CHOIR -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="worship">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_45_melogroup.jpg" alt="Melodious Choir" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-music mr-1"></i> Worship & Music
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  MELODIOUS CHOIR
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Dedicated to the ministry of choral music, formal hymns, classical arrangements, and spirit-filled anthems.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Wed & Sat 6:00 PM
+              </span>
+              <button onclick="openExecModal('choir')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: YOUTH MINISTRY -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="youth">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_46_youthgroup.jpg" alt="Youth Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-fire mr-1"></i> Youth & Children
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  YOUTH MINISTRY
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Monday meetings, spiritual fervency, and biblical discipleship for young people ages 13–25.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Mondays 6:00 PM
+              </span>
+              <button onclick="openExecModal('youth')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: CHILDREN'S MINISTRY -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="youth">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_47_childrengroup.jpg" alt="Children's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-child-reaching mr-1"></i> Youth & Children
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  CHILDREN'S MINISTRY
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Biblical foundation, creative worship, and spiritual growth tailored for children ages 3–12.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Sundays 8:30 AM
+              </span>
+              <button onclick="openExecModal('children')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: WOMEN'S MINISTRY -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_48_wmgroup.jpg" alt="Women's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-hands-holding-child mr-1"></i> Fellowships
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  WOMEN'S MINISTRY
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Prayer groups, mentorship, community outreach, and sisterhood for women of faith.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Fridays 8:00 AM
+              </span>
+              <button onclick="openExecModal('women')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: JOY FELLOWSHIP -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_49_joygroup.jpg" alt="Joy Fellowship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-heart mr-1"></i> Fellowships
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  JOY FELLOWSHIP
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Spiritual empowerment, career-life balance, and networking for working professional women.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Sundays after Church
+              </span>
+              <button onclick="openExecModal('joy')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7: YOUNG SINGLES (YS) -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_50_ysgroup.jpg" alt="Young Singles (YS)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-user-group mr-1"></i> Fellowships
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  YOUNG SINGLES (YS)
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Career guidance, relationship mentorship, and spiritual empowerment for young single women.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Sundays after Church
+              </span>
+              <button onclick="openExecModal('ys')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 8: MISSIONETTE -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="youth">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_51_missionettegroup.jpg" alt="Missionette" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-crown mr-1"></i> Youth & Girls
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  MISSIONETTE
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Biblical discipleship, life-skills training, and godly mentorship tailored specifically for young girls.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Saturdays 4:30 PM
+              </span>
+              <button onclick="openExecModal('missionette')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 9: MEN'S MINISTRY -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="men">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_52_mensgroup.jpg" alt="Men's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-shield-halved mr-1"></i> Men & Outdoor
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  MEN'S MINISTRY
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Weekly gatherings, accountability groups, spiritual mentorship, and leadership development for men.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Mondays 6:30 PM
+              </span>
+              <button onclick="openExecModal('men')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 10: ROYAL RANGERS -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="men">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_53_rangersgroup.jpg" alt="Royal Rangers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-compass mr-1"></i> Men & Outdoor
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  ROYAL RANGERS
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Character development, outdoor adventure, camping, and biblical leadership training for young men.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Saturdays 4:30 PM
+              </span>
+              <button onclick="openExecModal('rangers')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 11: EVANGELISM & MISSIONS -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="outreach">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_54_evang.jpg" alt="Evangelism & Missions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-earth-africa mr-1"></i> Outreach & Service
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  EVANGELISM & MISSIONS
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Community evangelism, hospital visits, street preaching, and missionary support to win souls for Christ.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Monthly Outreach Days
+              </span>
+              <button onclick="openExecModal('evangelism')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 12: PRAYER TOWER -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_46_youthgroup.jpg" alt="Prayer Tower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-hands-praying mr-1"></i> Fellowships
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  PRAYER TOWER
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Intercessory prayer meetings, prophetic vigils, and standing in the gap for the church and community.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Thursdays 6:30 PM
+              </span>
+              <button onclick="openExecModal('prayer')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 13: SUNDAY SCHOOL -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_55_ssgroup.jpg" alt="Sunday School" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-book-bible mr-1"></i> Fellowships
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  SUNDAY SCHOOL
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Saturdays in-depth Word session, lesson preparation, and theological grounding for Sunday school teachers.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Saturdays 6:00 PM
+              </span>
+              <button onclick="openExecModal('sundayschool')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 14: WELFARE TEAM -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="outreach">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_11_mercy1.jpg" alt="Welfare Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-hand-holding-heart mr-1"></i> Outreach & Service
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  WELFARE TEAM
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Dedicated to the social well-being, financial relief, benevolence, and brotherly care of every church member.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Sundays After Service
+              </span>
+              <button onclick="openExecModal('welfare')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 15: USHERING & PROTOCOL -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="operations">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_26_patrick.jpg" alt="Ushering & Protocol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-door-open mr-1"></i> Operations & Media
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  USHERING & PROTOCOL
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Welcoming and hosting church guests, maintaining order, managing sanctuary seating, and event protocol.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> All Services
+              </span>
+              <button onclick="openExecModal('ushering')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 16: PROPERTIES -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="operations">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_3_steve.jpg" alt="Properties" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-building mr-1"></i> Operations & Media
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  PROPERTIES
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Management of church land, building maintenance, infrastructure upkeep, and physical asset stewardship.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> Stewardship Team
+              </span>
+              <button onclick="openExecModal('properties')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 17: MEDIA TEAM -->
+          <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="operations">
+            <div>
+              <div class="relative h-56 overflow-hidden bg-navy">
+                <img src="Department Images/imageye___-_imgi_56_med.png" alt="Media Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
+                  <i class="fa-solid fa-video mr-1"></i> Operations & Media
+                </span>
+              </div>
+
+              <div class="p-6 sm:p-7">
+                <h3 class="font-sora text-xl font-extrabold text-navy mb-3 group-hover:text-navy-secondary transition-colors">
+                  MEDIA TEAM
+                </h3>
+                <p class="font-inter text-xs sm:text-sm text-muted mb-6 leading-relaxed">
+                  Audio-visual production, live streaming coordination, sound engineering, and digital content creation.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 border-t border-navy/5 flex items-center justify-between gap-3 mt-auto">
+              <span class="font-sora text-xs font-semibold text-navy/80 flex items-center gap-1.5 bg-navy/5 px-3 py-1.5 rounded-lg">
+                <i class="fa-regular fa-clock text-gold"></i> All Services
+              </span>
+              <button onclick="openExecModal('media')" class="inline-flex items-center gap-1.5 font-sora text-xs font-bold text-navy hover:text-gold transition-colors cursor-pointer">
+                View Executives <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ READY TO SERVE CTA SECTION ═══════════════ -->
+    <section class="py-16 sm:py-24 bg-navy text-white relative border-t border-white/10 overflow-hidden">
+      <div class="max-w-[1280px] mx-auto px-6 md:px-12 text-center relative z-10">
+        
+        <span class="inline-block px-4 py-1.5 rounded-full border border-gold/40 bg-gold/15 font-sora text-xs font-bold text-gold uppercase tracking-wider mb-4">
+          GET INVOLVED
+        </span>
+
+        <h2 class="font-sora text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+          Ready to Serve?
+        </h2>
+
+        <p class="font-inter text-white/80 text-sm sm:text-base leading-relaxed max-w-lg mx-auto mb-8">
+          Contact us to learn more about joining any department or ministry at True Worshippers A/G.
+        </p>
+
+        <a href="contact.html" class="inline-flex items-center gap-2.5 px-8 py-4 bg-gold hover:bg-white text-navy font-sora text-xs sm:text-sm font-extrabold rounded-2xl shadow-xl hover:shadow-gold/20 hover:scale-105 active:scale-95 transition-all uppercase tracking-wider">
+          <span>Join a Department</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- White / Cream Spacing Buffer between Section and Footer -->
+    <div class="py-10 sm:py-16 bg-cream border-t border-b border-borderSubtle/40" aria-hidden="true"></div>
+
   </main>
+
+  <!-- ═══════════════ EXECUTIVE MODAL SYSTEM ═══════════════ -->
+  <div id="exec-modal" class="fixed inset-0 z-[2000] bg-navy/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4 sm:p-6" onclick="if(event.target === this) closeExecModal()">
+    <div id="exec-modal-card" class="bg-surface border border-borderSubtle/80 rounded-3xl shadow-2xl max-w-xl w-full p-6 sm:p-8 transform scale-95 transition-transform duration-300 relative overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-borderSubtle/40 pb-4 mb-6">
+        <div>
+          <span class="font-sora text-[11px] font-bold text-gold bg-navy px-3 py-1 rounded-full uppercase tracking-wider" id="modal-dept-category">MINISTRY EXECUTIVES</span>
+          <h3 class="font-sora text-xl sm:text-2xl font-extrabold text-navy mt-2" id="modal-dept-title">Department Leadership</h3>
+        </div>
+        <button onclick="closeExecModal()" class="w-10 h-10 rounded-full bg-cream text-navy hover:bg-navy hover:text-gold flex items-center justify-center text-lg transition-all cursor-pointer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Executives List Container) -->
+      <div class="space-y-4 max-h-[60vh] overflow-y-auto pr-1" id="modal-exec-list">
+        <!-- Dynamically injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="mt-6 pt-5 border-t border-borderSubtle/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="font-inter text-xs text-muted text-center sm:text-left">Interested in serving in this department?</p>
+        <a href="contact.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-navy hover:bg-gold hover:text-navy text-white font-sora text-xs font-bold rounded-xl transition-all shadow-md">
+          Join Department <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="bg-navy text-white pt-20 pb-10 border-t border-gold/30 mt-auto" role="contentinfo">
@@ -172,7 +814,7 @@
       <!-- Top Grid: 4 Columns -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-white/10">
         
-        <!-- Col 1: Logo & Church Info (lg:col-span-4) -->
+        <!-- Col 1: Logo & Church Info -->
         <div class="lg:col-span-4 flex flex-col">
           <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 mb-6 no-underline max-w-full" aria-label="True Worshippers A/G — Home">
             <img src="images/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
@@ -206,7 +848,7 @@
           </div>
         </div>
 
-        <!-- Col 2: Quick Links (lg:col-span-2) -->
+        <!-- Col 2: Quick Links -->
         <div class="lg:col-span-2 flex flex-col">
           <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Quick Links</h4>
           <ul class="space-y-3 font-inter text-sm text-white/70">
@@ -218,7 +860,7 @@
           </ul>
         </div>
 
-        <!-- Col 3: Service Times (lg:col-span-3) -->
+        <!-- Col 3: Service Times -->
         <div class="lg:col-span-3 flex flex-col">
           <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Service Times</h4>
           
@@ -240,7 +882,7 @@
           </div>
         </div>
 
-        <!-- Col 4: Contact & Location (lg:col-span-3) -->
+        <!-- Col 4: Contact & Location -->
         <div class="lg:col-span-3 flex flex-col">
           <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Contact Us</h4>
           
@@ -298,5 +940,211 @@
   </button>
 
   <script src="js/navbar.js"></script>
+  <script>
+    // ═══════════════ DEPARTMENT FILTERING LOGIC ═══════════════
+    function filterDepartments(category, btn) {
+      const buttons = document.querySelectorAll('.dept-filter-btn');
+      buttons.forEach(b => {
+        b.classList.remove('bg-navy', 'text-gold', 'border-navy', 'shadow-md');
+        b.classList.add('bg-surface', 'text-navy', 'border-borderSubtle/80');
+      });
+      if (btn) {
+        btn.classList.remove('bg-surface', 'text-navy', 'border-borderSubtle/80');
+        btn.classList.add('bg-navy', 'text-gold', 'border-navy', 'shadow-md');
+      }
+
+      const cards = document.querySelectorAll('.dept-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+          card.classList.add('animate-fadeIn');
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // ═══════════════ DEPARTMENT EXECUTIVES DATA ═══════════════
+    const deptExecData = {
+      sapphire: {
+        title: "The Sapphire Worship Team",
+        category: "WORSHIP & MUSIC EXECUTIVES",
+        executives: [
+          { name: "Ruth", role: "Worship Leader", photo: "Department Images/imageye___-_imgi_2_rutth1.jpg" },
+          { name: "Edna", role: "Assistant Leader", photo: "Department Images/imageye___-_imgi_12_edna1.jpg" },
+          { name: "Osei", role: "Music Coordinator", photo: "Department Images/imageye___-_imgi_10_osei.jpg" }
+        ]
+      },
+      choir: {
+        title: "Melodious Choir",
+        category: "CHOIR EXECUTIVES",
+        executives: [
+          { name: "Ekow", role: "Choir Master", photo: "Department Images/imageye___-_imgi_5_ekow.jpg" },
+          { name: "Mercy", role: "Assistant Director", photo: "Department Images/imageye___-_imgi_11_mercy1.jpg" },
+          { name: "Mabel Atta", role: "Secretary", photo: "Department Images/imageye___-_imgi_9_mabelAtta.jpg" }
+        ]
+      },
+      youth: {
+        title: "Youth Ministry",
+        category: "YOUTH EXECUTIVES",
+        executives: [
+          { name: "Elder Duodo", role: "Youth Patron", photo: "Department Images/imageye___-_imgi_34_duodo.png" },
+          { name: "Seth", role: "Youth President", photo: "Department Images/imageye___-_imgi_27_seth.jpg" },
+          { name: "Victor", role: "Vice President", photo: "Department Images/imageye___-_imgi_28_vict2.jpg" }
+        ]
+      },
+      children: {
+        title: "Children's Ministry",
+        category: "CHILDREN'S MINISTRY EXECUTIVES",
+        executives: [
+          { name: "Comfort Tetteh", role: "Superintendent", photo: "Department Images/imageye___-_imgi_8_comftetteh.jpg" },
+          { name: "Ivy", role: "Assistant Superintendent", photo: "Department Images/imageye___-_imgi_36_ivy.jpg" }
+        ]
+      },
+      women: {
+        title: "Women's Ministry",
+        category: "WOMEN'S MINISTRY EXECUTIVES",
+        executives: [
+          { name: "Mrs. Cecilia Sarpong", role: "Ministry Patron", photo: "Department Images/imageye___-_imgi_24_ceci.jpg" },
+          { name: "Mary", role: "President", photo: "Department Images/imageye___-_imgi_15_marywm.jpg" },
+          { name: "Aba", role: "Secretary", photo: "Department Images/imageye___-_imgi_13_aba.jpg" }
+        ]
+      },
+      joy: {
+        title: "Joy Fellowship",
+        category: "JOY FELLOWSHIP EXECUTIVES",
+        executives: [
+          { name: "Akos", role: "President", photo: "Department Images/imageye___-_imgi_21_akosjoy.jpg" },
+          { name: "Bee", role: "Vice President", photo: "Department Images/imageye___-_imgi_16_bee.jpg" }
+        ]
+      },
+      ys: {
+        title: "Young Singles (YS)",
+        category: "YOUNG SINGLES EXECUTIVES",
+        executives: [
+          { name: "Maabrafi", role: "Lead Coordinator", photo: "Department Images/imageye___-_imgi_17_maabrafi.jpg" },
+          { name: "Adwoa Dick", role: "Secretary", photo: "Department Images/imageye___-_imgi_18_adwoadick.jpg" }
+        ]
+      },
+      missionette: {
+        title: "Missionette",
+        category: "MISSIONETTE EXECUTIVES",
+        executives: [
+          { name: "Naomi Serwaa", role: "Senior Advisor", photo: "Department Images/imageye___-_imgi_22_naomiserwaa treasurer.jpg" },
+          { name: "Aba", role: "Coordinator", photo: "Department Images/imageye___-_imgi_32_aba2.jpg" }
+        ]
+      },
+      men: {
+        title: "Men's Ministry",
+        category: "MEN'S MINISTRY EXECUTIVES",
+        executives: [
+          { name: "Fosu", role: "President", photo: "Department Images/imageye___-_imgi_30_fosu.jpg" },
+          { name: "Takyi", role: "Vice President", photo: "Department Images/imageye___-_imgi_37_takyi1.jpg" },
+          { name: "Danny", role: "Secretary", photo: "Department Images/imageye___-_imgi_38_danny2c.jpg" }
+        ]
+      },
+      rangers: {
+        title: "Royal Rangers",
+        category: "ROYAL RANGERS EXECUTIVES",
+        executives: [
+          { name: "Kwaa", role: "Senior Commander", photo: "Department Images/imageye___-_imgi_31_kwa2.jpg" },
+          { name: "Blayy", role: "Outpost Leader", photo: "Department Images/imageye___-_imgi_29_blayy.jpg" }
+        ]
+      },
+      evangelism: {
+        title: "Evangelism & Missions",
+        category: "EVANGELISM EXECUTIVES",
+        executives: [
+          { name: "Patrick", role: "Evangelism Director", photo: "Department Images/imageye___-_imgi_26_patrick.jpg" },
+          { name: "Steve", role: "Missions Coordinator", photo: "Department Images/imageye___-_imgi_3_steve.jpg" }
+        ]
+      },
+      prayer: {
+        title: "Prayer Tower",
+        category: "PRAYER TOWER EXECUTIVES",
+        executives: [
+          { name: "Seth", role: "Intercession Lead", photo: "Department Images/imageye___-_imgi_27_seth.jpg" },
+          { name: "Mabel Atta", role: "Prayer Secretary", photo: "Department Images/imageye___-_imgi_9_mabelAtta.jpg" }
+        ]
+      },
+      sundayschool: {
+        title: "Sunday School Teachers",
+        category: "SUNDAY SCHOOL EXECUTIVES",
+        executives: [
+          { name: "Comfort Tetteh", role: "Head Teacher", photo: "Department Images/imageye___-_imgi_8_comftetteh.jpg" },
+          { name: "Edna", role: "Curriculum Coordinator", photo: "Department Images/imageye___-_imgi_12_edna1.jpg" }
+        ]
+      },
+      welfare: {
+        title: "Welfare Team",
+        category: "WELFARE EXECUTIVES",
+        executives: [
+          { name: "Mercy", role: "Welfare Director", photo: "Department Images/imageye___-_imgi_11_mercy1.jpg" },
+          { name: "Naomi Serwaa", role: "Treasurer", photo: "Department Images/imageye___-_imgi_22_naomiserwaa treasurer.jpg" }
+        ]
+      },
+      ushering: {
+        title: "Ushering & Protocol",
+        category: "USHERING EXECUTIVES",
+        executives: [
+          { name: "Patrick", role: "Head Usher", photo: "Department Images/imageye___-_imgi_26_patrick.jpg" },
+          { name: "Bee", role: "Protocol Director", photo: "Department Images/imageye___-_imgi_16_bee.jpg" }
+        ]
+      },
+      properties: {
+        title: "Properties & Assets",
+        category: "PROPERTIES EXECUTIVES",
+        executives: [
+          { name: "Steve", role: "Properties Manager", photo: "Department Images/imageye___-_imgi_3_steve.jpg" },
+          { name: "Fosu", role: "Asset Inspector", photo: "Department Images/imageye___-_imgi_30_fosu.jpg" }
+        ]
+      },
+      media: {
+        title: "Media Team",
+        category: "MEDIA TEAM EXECUTIVES",
+        executives: [
+          { name: "Prince", role: "Media Director", photo: "Department Images/imageye___-_imgi_35_prince.png" },
+          { name: "JS", role: "Audio-Visual Lead", photo: "Department Images/imageye___-_imgi_33_js.png" },
+          { name: "Elder Duodo", role: "Patron", photo: "Department Images/imageye___-_imgi_34_duodo.png" }
+        ]
+      }
+    };
+
+    // ═══════════════ EXEC MODAL CONTROLS ═══════════════
+    function openExecModal(deptKey) {
+      const data = deptExecData[deptKey];
+      if (!data) return;
+
+      document.getElementById('modal-dept-title').textContent = data.title;
+      document.getElementById('modal-dept-category').textContent = data.category;
+
+      const container = document.getElementById('modal-exec-list');
+      container.innerHTML = data.executives.map(exec => `
+        <div class="flex items-center gap-4 p-3 rounded-2xl bg-cream border border-borderSubtle/60 hover:border-gold/50 transition-all">
+          <img src="${exec.photo}" alt="${exec.name}" class="w-14 h-14 rounded-xl object-cover shrink-0 border border-navy/15 shadow-sm">
+          <div>
+            <h4 class="font-sora text-base font-bold text-navy">${exec.name}</h4>
+            <p class="font-inter text-xs text-muted font-medium">${exec.role}</p>
+          </div>
+        </div>
+      `).join('');
+
+      const modal = document.getElementById('exec-modal');
+      const card = document.getElementById('exec-modal-card');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      card.classList.remove('scale-95');
+      card.classList.add('scale-100');
+    }
+
+    function closeExecModal() {
+      const modal = document.getElementById('exec-modal');
+      const card = document.getElementById('exec-modal-card');
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      card.classList.remove('scale-100');
+      card.classList.add('scale-95');
+    }
+  </script>
 </body>
 </html>
