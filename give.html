@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Support True Worshippers A/G | give tithes and offerings via Mobile Money or bank transfer. Every contribution makes a difference.">
-  <title>Give | True Worshippers A/G</title>
+  <meta name="description" content="Support True Worshippers A/G | Give tithes, offerings, building funds, and seed contributions via Mobile Money or Bank Transfer. Every contribution makes an eternal impact.">
+  <title>Give to God's Work | True Worshippers A/G</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,23 +21,26 @@
       theme: {
         extend: {
           colors: {
-            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181' },
-            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58' },
+            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181', dark: '#0A0A1F' },
+            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58', dark: '#D97706' },
             cream: '#F7F6E4',
             surface: '#FEFEFE',
             muted: '#475467',
             borderSubtle: '#D0D5DD',
+            momoYellow: '#FFB800',
+            ecobankTeal: '#00A896'
           },
           fontFamily: {
             sora: ['Sora', 'sans-serif'],
             inter: ['Inter', 'sans-serif'],
+            serifQuote: ['Playfair Display', 'serif'],
           }
         }
       }
     }
   </script>
 
-  <!-- Pure Tailwind Helper & Animation Styles -->
+  <!-- Pure Tailwind Helper & Custom Animation Styles -->
   <style>
     .navbar--hidden { transform: translateY(-100%); }
     /* ── Mobile Menu Toggle Bars ── */
@@ -54,8 +57,7 @@
     .navbar__mobile-menu--open .navbar__mobile-cta,
     .navbar__mobile-menu--open .navbar__mobile-social { opacity: 1 !important; transform: translateX(0) !important; }
 
-    /* ── Mobile Active Link ── */
-    .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600 !important; }
+    /* ── Nav Links Underline Indicator ── */
     .navbar__link::after {
       content: '';
       position: absolute;
@@ -74,9 +76,16 @@
     }
     .navbar__link--active {
       color: #FEFEFE;
-      font-weight: 500;
+      font-weight: 600;
     }
     .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600; }
+
+    /* Custom Pulse & Glows */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+    .animate-pulse-glow { animation: pulseGlow 4s ease-in-out infinite; }
   </style>
 
   <!-- Favicon -->
@@ -97,20 +106,20 @@
         </div>
       </a>
 
-      <!-- Desktop Nav Links (Visible md:flex - 768px and up) -->
+      <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-1 lg:gap-2 xl:gap-3" id="navbar-links">
         <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="home">Home</a>
         <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="about">About Us</a>
         <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="events">Events</a>
         <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="devotions">Devotions</a>
         <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="departments">Departments</a>
-        <a href="give.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="give">Give</a>
+        <a href="give.html" class="navbar__link navbar__link--active relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] text-white tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200" data-page="give">Give</a>
       </div>
 
       <!-- CTA Button -->
       <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(250,204,21,0.3)] active:translate-y-0">Contact Us</a>
 
-      <!-- Mobile Toggle (Visible on screens < md) -->
+      <!-- Mobile Toggle -->
       <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-transparent border-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
         <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
@@ -122,25 +131,22 @@
   <!-- Mobile Overlay -->
   <div class="fixed inset-0 bg-navy/50 backdrop-blur-sm z-[999] opacity-0 transition-opacity duration-300 pointer-events-none navbar__mobile-overlay" id="navbar-mobile-overlay"></div>
 
-  <!-- Mobile Drawer Menu (With Minimal Top-Right Close Button) -->
+  <!-- Mobile Drawer Menu -->
   <nav class="fixed top-0 right-0 w-[min(340px,85vw)] h-screen bg-navy z-[1005] flex flex-col pt-[56px] sm:pt-[64px] px-[24px] sm:px-[32px] pb-[32px] translate-x-full transition-transform duration-300 overflow-y-auto navbar__mobile-menu" id="navbar-mobile-menu" aria-label="Mobile navigation">
-    <!-- Minimal Close Button -->
     <button class="absolute top-4 right-5 p-2 text-white/80 hover:text-gold transition-colors cursor-pointer" id="navbar-mobile-close" aria-label="Close menu">
       <i class="fa-solid fa-xmark text-[22px]"></i>
     </button>
 
-    <!-- Reduced Mobile Nav Links -->
     <div class="flex flex-col mt-4">
       <a href="index.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="home">Home</a>
       <a href="about.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="about">About Us</a>
       <a href="events.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="events">Events</a>
       <a href="devotions.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="devotions">Devotions</a>
       <a href="departments.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="departments">Departments</a>
-      <a href="give.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="give">Give</a>
+      <a href="give.html" class="navbar__mobile-link navbar__mobile-link--active flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-semibold text-gold tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:pl-[6px]" data-page="give">Give</a>
       <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary">Contact Us</a>
     </div>
 
-    <!-- Mobile Social Links -->
     <div class="navbar__mobile-social flex items-center gap-[16px] mt-auto pt-[24px]">
       <a href="https://web.facebook.com/TrueWorshippersAG" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="https://www.instagram.com/trueworshippersag?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-[32px] h-[32px] rounded-full border border-white/10 text-white/50 text-[13px] transition-colors duration-200 hover:text-gold hover:border-gold hover:bg-gold/10"><i class="fa-brands fa-instagram"></i></a>
@@ -150,20 +156,520 @@
     </div>
   </nav>
 
-  <!-- ═══════════════ PAGE CONTENT ═══════════════ -->
-  <main class="py-16 sm:py-24 bg-cream flex-grow">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
-      <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
-        GENEROSITY & STEWARDSHIP
-      </span>
-      <h1 class="font-sora text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-6">
-        Give & Tithing
-      </h1>
-      <p class="font-inter text-muted text-base md:text-lg leading-relaxed max-w-3xl">
-        Support the work of God’s ministry, kingdom expansion, and community outreach through Mobile Money (MoMo) or bank transfers.
-      </p>
-    </div>
+  <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+  <main class="flex-grow">
+
+    <!-- ═══════════════ HERO BANNER SECTION ═══════════════ -->
+    <section class="relative bg-navy text-white py-16 sm:py-20 lg:py-24 overflow-hidden border-b border-gold/20 shadow-2xl">
+      <!-- Background Ambient Glowing Shapes & Radial Gradients -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-gold/15 blur-3xl pointer-events-none animate-pulse-glow"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-navy-secondary/60 blur-3xl pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none"></div>
+
+      <div class="relative max-w-[1280px] mx-auto px-6 md:px-12 text-center z-10">
+        
+        <!-- Scripture Quote Banner -->
+        <div class="inline-block max-w-3xl mb-8 px-6 py-3 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md shadow-inner">
+          <p class="font-serifQuote italic text-sm sm:text-base md:text-lg text-gold/95 leading-relaxed">
+            &ldquo;Bring the full tithe into the storehouse, that there may be food in my house.&rdquo;
+          </p>
+          <span class="block mt-1 font-sora text-xs uppercase tracking-widest text-white/70 font-semibold">&mdash; Malachi 3:10</span>
+        </div>
+
+        <!-- Generosity Badge -->
+        <div class="flex items-center justify-center mb-5">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/15 border border-gold/40 font-sora text-xs font-bold text-gold uppercase tracking-widest backdrop-blur-md shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-gold animate-ping"></span>
+            Generosity
+          </span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="font-sora text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-5">
+          Give to God's Work
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="font-inter text-base sm:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+          Your giving fuels ministry, supports the community, and advances the Kingdom of God.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ SECTION 1: BANK & MOBILE MONEY DETAILS ═══════════════ -->
+    <section class="py-16 sm:py-20 bg-cream">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+        
+        <!-- Section Header -->
+        <div class="mb-10 text-left">
+          <span class="block font-sora text-xs font-bold text-gold-dark uppercase tracking-widest mb-2">
+            Payment Details
+          </span>
+          <h2 class="font-sora text-2xl sm:text-4xl font-extrabold text-navy leading-tight">
+            Bank & Mobile Money
+          </h2>
+        </div>
+
+        <!-- Grid Cards (MTN MoMo & Ecobank Cards) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+          <!-- ─── CARD 1: MTN MOBILE MONEY ─── -->
+          <div class="group relative bg-gradient-to-br from-[#FFC107] via-[#FFB800] to-[#E6A100] text-navy rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden border border-amber-300/60">
+            <!-- Glass Overlay Shine -->
+            <div class="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-white/20 blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+            
+            <div>
+              <!-- Card Header / Logo Badge -->
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-navy text-gold flex items-center justify-center text-xl shadow-md">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                  </div>
+                  <div>
+                    <span class="block font-sora text-xs font-bold uppercase tracking-wider text-navy/70">Mobile Wallet</span>
+                    <span class="font-sora text-lg font-extrabold text-navy">MTN Mobile Money</span>
+                  </div>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-navy/10 font-sora text-[11px] font-bold text-navy uppercase tracking-wider">MoMo</span>
+              </div>
+
+              <!-- Content Fields -->
+              <div class="space-y-4 font-inter text-navy/90">
+                <div class="bg-white/40 backdrop-blur-sm p-4 rounded-2xl border border-white/50">
+                  <span class="block font-sora text-[11px] font-bold text-navy/60 uppercase tracking-wider mb-1">Account Name</span>
+                  <p class="font-sora text-base sm:text-lg font-bold text-navy">John 10:2 Foundation</p>
+                </div>
+
+                <div class="bg-white/60 backdrop-blur-md p-4 rounded-2xl border border-white/80 shadow-sm flex items-center justify-between gap-4">
+                  <div class="overflow-hidden">
+                    <span class="block font-sora text-[11px] font-bold text-navy/60 uppercase tracking-wider mb-0.5">MoMo Number</span>
+                    <p class="font-sora text-xl sm:text-2xl font-black text-navy tracking-wider" id="momo-num-text">059 303 7700</p>
+                  </div>
+                  
+                  <button 
+                    onclick="copyToClipboard('0593037700', 'momo-copy-btn')" 
+                    id="momo-copy-btn"
+                    class="shrink-0 px-4 py-2.5 rounded-xl bg-navy text-gold hover:bg-navy-secondary font-sora text-xs font-bold uppercase tracking-wider transition-all duration-200 flex items-center gap-2 shadow-md hover:scale-105 active:scale-95 cursor-pointer"
+                    aria-label="Copy Mobile Money Number"
+                  >
+                    <i class="fa-regular fa-copy text-sm"></i>
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-sm p-4 rounded-2xl border border-white/50 flex items-center justify-between">
+                  <div>
+                    <span class="block font-sora text-[11px] font-bold text-navy/60 uppercase tracking-wider mb-0.5">Network</span>
+                    <p class="font-sora text-sm font-bold text-navy">MTN Ghana</p>
+                  </div>
+                  <i class="fa-solid fa-signal text-navy/40 text-lg"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Footer Note -->
+            <div class="mt-6 pt-4 border-t border-navy/10 flex items-center gap-2 font-inter text-xs text-navy/80">
+              <i class="fa-solid fa-circle-info text-navy"></i>
+              <span>Use Reference: Tithe, Offering, or Support</span>
+            </div>
+          </div>
+
+
+          <!-- ─── CARD 2: ECOBANK BANK TRANSFER ─── -->
+          <div class="group relative bg-gradient-to-br from-[#00A896] via-[#0284C7] to-[#0369A1] text-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden border border-cyan-400/40">
+            <!-- Glass Overlay Shine -->
+            <div class="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-white/20 blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+
+            <div>
+              <!-- Card Header / Logo Badge -->
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-white text-ecobankTeal flex items-center justify-center text-xl shadow-md">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <div>
+                    <span class="block font-sora text-xs font-bold uppercase tracking-wider text-white/80">Bank Transfer</span>
+                    <span class="font-sora text-lg font-extrabold text-white">Ecobank Ghana</span>
+                  </div>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md font-sora text-[11px] font-bold text-white uppercase tracking-wider">Bank</span>
+              </div>
+
+              <!-- Content Fields -->
+              <div class="space-y-4 font-inter text-white">
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20">
+                  <span class="block font-sora text-[11px] font-bold text-white/70 uppercase tracking-wider mb-1">Account Name</span>
+                  <p class="font-sora text-base sm:text-lg font-bold text-white">True Worshippers Assemblies of God</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20">
+                  <span class="block font-sora text-[11px] font-bold text-white/70 uppercase tracking-wider mb-1">Branch</span>
+                  <p class="font-sora text-sm font-bold text-white">Harper Road Branch</p>
+                </div>
+
+                <div class="bg-white/20 backdrop-blur-md p-4 rounded-2xl border border-white/30 shadow-sm flex items-center justify-between gap-4">
+                  <div class="overflow-hidden">
+                    <span class="block font-sora text-[11px] font-bold text-white/80 uppercase tracking-wider mb-0.5">Account Number</span>
+                    <p class="font-sora text-xl sm:text-2xl font-black text-white tracking-wider" id="bank-num-text">144 10021 34701</p>
+                  </div>
+                  
+                  <button 
+                    onclick="copyToClipboard('1441002134701', 'bank-copy-btn')" 
+                    id="bank-copy-btn"
+                    class="shrink-0 px-4 py-2.5 rounded-xl bg-gold text-navy hover:bg-gold-secondary font-sora text-xs font-bold uppercase tracking-wider transition-all duration-200 flex items-center gap-2 shadow-md hover:scale-105 active:scale-95 cursor-pointer"
+                    aria-label="Copy Bank Account Number"
+                  >
+                    <i class="fa-regular fa-copy text-sm"></i>
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Footer Note -->
+            <div class="mt-6 pt-4 border-t border-white/20 flex items-center gap-2 font-inter text-xs text-white/80">
+              <i class="fa-solid fa-shield-halved text-white"></i>
+              <span>Direct Bank Deposit / Wire Transfer Supported</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ SECTION 2: ONLINE GIVING FORM (CONTRIBUTION BUILDER) ═══════════════ -->
+    <section class="py-16 sm:py-20 bg-surface border-y border-navy/10 relative">
+      <div class="max-w-[840px] mx-auto px-6 md:px-12">
+        
+        <!-- Section Header -->
+        <div class="mb-10 text-center">
+          <span class="block font-sora text-xs font-bold text-gold-dark uppercase tracking-widest mb-2">
+            Online Giving
+          </span>
+          <h2 class="font-sora text-2xl sm:text-4xl font-extrabold text-navy leading-tight">
+            Make a Contribution
+          </h2>
+          <p class="mt-3 font-inter text-muted text-sm sm:text-base max-w-lg mx-auto">
+            Choose your contribution amount and category to proceed with your giving.
+          </p>
+        </div>
+
+        <!-- Giving Form Container -->
+        <div class="bg-cream/60 rounded-3xl p-6 sm:p-10 border border-navy/10 shadow-xl backdrop-blur-md">
+          <form id="giving-form" onsubmit="handleGivingSubmit(event)" class="space-y-6">
+
+            <!-- Select Amount Preset Pills -->
+            <div>
+              <label class="block font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
+                Select an amount
+              </label>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="amount-presets">
+                <button 
+                  type="button" 
+                  onclick="selectPresetAmount(50, this)"
+                  class="preset-btn py-3.5 px-4 rounded-xl border border-navy/20 bg-white font-sora text-sm font-bold text-navy hover:border-navy hover:bg-navy/5 transition-all duration-200 shadow-sm cursor-pointer active:scale-95"
+                >
+                  GH₵50
+                </button>
+
+                <button 
+                  type="button" 
+                  onclick="selectPresetAmount(100, this)"
+                  class="preset-btn py-3.5 px-4 rounded-xl border border-navy/20 bg-white font-sora text-sm font-bold text-navy hover:border-navy hover:bg-navy/5 transition-all duration-200 shadow-sm cursor-pointer active:scale-95"
+                >
+                  GH₵100
+                </button>
+
+                <button 
+                  type="button" 
+                  onclick="selectPresetAmount(200, this)"
+                  class="preset-btn py-3.5 px-4 rounded-xl border border-navy/20 bg-white font-sora text-sm font-bold text-navy hover:border-navy hover:bg-navy/5 transition-all duration-200 shadow-sm cursor-pointer active:scale-95"
+                >
+                  GH₵200
+                </button>
+
+                <button 
+                  type="button" 
+                  onclick="selectPresetAmount('other', this)"
+                  class="preset-btn py-3.5 px-4 rounded-xl border border-navy/20 bg-white font-sora text-sm font-bold text-navy hover:border-navy hover:bg-navy/5 transition-all duration-200 shadow-sm cursor-pointer active:scale-95"
+                >
+                  Other
+                </button>
+              </div>
+            </div>
+
+            <!-- Custom Amount Input -->
+            <div>
+              <label for="custom-amount" class="sr-only">Or enter custom amount (GH₵)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-4 flex items-center font-sora text-sm font-bold text-navy/50 pointer-events-none">
+                  GH₵
+                </span>
+                <input 
+                  type="number" 
+                  id="custom-amount" 
+                  name="custom-amount" 
+                  min="1" 
+                  step="any" 
+                  placeholder="Or enter custom amount (GH₵)" 
+                  oninput="handleCustomAmountInput(this)"
+                  class="w-full pl-14 pr-4 py-3.5 rounded-xl border border-navy/20 bg-white font-inter text-base text-navy placeholder:text-navy/40 focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition-all shadow-sm"
+                  required
+                >
+              </div>
+            </div>
+
+            <!-- Giving Category Dropdown -->
+            <div>
+              <label for="giving-category" class="sr-only">Select giving category</label>
+              <div class="relative">
+                <select 
+                  id="giving-category" 
+                  name="giving-category" 
+                  class="w-full pl-4 pr-10 py-3.5 rounded-xl border border-navy/20 bg-white font-inter text-base text-navy focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition-all shadow-sm appearance-none cursor-pointer"
+                  required
+                >
+                  <option value="" disabled selected>Select giving category</option>
+                  <option value="Tithe">Tithe (10%)</option>
+                  <option value="Sunday Offering">Sunday Offering</option>
+                  <option value="Building & Expansion Fund">Building & Expansion Fund</option>
+                  <option value="Missions & Outreach">Missions & Outreach</option>
+                  <option value="Welfare & Benevolence">Welfare & Benevolence</option>
+                  <option value="Thanksgiving Seed">Thanksgiving Seed</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-navy/60">
+                  <i class="fa-solid fa-chevron-down text-sm"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Full Name Input -->
+            <div>
+              <label for="full-name" class="sr-only">Your Full Name</label>
+              <input 
+                type="text" 
+                id="full-name" 
+                name="full-name" 
+                placeholder="Your Full Name" 
+                class="w-full px-4 py-3.5 rounded-xl border border-navy/20 bg-white font-inter text-base text-navy placeholder:text-navy/40 focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition-all shadow-sm"
+                required
+              >
+            </div>
+
+            <!-- Email Input -->
+            <div>
+              <label for="email-address" class="sr-only">Email (for receipt)</label>
+              <input 
+                type="email" 
+                id="email-address" 
+                name="email-address" 
+                placeholder="Email (for receipt)" 
+                class="w-full px-4 py-3.5 rounded-xl border border-navy/20 bg-white font-inter text-base text-navy placeholder:text-navy/40 focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition-all shadow-sm"
+                required
+              >
+            </div>
+
+            <!-- Submit CTA Button -->
+            <button 
+              type="submit" 
+              class="w-full py-4 px-6 rounded-xl bg-gold text-navy hover:bg-gold-secondary font-sora text-sm sm:text-base font-bold uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3 cursor-pointer"
+            >
+              <span>Proceed to Give</span>
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ SECTION 3: GIVING FAQ ═══════════════ -->
+    <section class="py-16 sm:py-20 bg-cream">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+        
+        <!-- Section Header -->
+        <div class="mb-12 text-left">
+          <span class="block font-sora text-xs font-bold text-gold-dark uppercase tracking-widest mb-2">
+            FAQ
+          </span>
+          <h2 class="font-sora text-2xl sm:text-4xl font-extrabold text-navy leading-tight">
+            Giving FAQ
+          </h2>
+        </div>
+
+        <!-- 2x2 FAQ Card Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+
+          <!-- FAQ Card 1 -->
+          <div class="bg-surface rounded-2xl p-6 sm:p-8 border border-gold/30 shadow-md hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-gold/15 text-navy flex items-center justify-center text-lg shrink-0 mt-1">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+              <div>
+                <h3 class="font-sora text-base sm:text-lg font-bold text-navy mb-2">
+                  Is my giving secure?
+                </h3>
+                <p class="font-inter text-muted text-sm leading-relaxed">
+                  Yes. All online transactions are encrypted and processed securely through our verified payment provider.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Card 2 -->
+          <div class="bg-surface rounded-2xl p-6 sm:p-8 border border-gold/30 shadow-md hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-gold/15 text-navy flex items-center justify-center text-lg shrink-0 mt-1">
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+              <div>
+                <h3 class="font-sora text-base sm:text-lg font-bold text-navy mb-2">
+                  Can I give regularly?
+                </h3>
+                <p class="font-inter text-muted text-sm leading-relaxed">
+                  Yes. You can set up a recurring giving schedule for tithes and offerings through your bank.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Card 3 -->
+          <div class="bg-surface rounded-2xl p-6 sm:p-8 border border-gold/30 shadow-md hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-gold/15 text-navy flex items-center justify-center text-lg shrink-0 mt-1">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+              <div>
+                <h3 class="font-sora text-base sm:text-lg font-bold text-navy mb-2">
+                  Do I get a receipt?
+                </h3>
+                <p class="font-inter text-muted text-sm leading-relaxed">
+                  A confirmation is sent to your email address after every successful transaction.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Card 4 -->
+          <div class="bg-surface rounded-2xl p-6 sm:p-8 border border-gold/30 shadow-md hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-gold/15 text-navy flex items-center justify-center text-lg shrink-0 mt-1">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <div>
+                <h3 class="font-sora text-base sm:text-lg font-bold text-navy mb-2">
+                  What does my giving support?
+                </h3>
+                <p class="font-inter text-muted text-sm leading-relaxed">
+                  Tithes, building fund, outreach missions, and church welfare programmes across the community.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
+
+
+  <!-- ═══════════════ PROCEED TO GIVE CONFIRMATION MODAL ═══════════════ -->
+  <div id="giving-modal" class="fixed inset-0 z-[2000] hidden flex items-center justify-center p-4 sm:p-6 bg-navy/80 backdrop-blur-md transition-opacity duration-300 opacity-0 pointer-events-none">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-gold/40 transform transition-all duration-300 scale-95" id="giving-modal-content">
+      
+      <!-- Modal Header -->
+      <div class="bg-navy text-white p-6 relative flex items-center justify-between border-b border-gold/20">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gold text-navy flex items-center justify-center text-lg font-bold">
+            <i class="fa-solid fa-heart-circle-check"></i>
+          </div>
+          <div>
+            <h3 class="font-sora text-lg font-bold text-white">Contribution Summary</h3>
+            <p class="font-inter text-xs text-gold">True Worshippers A/G</p>
+          </div>
+        </div>
+        <button onclick="closeGivingModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 space-y-5 font-inter text-navy">
+        
+        <!-- Summary Card -->
+        <div class="bg-cream rounded-2xl p-4 border border-navy/10 space-y-2">
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-muted">Amount:</span>
+            <span class="font-sora text-lg font-black text-navy" id="modal-summary-amount">GH₵0.00</span>
+          </div>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-muted">Category:</span>
+            <span class="font-sora text-sm font-bold text-navy" id="modal-summary-category">-</span>
+          </div>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-muted">Giver Name:</span>
+            <span class="font-sora text-sm font-medium text-navy" id="modal-summary-name">-</span>
+          </div>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-muted">Email:</span>
+            <span class="font-sora text-xs font-medium text-navy/80" id="modal-summary-email">-</span>
+          </div>
+        </div>
+
+        <!-- Instructions Box -->
+        <div class="bg-amber-50 rounded-2xl p-4 border border-amber-200 space-y-3">
+          <h4 class="font-sora text-xs font-bold uppercase tracking-wider text-amber-900 flex items-center gap-2">
+            <i class="fa-solid fa-mobile-screen text-amber-600"></i>
+            Mobile Money Prompt Instructions
+          </h4>
+          <ol class="list-decimal list-inside text-xs text-amber-900 space-y-1.5 leading-relaxed font-inter">
+            <li>Dial <strong class="font-bold text-navy">*170#</strong> on your phone.</li>
+            <li>Select <strong class="font-bold text-navy">Transfer Money</strong> &rarr; <strong class="font-bold text-navy">MoMo User</strong>.</li>
+            <li>Enter Number: <strong class="font-bold text-navy">059 303 7700</strong> (John 10:2 Foundation).</li>
+            <li>Enter Amount: <strong class="font-bold text-navy" id="modal-instruction-amount">GH₵0</strong>.</li>
+            <li>Use Reference: <strong class="font-bold text-navy" id="modal-instruction-ref">Tithe</strong>.</li>
+            <li>Confirm transaction with your MoMo PIN.</li>
+          </ol>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <button 
+            onclick="copyToClipboard('0593037700', 'modal-copy-momo')" 
+            id="modal-copy-momo"
+            class="flex-1 py-3 px-4 rounded-xl bg-navy text-gold hover:bg-navy-secondary font-sora text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span>Copy MoMo Number</span>
+          </button>
+          
+          <button 
+            onclick="completeGivingSimulation()" 
+            class="flex-1 py-3 px-4 rounded-xl bg-gold text-navy hover:bg-gold-secondary font-sora text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+          >
+            <i class="fa-solid fa-check"></i>
+            <span>I Have Sent Payment</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════ TOAST NOTIFICATION CONTAINER ═══════════════ -->
+  <div id="toast-container" class="fixed bottom-6 left-6 z-[3000] flex flex-col gap-2 pointer-events-none"></div>
+
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="bg-navy text-white pt-20 pb-10 border-t border-gold/30 mt-auto" role="contentinfo">
@@ -214,6 +720,7 @@
             <li><a href="about.html" class="hover:text-gold transition-colors inline-block">About Us</a></li>
             <li><a href="events.html" class="hover:text-gold transition-colors inline-block">Events</a></li>
             <li><a href="devotions.html" class="hover:text-gold transition-colors inline-block">Devotions</a></li>
+            <li><a href="departments.html" class="hover:text-gold transition-colors inline-block">Departments</a></li>
             <li><a href="give.html" class="hover:text-gold transition-colors inline-block">Give</a></li>
           </ul>
         </div>
@@ -225,17 +732,17 @@
           <div class="space-y-4 font-inter text-sm text-white/80">
             <div>
               <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Sunday Worship</strong>
-              <span>8:30 AM — 12:00 PM</span>
+              <span>8:30 AM &mdash; 12:00 PM</span>
             </div>
 
             <div>
               <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Tuesday Bible Studies</strong>
-              <span>6:00 PM — 7:00 PM</span>
+              <span>6:00 PM &mdash; 7:00 PM</span>
             </div>
 
             <div>
               <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Wednesday Miracle Service</strong>
-              <span>9:00 AM — 12:00 PM</span>
+              <span>9:00 AM &mdash; 12:00 PM</span>
             </div>
           </div>
         </div>
@@ -275,11 +782,11 @@
 
       <!-- Bottom Bar: Copyright -->
       <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-inter text-xs text-white/60">
-        <p>© 2026 True Worshippers A/G, Old Tafo-Abono. All Rights Reserved.</p>
+        <p>&copy; 2026 True Worshippers A/G, Old Tafo-Abono. All Rights Reserved.</p>
         
         <div class="flex items-center gap-6">
           <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
-          <span>•</span>
+          <span>&bull;</span>
           <a href="#" class="hover:text-gold transition-colors">Terms of Use</a>
         </div>
       </div>
@@ -298,5 +805,207 @@
   </button>
 
   <script src="js/navbar.js"></script>
+
+  <!-- ═══════════════ PAGE INTERACTIVITY SCRIPT ═══════════════ -->
+  <script>
+    // Copy to Clipboard Utility
+    function copyToClipboard(text, btnId) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          showCopySuccess(btnId, text);
+        }).catch(err => {
+          fallbackCopyText(text, btnId);
+        });
+      } else {
+        fallbackCopyText(text, btnId);
+      }
+    }
+
+    function fallbackCopyText(text, btnId) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.opacity = "0";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showCopySuccess(btnId, text);
+      } catch (err) {
+        showToast("Unable to copy to clipboard", "error");
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function showCopySuccess(btnId, text) {
+      const btn = document.getElementById(btnId);
+      if (btn) {
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = `<i class="fa-solid fa-check text-sm"></i><span>Copied!</span>`;
+        btn.classList.add('bg-green-600', 'text-white');
+
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.classList.remove('bg-green-600', 'text-white');
+        }, 2200);
+      }
+      showToast(`Copied ${text} to clipboard!`, "success");
+    }
+
+    // Toast Notification System
+    function showToast(message, type = "success") {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-2xl text-xs font-sora font-semibold shadow-2xl transition-all duration-300 transform translate-y-4 opacity-0 ${
+        type === "success" 
+          ? "bg-navy text-gold border border-gold/40" 
+          : "bg-red-900 text-white border border-red-500"
+      }`;
+
+      toast.innerHTML = `
+        <i class="${type === 'success' ? 'fa-solid fa-circle-check text-gold' : 'fa-solid fa-circle-exclamation text-red-300'} text-base"></i>
+        <span>${message}</span>
+      `;
+
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-4', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-4', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // Amount Preset Pill Button Handler
+    function selectPresetAmount(amount, element) {
+      const presetBtns = document.querySelectorAll('.preset-btn');
+      presetBtns.forEach(btn => {
+        btn.classList.remove('bg-navy', 'text-gold', 'border-navy', 'shadow-md', 'scale-105');
+        btn.classList.add('bg-white', 'text-navy', 'border-navy/20');
+      });
+
+      if (element) {
+        element.classList.remove('bg-white', 'text-navy', 'border-navy/20');
+        element.classList.add('bg-navy', 'text-gold', 'border-navy', 'shadow-md', 'scale-105');
+      }
+
+      const customInput = document.getElementById('custom-amount');
+      if (amount === 'other') {
+        customInput.value = '';
+        customInput.focus();
+      } else {
+        customInput.value = amount;
+      }
+    }
+
+    function handleCustomAmountInput(input) {
+      // Un-highlight presets if user types custom amount directly
+      const val = parseFloat(input.value);
+      const presetBtns = document.querySelectorAll('.preset-btn');
+      
+      let matchedPreset = false;
+      presetBtns.forEach(btn => {
+        const text = btn.innerText.replace('GH₵', '').trim();
+        if (text === input.value) {
+          btn.classList.remove('bg-white', 'text-navy', 'border-navy/20');
+          btn.classList.add('bg-navy', 'text-gold', 'border-navy', 'shadow-md', 'scale-105');
+          matchedPreset = true;
+        } else if (text !== 'Other') {
+          btn.classList.remove('bg-navy', 'text-gold', 'border-navy', 'shadow-md', 'scale-105');
+          btn.classList.add('bg-white', 'text-navy', 'border-navy/20');
+        }
+      });
+
+      if (!matchedPreset && input.value !== '') {
+        const otherBtn = presetBtns[presetBtns.length - 1];
+        if (otherBtn) {
+          otherBtn.classList.remove('bg-white', 'text-navy', 'border-navy/20');
+          otherBtn.classList.add('bg-navy', 'text-gold', 'border-navy', 'shadow-md', 'scale-105');
+        }
+      }
+    }
+
+    // Modal Control
+    function handleGivingSubmit(e) {
+      e.preventDefault();
+      const amount = document.getElementById('custom-amount').value;
+      const category = document.getElementById('giving-category').value;
+      const name = document.getElementById('full-name').value;
+      const email = document.getElementById('email-address').value;
+
+      if (!amount || amount <= 0) {
+        showToast("Please enter a valid contribution amount.", "error");
+        return;
+      }
+      if (!category) {
+        showToast("Please select a giving category.", "error");
+        return;
+      }
+
+      // Populate Modal
+      document.getElementById('modal-summary-amount').textContent = `GH₵${parseFloat(amount).toFixed(2)}`;
+      document.getElementById('modal-summary-category').textContent = category;
+      document.getElementById('modal-summary-name').textContent = name;
+      document.getElementById('modal-summary-email').textContent = email;
+
+      document.getElementById('modal-instruction-amount').textContent = `GH₵${parseFloat(amount).toFixed(2)}`;
+      document.getElementById('modal-instruction-ref').textContent = category;
+
+      openGivingModal();
+    }
+
+    function openGivingModal() {
+      const modal = document.getElementById('giving-modal');
+      const content = document.getElementById('giving-modal-content');
+
+      modal.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        content.classList.remove('scale-95');
+        content.classList.add('scale-100');
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGivingModal() {
+      const modal = document.getElementById('giving-modal');
+      const content = document.getElementById('giving-modal-content');
+
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      content.classList.remove('scale-100');
+      content.classList.add('scale-95');
+
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    function completeGivingSimulation() {
+      closeGivingModal();
+      showToast("God bless you! Your giving instruction has been recorded.", "success");
+      document.getElementById('giving-form').reset();
+
+      // Reset preset buttons
+      document.querySelectorAll('.preset-btn').forEach(btn => {
+        btn.classList.remove('bg-navy', 'text-gold', 'border-navy', 'shadow-md', 'scale-105');
+        btn.classList.add('bg-white', 'text-navy', 'border-navy/20');
+      });
+    }
+
+    // Auto-select GH₵100 as initial default preset on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const defaultPill = document.querySelectorAll('.preset-btn')[1]; // GH₵100
+      if (defaultPill) {
+        selectPresetAmount(100, defaultPill);
+      }
+    });
+  </script>
 </body>
 </html>
