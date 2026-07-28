@@ -307,7 +307,7 @@
                 <i class="fa-brands fa-youtube text-xs"></i> YouTube
               </a>
 
-              <button onclick="navigator.clipboard.writeText('https://www.youtube.com/live/FmM-iOfXy0Y?si=YIxm048rUsORiFcm'); alert('Live stream URL copied to clipboard!');" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-white font-sora text-xs font-bold rounded-none transition-all border border-white/20 hover:scale-105 active:scale-95">
+              <button onclick="copyLiveUrl(this)" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-white font-sora text-xs font-bold rounded-none transition-all border border-white/20 hover:scale-105 active:scale-95">
                 <i class="fa-solid fa-share-nodes text-[10px]"></i> Share
               </button>
             </div>
@@ -746,6 +746,19 @@
   <script>
     function loadYtVideo(container, videoId) {
       container.innerHTML = `<iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/${videoId}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    }
+
+    function copyLiveUrl(btn) {
+      const liveUrl = 'https://www.youtube.com/live/FmM-iOfXy0Y?si=YIxm048rUsORiFcm';
+      navigator.clipboard.writeText(liveUrl).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check text-gold text-[10px]"></i> Copied!';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+        }, 2000);
+      }).catch(() => {
+        alert('Live stream URL: ' + liveUrl);
+      });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
