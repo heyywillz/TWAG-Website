@@ -16,26 +16,7 @@
 
   <!-- Tailwind CSS v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181' },
-            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58' },
-            cream: '#F7F6E4',
-            surface: '#FEFEFE',
-            muted: '#475467',
-            borderSubtle: '#D0D5DD',
-          },
-          fontFamily: {
-            sora: ['Sora', 'sans-serif'],
-            inter: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <script src="js/tailwind.config.js"></script>
 
   <!-- Pure Tailwind Helper & Animation Styles -->
   <style>
@@ -79,7 +60,7 @@
   </style>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/twag-icon.png">
+  <link rel="icon" type="image/png" href="images/logos/twag-icon.png">
 </head>
 <body class="font-sora font-normal bg-cream text-navy leading-relaxed min-h-screen flex flex-col justify-between pt-[64px] sm:pt-[76px] lg:pt-[84px] overflow-x-hidden">
 
@@ -89,7 +70,7 @@
 
       <!-- Logo & Brand Name -->
       <a href="index.html" class="flex items-center gap-0 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
-        <img src="images/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
+        <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
         <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
           <span class="font-sora text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
           <span class="font-sora text-[12px] sm:text-[15px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
@@ -152,7 +133,7 @@
     <!-- ═══════════════ HERO BANNER SECTION ═══════════════ -->
     <section class="relative py-20 sm:py-24 lg:py-28 text-white text-center overflow-hidden border-b border-white/10">
       <!-- Background Worship Photo -->
-      <img src="images/sapphire-group.jpg" alt="True Worshippers A/G Departments" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
+      <img src="images/ministries/sapphire-group.jpg" alt="True Worshippers A/G Departments" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
       <!-- Subtle Navy Gradient Overlay -->
       <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/60 to-navy/40 pointer-events-none"></div>
 
@@ -214,7 +195,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="worship">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/sapphire-group.jpg" alt="The Sapphire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/sapphire-group.jpg" alt="The Sapphire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Worship & Music
@@ -247,7 +228,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="worship">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/melodious-choir-group.jpg" alt="Melodious Choir" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/melodious-choir-group.jpg" alt="Melodious Choir" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Worship & Music
@@ -280,7 +261,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="youth">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/youth-group.jpg" alt="Youth Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/youth-group.jpg" alt="Youth Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Youth & Children
@@ -313,7 +294,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="youth">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/children-group.jpg" alt="Children's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/children-group.jpg" alt="Children's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Youth & Children
@@ -346,7 +327,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/women-ministry-group.jpg" alt="Women's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/women-ministry-group.jpg" alt="Women's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Fellowships
@@ -379,7 +360,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/joy-fellowship-group.jpg" alt="Joy Fellowship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/joy-fellowship-group.jpg" alt="Joy Fellowship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Fellowships
@@ -412,7 +393,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/young-singles-group.jpg" alt="Young Singles (YS)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/young-singles-group.jpg" alt="Young Singles (YS)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Fellowships
@@ -445,7 +426,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="youth">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/missionette-group.jpg" alt="Missionette" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/missionette-group.jpg" alt="Missionette" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Youth & Girls
@@ -478,7 +459,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="men">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/mens-group.jpg" alt="Men's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/mens-group.jpg" alt="Men's Ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Men & Outdoor
@@ -511,7 +492,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="men">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/royal-rangers-group.jpg" alt="Royal Rangers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/royal-rangers-group.jpg" alt="Royal Rangers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Men & Outdoor
@@ -544,7 +525,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="outreach">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/evangelism-group.jpg" alt="Evangelism & Missions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/evangelism-group.jpg" alt="Evangelism & Missions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Outreach & Service
@@ -577,7 +558,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/hero-worship.jpg" alt="Prayer Tower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/hero/hero-worship.jpg" alt="Prayer Tower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Fellowships
@@ -610,7 +591,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="fellowship">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/sunday-school-group.jpg" alt="Sunday School" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/sunday-school-group.jpg" alt="Sunday School" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Fellowships
@@ -643,7 +624,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="outreach">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/juliana-donkor.png" alt="Welfare Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/leadership/juliana-donkor.png" alt="Welfare Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Outreach & Service
@@ -676,7 +657,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="operations">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/prince-agyemang.png" alt="Ushering & Protocol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/leadership/prince-agyemang.png" alt="Ushering & Protocol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Operations & Media
@@ -709,7 +690,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="operations">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/patrick-gyamfi.jpg" alt="Properties" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/leadership/patrick-gyamfi.jpg" alt="Properties" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Operations & Media
@@ -742,7 +723,7 @@
           <div class="dept-card bg-surface rounded-3xl border border-borderSubtle/60 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group" data-category="operations">
             <div>
               <div class="relative h-56 overflow-hidden bg-navy">
-                <img src="images/media-team-group.png" alt="Media Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="images/ministries/media-team-group.png" alt="Media Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
                 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy/80 backdrop-blur-md text-gold font-sora text-[11px] font-bold uppercase tracking-wider border border-gold/30">
                   Operations & Media
@@ -846,7 +827,7 @@
         <!-- Col 1: Logo & Church Info -->
         <div class="lg:col-span-4 flex flex-col">
           <a href="index.html" class="flex items-center gap-0 mb-6 no-underline max-w-full" aria-label="True Worshippers A/G — Home">
-            <img src="images/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
+            <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
             <div class="flex flex-col justify-center leading-tight min-w-0">
               <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-wider sm:tracking-widest uppercase truncate">Assemblies of God, Ghana</span>
               <span class="font-sora text-sm sm:text-lg lg:text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
@@ -969,230 +950,6 @@
   </button>
 
   <script src="js/navbar.js"></script>
-  <script>
-    // ═══════════════ DEPARTMENT FILTERING LOGIC ═══════════════
-    function filterDepartments(category, btn) {
-      const buttons = document.querySelectorAll('.dept-filter-btn');
-      buttons.forEach(b => {
-        b.classList.remove('bg-navy', 'text-gold', 'border-navy', 'shadow-md');
-        b.classList.add('bg-surface', 'text-navy', 'border-borderSubtle/80');
-      });
-      if (btn) {
-        btn.classList.remove('bg-surface', 'text-navy', 'border-borderSubtle/80');
-        btn.classList.add('bg-navy', 'text-gold', 'border-navy', 'shadow-md');
-      }
-
-      const cards = document.querySelectorAll('.dept-card');
-      cards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'flex';
-          card.classList.add('animate-fadeIn');
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // ═══════════════ EXACT DEPARTMENT EXECUTIVES DATA ═══════════════
-    const deptExecData = {
-      sapphire: {
-        title: "The Sapphire Worship Team",
-        category: "WORSHIP & MUSIC EXECUTIVES",
-        executives: [
-          { name: "Ruth Mensah", role: "President", photo: "images/ruth-mensah.jpg" },
-          { name: "Stephen Adu", role: "Music Director", photo: "images/stephen-adu.jpg" },
-          { name: "Hannah Fosu", role: "Treasurer", initials: "HF" }
-        ]
-      },
-      choir: {
-        title: "Melodious Choir",
-        category: "CHOIR EXECUTIVES",
-        executives: [
-          { name: "Stephen Adu", role: "President", photo: "images/stephen-adu.jpg" },
-          { name: "Isaac Boafo", role: "Choir Director", photo: "images/isaac-boafo.jpg" },
-          { name: "Yoosi Ankomah", role: "Choir Director", photo: "images/eric-takyi-mensah.jpg" },
-          { name: "Patience Ansong", role: "Secretary", photo: "images/ivy-yeboah.jpg" },
-          { name: "Comfort Tetteh", role: "Treasurer", photo: "images/comfort-tetteh.jpg" },
-          { name: "Mabel Afriyie", role: "Curator", photo: "images/mabel-afriyie.jpg" }
-        ]
-      },
-      youth: {
-        title: "Youth Ministry",
-        category: "YOUTH EXECUTIVES",
-        executives: [
-          { name: "Pastor Emmanuel Osei Mensah", role: "President", photo: "images/emmanuel-osei.jpg" },
-          { name: "Stephen Adu", role: "Vice President", photo: "images/stephen-adu.jpg" },
-          { name: "Mercy Oduro", role: "Secretary", photo: "images/mercy-oduro.jpg" },
-          { name: "Edna Konadu Boah", role: "Treasurer", photo: "images/edna-konadu-boah.jpg" }
-        ]
-      },
-      children: {
-        title: "Children's Ministry",
-        category: "CHILDREN'S MINISTRY EXECUTIVES",
-        executives: [
-          { name: "Mavis Aba Baffoe", role: "Teacher", photo: "images/mavis-aba-baffoe.jpg" },
-          { name: "Frank Boadu", role: "Teacher", photo: "images/frank-boadu.png" }
-        ]
-      },
-      women: {
-        title: "Women's Ministry",
-        category: "WOMEN'S MINISTRY EXECUTIVES",
-        executives: [
-          { name: "Mary Owusu", role: "President", photo: "images/mary-owusu.jpg" },
-          { name: "Beatrice Owusu", role: "Vice President", photo: "images/beatrice-owusu.jpg" },
-          { name: "Victoria Yeboah", role: "Secretary", photo: "images/victoria-yeboah.jpg" },
-          { name: "Mary Aboagye", role: "Treasurer", photo: "images/mary-aboagye.jpg" }
-        ]
-      },
-      joy: {
-        title: "Joy Fellowship",
-        category: "JOY FELLOWSHIP EXECUTIVES",
-        executives: [
-          { name: "Juliana Manu", role: "President", initials: "JM" },
-          { name: "Juliana Donkor", role: "Vice President", photo: "images/juliana-donkor.png" },
-          { name: "Agartha", role: "Treasurer", initials: "A" },
-          { name: "Abigail Asante", role: "Secretary", photo: "images/abigail-asante.jpg" }
-        ]
-      },
-      ys: {
-        title: "Young Singles (YS)",
-        category: "YOUNG SINGLES EXECUTIVES",
-        executives: [
-          { name: "Jane Doe", role: "President", initials: "JD" },
-          { name: "Jane Doe II", role: "Vice President", initials: "JD" },
-          { name: "Jane Doe III", role: "Secretary", initials: "JD" },
-          { name: "Naomi Serwaa", role: "Treasurer", photo: "images/naomi-serwaa.jpg" },
-          { name: "Hagar Panful", role: "Sponsor", photo: "images/hagar-panful.png" }
-        ]
-      },
-      missionette: {
-        title: "Missionette",
-        category: "MISSIONETTE EXECUTIVES",
-        executives: [
-          { name: "Mavis Aba Baffoe", role: "Sponsor", photo: "images/mavis-aba-baffoe.jpg" },
-          { name: "Cecilia Opoku", role: "Sponsor", photo: "images/cecilia-opoku.jpg" },
-          { name: "Juliana Donkor", role: "Sponsor", photo: "images/juliana-donkor.png" },
-          { name: "Christiana Mensah", role: "Sponsor", initials: "CM" }
-        ]
-      },
-      men: {
-        title: "Men's Ministry",
-        category: "MEN'S MINISTRY EXECUTIVES",
-        executives: [
-          { name: "Patrick Gyamfi", role: "President", photo: "images/patrick-gyamfi.jpg" },
-          { name: "Seth Boakye", role: "Vice President", photo: "images/seth-boakye.jpg" },
-          { name: "Victor Agyemang", role: "Secretary", photo: "images/victor-agyemang.jpg" },
-          { name: "Richard Blay", role: "Organizer", photo: "images/richard-blay.jpg" },
-          { name: "Frank Boadu", role: "Treasurer", photo: "images/frank-boadu.png" }
-        ]
-      },
-      rangers: {
-        title: "Royal Rangers",
-        category: "ROYAL RANGERS EXECUTIVES",
-        executives: [
-          { name: "Patrick Gyamfi", role: "Sponsor", photo: "images/patrick-gyamfi.jpg" },
-          { name: "Fiifi Baffoe", role: "Commander", initials: "FB" }
-        ]
-      },
-      evangelism: {
-        title: "Evangelism & Missions",
-        category: "EVANGELISM EXECUTIVES",
-        executives: [
-          { name: "Pastor Emmanuel Osei Mensah", role: "President", photo: "images/emmanuel-osei.jpg" },
-          { name: "Deacon Emmanuel Fosu", role: "Vice President", photo: "images/emmanuel-fosu.jpg" },
-          { name: "Eric Amoah", role: "Secretary", photo: "images/eric-amoah.jpg" }
-        ]
-      },
-      prayer: {
-        title: "Prayer Tower",
-        category: "PRAYER TOWER EXECUTIVES",
-        executives: [
-          { name: "Eric Amoah", role: "President", photo: "images/eric-amoah.jpg" },
-          { name: "Emmanuel Osei", role: "Vice President", photo: "images/emmanuel-osei.jpg" }
-        ]
-      },
-      sundayschool: {
-        title: "Sunday School",
-        category: "SUNDAY SCHOOL EXECUTIVES",
-        executives: [
-          { name: "Mavis Aba Baffoe", role: "SS Superintendent", photo: "images/mavis-aba-baffoe-2.jpg" },
-          { name: "Johnson Adu", role: "Vice President", photo: "images/johnson-adu.png" }
-        ]
-      },
-      welfare: {
-        title: "Welfare Team",
-        category: "WELFARE EXECUTIVES",
-        executives: [
-          { name: "Juliana Donkor", role: "President", photo: "images/juliana-donkor.png" },
-          { name: "James Duodu", role: "Vice President", photo: "images/james-duodu.png" }
-        ]
-      },
-      ushering: {
-        title: "Ushering & Protocol",
-        category: "USHERING EXECUTIVES",
-        executives: [
-          { name: "Prince Agyemang", role: "President", photo: "images/prince-agyemang.png" },
-          { name: "Ivy Yeboah", role: "Vice President", photo: "images/ivy-yeboah.jpg" }
-        ]
-      },
-      properties: {
-        title: "Properties",
-        category: "PROPERTIES EXECUTIVES",
-        executives: [
-          { name: "Patrick Gyamfi", role: "Chairman", photo: "images/patrick-gyamfi.jpg" },
-          { name: "Eric Takyi Mensah", role: "Vice Chairman", photo: "images/eric-takyi-mensah.jpg" },
-          { name: "Comfort Tetteh", role: "Secretary", photo: "images/comfort-tetteh.jpg" }
-        ]
-      },
-      media: {
-        title: "Media Team",
-        category: "MEDIA TEAM EXECUTIVES",
-        executives: [
-          { name: "Stephen Adu", role: "President", photo: "images/stephen-adu.jpg" },
-          { name: "Daniel Sarpong", role: "Head of Production", photo: "images/daniel-sarpong.jpg" },
-          { name: "Eric Amoah", role: "Sound Manager", photo: "images/eric-amoah.jpg" }
-        ]
-      }
-    };
-
-    // ═══════════════ EXEC MODAL CONTROLS ═══════════════
-    function openExecModal(deptKey) {
-      const data = deptExecData[deptKey];
-      if (!data) return;
-
-      document.getElementById('modal-dept-title').textContent = data.title;
-      document.getElementById('modal-dept-category').textContent = data.category;
-
-      const container = document.getElementById('modal-exec-list');
-      container.innerHTML = data.executives.map(exec => `
-        <div class="flex items-center gap-4 p-3.5 rounded-2xl bg-cream border border-borderSubtle/60 hover:border-gold/50 transition-all">
-          ${exec.photo 
-            ? `<img src="${exec.photo}" alt="${exec.name}" class="w-14 h-14 rounded-xl object-cover shrink-0 border border-gold/40 shadow-sm">`
-            : `<div class="w-14 h-14 rounded-xl bg-navy text-gold font-sora text-base font-extrabold flex items-center justify-center shrink-0 border border-gold/40 shadow-sm">${exec.initials || 'HF'}</div>`
-          }
-          <div>
-            <h4 class="font-sora text-base font-bold text-navy">${exec.name}</h4>
-            <p class="font-inter text-xs text-muted font-medium">${exec.role}</p>
-          </div>
-        </div>
-      `).join('');
-
-      const modal = document.getElementById('exec-modal');
-      const card = document.getElementById('exec-modal-card');
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-      modal.classList.add('opacity-100');
-      card.classList.remove('scale-95');
-      card.classList.add('scale-100');
-    }
-
-    function closeExecModal() {
-      const modal = document.getElementById('exec-modal');
-      const card = document.getElementById('exec-modal-card');
-      modal.classList.remove('opacity-100');
-      modal.classList.add('opacity-0', 'pointer-events-none');
-      card.classList.remove('scale-100');
-      card.classList.add('scale-95');
-    }
-  </script>
+  <script src="js/departments.js"></script>
 </body>
 </html>

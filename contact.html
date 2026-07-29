@@ -16,26 +16,7 @@
 
   <!-- Tailwind CSS v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181' },
-            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58', dark: '#D97706' },
-            cream: '#F7F6E4',
-            surface: '#FEFEFE',
-            muted: '#475467',
-            borderSubtle: '#D0D5DD',
-          },
-          fontFamily: {
-            sora: ['Sora', 'sans-serif'],
-            inter: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <script src="js/tailwind.config.js"></script>
 
   <!-- Pure Tailwind Helper & Animation Styles -->
   <style>
@@ -80,7 +61,7 @@
   </style>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/twag-icon.png">
+  <link rel="icon" type="image/png" href="images/logos/twag-icon.png">
 </head>
 <body class="font-sora font-normal bg-cream text-navy leading-relaxed min-h-screen flex flex-col justify-between pt-[64px] sm:pt-[76px] lg:pt-[84px] overflow-x-hidden">
 
@@ -90,7 +71,7 @@
 
       <!-- Logo & Brand Name -->
       <a href="index.html" class="flex items-center gap-0 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
-        <img src="images/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
+        <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
         <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
           <span class="font-sora text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
           <span class="font-sora text-[12px] sm:text-[15px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
@@ -155,7 +136,7 @@
 
     <!-- ═══════════════ HERO SECTION ═══════════════ -->
     <section class="relative py-12 sm:py-16 lg:py-20 bg-navy text-white text-center overflow-hidden border-b border-navy/10">
-      <img src="images/church-fellowship-1.jpg" alt="True Worshippers A/G Church Fellowship" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
+      <img src="images/ministries/church-fellowship-1.jpg" alt="True Worshippers A/G Church Fellowship" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
       <div class="absolute inset-0 bg-navy/75 pointer-events-none"></div>
 
       <div class="relative max-w-[1280px] mx-auto px-6 md:px-12 text-center z-10">
@@ -472,7 +453,7 @@
         <!-- Col 1: Logo & Church Info (lg:col-span-4) -->
         <div class="lg:col-span-4 flex flex-col">
           <a href="index.html" class="flex items-center gap-0 mb-6 no-underline max-w-full" aria-label="True Worshippers A/G — Home">
-            <img src="images/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
+            <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
             <div class="flex flex-col justify-center leading-tight min-w-0">
               <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-wider sm:tracking-widest uppercase truncate">Assemblies of God, Ghana</span>
               <span class="font-sora text-sm sm:text-lg lg:text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
@@ -595,35 +576,6 @@
   </button>
 
   <script src="js/navbar.js"></script>
-  <script>
-    // Toast Notification helper
-    function showToast(message, type = "success") {
-      const container = document.getElementById("toast-container");
-      const toast = document.createElement("div");
-      toast.className = `px-5 py-3 rounded-xl font-sora text-xs font-bold text-white shadow-2xl transition-all duration-300 transform translate-y-4 opacity-0 flex items-center gap-2 pointer-events-auto ${
-        type === "success" ? "bg-emerald-600" : "bg-navy"
-      }`;
-      toast.innerHTML = `<i class="fa-solid ${type === "success" ? "fa-circle-check" : "fa-circle-info"}"></i> <span>${message}</span>`;
-      
-      container.appendChild(toast);
-      
-      requestAnimationFrame(() => {
-        toast.classList.remove("translate-y-4", "opacity-0");
-      });
-
-      setTimeout(() => {
-        toast.classList.add("opacity-0", "translate-y-2");
-        setTimeout(() => toast.remove(), 300);
-      }, 3500);
-    }
-
-    // Handle Contact Form Submit Simulation
-    function handleContactSubmit(event) {
-      event.preventDefault();
-      const name = document.getElementById("full-name").value || "there";
-      showToast(`Thank you, ${name}! Your message has been sent to True Worshippers A/G.`);
-      document.getElementById("contact-form").reset();
-    }
-  </script>
+  <script src="js/contact.js"></script>
 </body>
 </html>

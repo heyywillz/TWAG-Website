@@ -16,26 +16,7 @@
 
   <!-- Tailwind CSS v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181' },
-            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58' },
-            cream: '#F7F6E4',
-            surface: '#FEFEFE',
-            muted: '#475467',
-            borderSubtle: '#D0D5DD',
-          },
-          fontFamily: {
-            sora: ['Sora', 'sans-serif'],
-            inter: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <script src="js/tailwind.config.js"></script>
 
   <!-- Pure Tailwind Helper & Animation Styles -->
   <style>
@@ -79,7 +60,7 @@
   </style>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/twag-icon.png">
+  <link rel="icon" type="image/png" href="images/logos/twag-icon.png">
 </head>
 <body class="font-sora font-normal bg-cream text-navy leading-relaxed min-h-screen flex flex-col justify-between pt-[64px] sm:pt-[76px] lg:pt-[84px] overflow-x-hidden">
 
@@ -89,7 +70,7 @@
 
       <!-- Logo & Brand Name -->
       <a href="index.html" class="flex items-center gap-0 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
-        <img src="images/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
+        <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
         <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
           <span class="font-sora text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
           <span class="font-sora text-[12px] sm:text-[15px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
@@ -149,7 +130,7 @@
   <!-- ═══════════════ SHORT LANDSCAPE HERO SECTION ═══════════════ -->
   <section class="relative w-full h-[280px] sm:h-[340px] lg:h-[380px] overflow-hidden flex items-center justify-center bg-navy" aria-label="About page hero section">
     <!-- Landscape Background Image -->
-    <img src="images/hero-group.jpg" alt="True Worshippers A/G Church Family" class="absolute inset-0 w-full h-full object-cover object-[center_35%]">
+    <img src="images/hero/hero-group.jpg" alt="True Worshippers A/G Church Family" class="absolute inset-0 w-full h-full object-cover object-[center_35%]">
     
     <!-- Subtle Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/45 to-navy/35 z-[2]"></div>
@@ -200,7 +181,7 @@
           <div class="lg:col-span-6">
             <div class="relative group rounded-3xl overflow-hidden shadow-2xl bg-navy transition-all duration-300">
               <!-- Increased Image Height -->
-              <img src="images/begining picture.jpg" alt="True Worshippers A/G | Est. 1995" class="w-full h-[360px] sm:h-[460px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+              <img src="images/hero/begining picture.jpg" alt="True Worshippers A/G | Est. 1995" class="w-full h-[360px] sm:h-[460px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
               
               <!-- Smooth Bottom Dark Gradient Overlay (No Solid Pill Box) -->
               <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/30 to-transparent"></div>
@@ -239,7 +220,7 @@
           <!-- Left Featured Card: Values with Photo & Gradient Overlay -->
           <div class="lg:col-span-6 relative group rounded-3xl overflow-hidden shadow-xl border border-navy/10 min-h-[360px] sm:min-h-[440px] flex flex-col justify-end">
             <!-- Background Image -->
-            <img src="images/church-community-praising-god.jpg" alt="True Worshippers A/G Values" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/ministries/church-community-praising-god.jpg" alt="True Worshippers A/G Values" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             
             <!-- Bottom Dark Gradient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-transparent"></div>
@@ -441,7 +422,7 @@
         <!-- Col 1: Logo & Church Info -->
         <div class="lg:col-span-4 flex flex-col">
           <a href="index.html" class="flex items-center gap-0 mb-6 no-underline max-w-full" aria-label="True Worshippers A/G — Home">
-            <img src="images/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
+            <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
             <div class="flex flex-col justify-center leading-tight min-w-0">
               <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-wider sm:tracking-widest uppercase truncate">Assemblies of God, Ghana</span>
               <span class="font-sora text-sm sm:text-lg lg:text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
@@ -561,37 +542,6 @@
   </button>
 
   <script src="js/navbar.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const accordionItems = document.querySelectorAll('.service-accordion-item');
-      accordionItems.forEach((item) => {
-        item.addEventListener('click', () => {
-          const isExpanded = item.classList.contains('service-accordion--open');
-          
-          accordionItems.forEach(i => {
-            i.classList.remove('service-accordion--open', 'ring-2', 'ring-gold/60', 'border-gold/50');
-            const icon = i.querySelector('.service-accordion-icon');
-            if (icon) {
-              icon.classList.remove('fa-xmark');
-              icon.classList.add('fa-plus');
-            }
-            const body = i.querySelector('.service-accordion-body');
-            if (body) body.classList.add('hidden');
-          });
-
-          if (!isExpanded) {
-            item.classList.add('service-accordion--open', 'ring-2', 'ring-gold/60', 'border-gold/50');
-            const icon = item.querySelector('.service-accordion-icon');
-            if (icon) {
-              icon.classList.remove('fa-plus');
-              icon.classList.add('fa-xmark');
-            }
-            const body = item.querySelector('.service-accordion-body');
-            if (body) body.classList.remove('hidden');
-          }
-        });
-      });
-    });
-  </script>
+  <script src="js/about.js"></script>
 </body>
 </html>

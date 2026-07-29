@@ -16,29 +16,7 @@
 
   <!-- Tailwind CSS v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181' },
-            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58' },
-            cream: '#F7F6E4',
-            surface: '#FEFEFE',
-            muted: '#475467',
-            borderSubtle: '#D0D5DD',
-            spotify: '#1DB954',
-            spotifyDark: '#121212',
-            spotifyCard: '#181818',
-          },
-          fontFamily: {
-            sora: ['Sora', 'sans-serif'],
-            inter: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <script src="js/tailwind.config.js"></script>
 
   <!-- Pure Tailwind Helper & Animation Styles -->
   <style>
@@ -82,7 +60,7 @@
   </style>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/twag-icon.png">
+  <link rel="icon" type="image/png" href="images/logos/twag-icon.png">
 </head>
 <body class="font-sora font-normal bg-cream text-navy leading-relaxed min-h-screen flex flex-col justify-between pt-[64px] sm:pt-[76px] lg:pt-[84px] overflow-x-hidden">
 
@@ -92,7 +70,7 @@
 
       <!-- Logo & Brand Name -->
       <a href="index.html" class="flex items-center gap-0 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
-        <img src="images/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
+        <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
         <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
           <span class="font-sora text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
           <span class="font-sora text-[12px] sm:text-[15px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
@@ -155,7 +133,7 @@
     <!-- ═══════════════ HERO BANNER SECTION ═══════════════ -->
     <section class="relative py-20 sm:py-24 lg:py-28 text-white text-center overflow-hidden border-b border-white/10">
       <!-- Background Image with Subtle Navy Gradient Overlay (Events Style) -->
-      <img src="images/hero-preaching.jpg" alt="Pastor's Devotions — True Worshippers A/G" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
+      <img src="images/hero/hero-preaching.jpg" alt="Pastor's Devotions — True Worshippers A/G" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
       <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/60 to-navy/40 pointer-events-none"></div>
 
       <div class="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10 text-center">
@@ -280,7 +258,7 @@
         <!-- Col 1: Logo & Church Info -->
         <div class="lg:col-span-4 flex flex-col">
           <a href="index.html" class="flex items-center gap-0 mb-6 no-underline max-w-full" aria-label="True Worshippers A/G — Home">
-            <img src="images/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
+            <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
             <div class="flex flex-col justify-center leading-tight min-w-0">
               <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-wider sm:tracking-widest uppercase truncate">Assemblies of God, Ghana</span>
               <span class="font-sora text-sm sm:text-lg lg:text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
@@ -460,77 +438,6 @@
   </button>
 
   <script src="js/navbar.js"></script>
-  <script>
-    function playSpotifyEpisode(event) {
-      if (event) event.preventDefault();
-      const iframe = document.getElementById('spotify-iframe');
-      const iframeContainer = document.getElementById('spotify-iframe-container');
-      
-      if (iframe) {
-        // Set src with autoplay=1 to play audio directly on the site inside the embedded player
-        iframe.src = "https://open.spotify.com/embed/episode/0NUph0HZfafFyORsue02EM?utm_source=generator&autoplay=1";
-      }
-
-      if (iframeContainer) {
-        iframeContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        iframeContainer.classList.add('ring-4', 'ring-[#1DB954]/70');
-        setTimeout(() => {
-          iframeContainer.classList.remove('ring-4', 'ring-[#1DB954]/70');
-        }, 2500);
-      }
-    }
-
-    function openShareModal() {
-      const modal = document.getElementById('share-modal');
-      const card = document.getElementById('share-modal-card');
-      if (modal && card) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
-        card.classList.remove('scale-95');
-        card.classList.add('scale-100');
-      }
-    }
-
-    function closeShareModal() {
-      const modal = document.getElementById('share-modal');
-      const card = document.getElementById('share-modal-card');
-      if (modal && card) {
-        modal.classList.remove('opacity-100');
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        card.classList.remove('scale-100');
-        card.classList.add('scale-95');
-      }
-    }
-
-    function copyDevotionLink(btn) {
-      const link = 'https://open.spotify.com/episode/0NUph0HZfafFyORsue02EM?go=1&sp_cid=e4d96f09-8d08-432f-a227-c46720953c95&utm_source=embed_player_p&utm_medium=desktop';
-      navigator.clipboard.writeText(link).then(() => {
-        const orig = btn.innerHTML;
-        btn.innerHTML = '<i class="fa-solid fa-check text-green-600"></i> Copied!';
-        setTimeout(() => { btn.innerHTML = orig; }, 2000);
-      }).catch(() => {
-        alert('Devotion Link: ' + link);
-      });
-    }
-
-    function copyDevotionLinkInput(btn) {
-      const link = 'https://open.spotify.com/episode/0NUph0HZfafFyORsue02EM?go=1&sp_cid=e4d96f09-8d08-432f-a227-c46720953c95&utm_source=embed_player_p&utm_medium=desktop';
-      navigator.clipboard.writeText(link).then(() => {
-        const copyBtn = document.getElementById('copy-modal-btn');
-        if (copyBtn) {
-          copyBtn.textContent = 'Copied!';
-          copyBtn.classList.remove('bg-gold', 'text-navy');
-          copyBtn.classList.add('bg-green-500', 'text-white');
-          setTimeout(() => {
-            copyBtn.textContent = 'Copy';
-            copyBtn.classList.remove('bg-green-500', 'text-white');
-            copyBtn.classList.add('bg-gold', 'text-navy');
-          }, 2000);
-        }
-      }).catch(() => {
-        alert('Devotion Link: ' + link);
-      });
-    }
-  </script>
+  <script src="js/devotions.js"></script>
 </body>
 </html>

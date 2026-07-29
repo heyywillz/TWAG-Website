@@ -16,27 +16,7 @@
 
   <!-- Tailwind CSS v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#01000F', primary: '#01000F', secondary: '#303181' },
-            gold: { DEFAULT: '#FACC15', primary: '#FACC15', secondary: '#FFDB58' },
-            cream: '#F7F6E4',
-            surface: '#FEFEFE',
-            muted: '#475467',
-            borderSubtle: '#D0D5DD',
-          },
-          fontFamily: {
-            cinzel: ['Cinzel', 'serif'],
-            sora: ['Sora', 'sans-serif'],
-            inter: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <script src="js/tailwind.config.js"></script>
 
   <!-- Pure Tailwind Helper & Animation Styles -->
   <style>
@@ -99,7 +79,7 @@
   </style>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/twag-icon.png">
+  <link rel="icon" type="image/png" href="images/logos/twag-icon.png">
 </head>
 <body class="font-sora font-normal bg-cream text-navy leading-relaxed overflow-x-hidden">
 
@@ -109,7 +89,7 @@
 
       <!-- Logo & Brand Name -->
       <a href="index.html" class="flex items-center gap-0 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
-        <img src="images/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
+        <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-[24px] sm:h-[32px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
         <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
           <span class="font-sora text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
           <span class="font-sora text-[12px] sm:text-[15px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
@@ -175,19 +155,19 @@
     <!-- Background Slideshow -->
     <div class="absolute inset-0 z-[1]" id="hero-slides">
       <div class="hero__slide hero__slide--active absolute inset-0">
-        <img src="images/hero-choir.jpg" alt="True Worshippers A/G worship choir singing praises" class="w-full h-full object-cover object-[center_30%]">
+        <img src="images/hero/hero-choir.jpg" alt="True Worshippers A/G worship choir singing praises" class="w-full h-full object-cover object-[center_30%]">
       </div>
       <div class="hero__slide absolute inset-0">
-        <img src="images/hero-congregation.jpg" alt="Church congregation gathered for worship service" class="w-full h-full object-cover object-[center_30%]">
+        <img src="images/hero/hero-congregation.jpg" alt="Church congregation gathered for worship service" class="w-full h-full object-cover object-[center_30%]">
       </div>
       <div class="hero__slide absolute inset-0">
-        <img src="images/hero-worship.jpg" alt="Church members worshipping together" class="w-full h-full object-cover object-[center_30%]">
+        <img src="images/hero/hero-worship.jpg" alt="Church members worshipping together" class="w-full h-full object-cover object-[center_30%]">
       </div>
       <div class="hero__slide absolute inset-0">
-        <img src="images/hero-preaching.jpg" alt="Rev. Prof. Paul Frimpong Manso preaching at the pulpit" class="w-full h-full object-cover object-[center_30%]">
+        <img src="images/hero/hero-preaching.jpg" alt="Rev. Prof. Paul Frimpong Manso preaching at the pulpit" class="w-full h-full object-cover object-[center_30%]">
       </div>
       <div class="hero__slide absolute inset-0">
-        <img src="images/hero-group.jpg" alt="Church leadership and congregation group photo" class="w-full h-full object-cover object-[center_30%]">
+        <img src="images/hero/hero-group.jpg" alt="Church leadership and congregation group photo" class="w-full h-full object-cover object-[center_30%]">
       </div>
     </div>
 
@@ -250,7 +230,7 @@
           <!-- Main Image Container with Responsive Height -->
           <div class="relative w-full max-w-[490px] h-[380px] sm:h-[520px] lg:h-[620px] rounded-2xl overflow-hidden shadow-2xl bg-navy">
             <img 
-              src="images/pastor-and-wife.jpg" 
+              src="images/leadership/pastor-and-wife.jpg" 
               alt="Rev. Elvis Kwadwo & Mrs. Cecilia Sarpong" 
               class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
             >
@@ -381,7 +361,7 @@
         <!-- Card 1: Pastor Georgina Mensah -->
         <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
           <img 
-            src="images/pastor-georgina-mensah.jpg" 
+            src="images/leadership/pastor-georgina-mensah.jpg" 
             alt="Pastor Georgina Mensah" 
             class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
           >
@@ -397,7 +377,7 @@
         <!-- Card 2: Deacon Kingsley Sarfo -->
         <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
           <img 
-            src="images/deacon-kingsley-sarfo.jpg" 
+            src="images/leadership/deacon-kingsley-sarfo.jpg" 
             alt="Deacon Kingsley Sarfo" 
             class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
           >
@@ -413,7 +393,7 @@
         <!-- Card 3: Deacon Moses Yeboah -->
         <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
           <img 
-            src="images/deacon-moses-yeboah.jpg" 
+            src="images/leadership/deacon-moses-yeboah.jpg" 
             alt="Deacon Moses Yeboah" 
             class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
           >
@@ -429,7 +409,7 @@
         <!-- Card 4: Deacon Jerry Kyei -->
         <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
           <img 
-            src="images/deacon-jerry-kyei.jpg" 
+            src="images/leadership/deacon-jerry-kyei.jpg" 
             alt="Deacon Jerry Kyei" 
             class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
           >
@@ -445,7 +425,7 @@
         <!-- Card 5: Deacon Emmanuel Fosu -->
         <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
           <img 
-            src="images/deacon-emmanuel-fosu.jpg" 
+            src="images/leadership/deacon-emmanuel-fosu.jpg" 
             alt="Deacon Emmanuel Fosu" 
             class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
           >
@@ -461,7 +441,7 @@
         <!-- Card 6: Deacon Emmanuel Osei -->
         <div class="snap-start flex-none w-[320px] sm:w-[360px] h-[460px] rounded-2xl overflow-hidden relative group shadow-xl bg-navy">
           <img 
-            src="images/deacon-emmanuel-osei.jpg" 
+            src="images/leadership/deacon-emmanuel-osei.jpg" 
             alt="Deacon Emmanuel Osei" 
             class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
           >
@@ -512,7 +492,7 @@
           <!-- Main Theme Image Container -->
           <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-borderSubtle/60 bg-navy">
             <img 
-              src="images/theme-of-the-year.jpg" 
+              src="images/hero/theme-of-the-year.jpg" 
               alt="True Worshippers A/G 2026 Theme of the Year" 
               class="w-full h-auto object-cover transform group-hover:scale-103 transition-transform duration-700 ease-out"
             >
@@ -581,7 +561,7 @@
       playsinline 
       class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
     >
-      <source src="images/landing-2026.mp4" type="video/mp4">
+      <source src="images/hero/landing-2026.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
@@ -627,11 +607,11 @@
 
         <!-- Pin 1: Church Choir -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
-             data-src="images/church-choir.jpg"
+             data-src="images/ministries/church-choir.jpg"
              data-title="True Worshippers Choir"
              data-category="WORSHIP"
              data-desc="Joyful choir rendering uplifting praises and songs of adoration during divine worship.">
-          <img src="images/church-choir.jpg" alt="True Worshippers Choir" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/church-choir.jpg" alt="True Worshippers Choir" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">WORSHIP</span>
@@ -648,11 +628,11 @@
 
         <!-- Pin 2: Communion Service -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
-             data-src="images/communion-service.jpg"
+             data-src="images/events/communion-service.jpg"
              data-title="Holy Communion Service"
              data-category="SACRAMENT"
              data-desc="Partaking in the Lord's Supper in remembrance of Christ's sacrifice and new covenant.">
-          <img src="images/communion-service.jpg" alt="Holy Communion Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/communion-service.jpg" alt="Holy Communion Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">SACRAMENT</span>
@@ -669,11 +649,11 @@
 
         <!-- Pin 3: Preaching -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
-             data-src="images/preaching.jpg"
+             data-src="images/ministries/preaching.jpg"
              data-title="Proclaiming the Gospel"
              data-category="SERMON"
              data-desc="Rev. Elvis Kwadwo preaching the uncompromised Word of God with clarity and power.">
-          <img src="images/preaching.jpg" alt="Proclaiming the Gospel" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/preaching.jpg" alt="Proclaiming the Gospel" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">SERMON</span>
@@ -690,11 +670,11 @@
 
         <!-- Pin 4: Anointing Service -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
-             data-src="images/anointing-service.jpg"
+             data-src="images/events/anointing-service.jpg"
              data-title="Anointing & Healing Service"
              data-category="PRAYER"
              data-desc="Seeking divine unction, healing, and spiritual empowerment for God's people.">
-          <img src="images/anointing-service.jpg" alt="Anointing & Healing Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/anointing-service.jpg" alt="Anointing & Healing Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">PRAYER</span>
@@ -711,11 +691,11 @@
 
         <!-- Pin 5: Church Community Praising God -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
-             data-src="images/church-community-praising-god.jpg"
+             data-src="images/ministries/church-community-praising-god.jpg"
              data-title="Congregational Praise"
              data-category="WORSHIP"
              data-desc="Church family united in joyful praise and thanksgiving for the Lord's goodness.">
-          <img src="images/church-community-praising-god.jpg" alt="Congregational Praise" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/church-community-praising-god.jpg" alt="Congregational Praise" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">WORSHIP</span>
@@ -732,11 +712,11 @@
 
         <!-- Pin 6: Children Ministry -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
-             data-src="images/children-ministry.jpg"
+             data-src="images/ministries/children-ministry.jpg"
              data-title="Children's Ministry"
              data-category="MINISTRY"
              data-desc="Nurturing young minds in Biblical truth, prayer, and Christian fellowship.">
-          <img src="images/children-ministry.jpg" alt="Children's Ministry" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/children-ministry.jpg" alt="Children's Ministry" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">MINISTRY</span>
@@ -753,11 +733,11 @@
 
         <!-- Pin 7: Men's Ministry -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
-             data-src="images/mens-ministry.jpg"
+             data-src="images/ministries/mens-ministry.jpg"
              data-title="Men of Valor Fellowship"
              data-category="FELLOWSHIP"
              data-desc="Equipping Christian men to lead with godly integrity in their homes and community.">
-          <img src="images/mens-ministry.jpg" alt="Men of Valor Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/mens-ministry.jpg" alt="Men of Valor Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">FELLOWSHIP</span>
@@ -774,11 +754,11 @@
 
         <!-- Pin 8: Women's Ministry -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin"
-             data-src="images/womens-ministry.jpg"
+             data-src="images/ministries/womens-ministry.jpg"
              data-title="Virtuous Women Fellowship"
              data-category="FELLOWSHIP"
              data-desc="Empowering women through prayer, biblical mentorship, and compassionate service.">
-          <img src="images/womens-ministry.jpg" alt="Virtuous Women Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/womens-ministry.jpg" alt="Virtuous Women Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">FELLOWSHIP</span>
@@ -797,11 +777,11 @@
 
         <!-- Pin 9: Royal Rangers -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/royal-rangers.jpg"
+             data-src="images/ministries/royal-rangers.jpg"
              data-title="Royal Rangers Brigade"
              data-category="YOUTH"
              data-desc="Building spiritual character, outdoor skills, and servant leadership in young boys and girls.">
-          <img src="images/royal-rangers.jpg" alt="Royal Rangers Brigade" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/royal-rangers.jpg" alt="Royal Rangers Brigade" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">YOUTH</span>
@@ -818,11 +798,11 @@
 
         <!-- Pin 10: Children's Day Ceremony -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/childrens-day-ceremony.jpg"
+             data-src="images/events/childrens-day-ceremony.jpg"
              data-title="Children's Day Celebration"
              data-category="CELEBRATION"
              data-desc="Celebrating our children with scripture recitations, songs, and special performances.">
-          <img src="images/childrens-day-ceremony.jpg" alt="Children's Day Celebration" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/childrens-day-ceremony.jpg" alt="Children's Day Celebration" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">CELEBRATION</span>
@@ -839,11 +819,11 @@
 
         <!-- Pin 11: Carols Night -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/carols-night.jpg"
+             data-src="images/events/carols-night.jpg"
              data-title="Festival of Nine Lessons & Carols"
              data-category="EVENTS"
              data-desc="A memorable evening of festive Christmas carols, scripture readings, and holiday joy.">
-          <img src="images/carols-night.jpg" alt="Festival of Nine Lessons & Carols" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/carols-night.jpg" alt="Festival of Nine Lessons & Carols" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">EVENTS</span>
@@ -860,11 +840,11 @@
 
         <!-- Pin 12: Cultural Day -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/cultural-day.jpg"
+             data-src="images/events/cultural-day.jpg"
              data-title="Ghanaian Heritage & Cultural Day"
              data-category="CULTURE"
              data-desc="Celebrating God's blessings in rich Ghanaian traditional regalia and indigenous worship.">
-          <img src="images/cultural-day.jpg" alt="Ghanaian Heritage & Cultural Day" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/cultural-day.jpg" alt="Ghanaian Heritage & Cultural Day" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">CULTURE</span>
@@ -881,11 +861,11 @@
 
         <!-- Pin 13: Child Dedication -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/child-dedication.jpg"
+             data-src="images/events/child-dedication.jpg"
              data-title="Child Dedication Ceremony"
              data-category="FAMILY"
              data-desc="Presenting babies to the Lord for His guidance, wisdom, and lifelong protection.">
-          <img src="images/child-dedication.jpg" alt="Child Dedication Ceremony" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/child-dedication.jpg" alt="Child Dedication Ceremony" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">FAMILY</span>
@@ -902,11 +882,11 @@
 
         <!-- Pin 14: Marital Blessing -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/marital-blessing.jpg"
+             data-src="images/events/marital-blessing.jpg"
              data-title="Marital Blessing Service"
              data-category="FAMILY"
              data-desc="Honouring holy matrimony and committing Christian marriages to God's divine grace.">
-          <img src="images/marital-blessing.jpg" alt="Marital Blessing Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/marital-blessing.jpg" alt="Marital Blessing Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">FAMILY</span>
@@ -923,11 +903,11 @@
 
         <!-- Pin 15: Church Awards -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/church-awards.jpg"
+             data-src="images/events/church-awards.jpg"
              data-title="Leadership & Excellence Awards"
              data-category="HONOUR"
              data-desc="Recognizing faithful workers and dedicated servants in the house of the Lord.">
-          <img src="images/church-awards.jpg" alt="Leadership & Excellence Awards" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/church-awards.jpg" alt="Leadership & Excellence Awards" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">HONOUR</span>
@@ -944,11 +924,11 @@
 
         <!-- Pin 16: Children's Home Donation -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/childrens-home-donation.jpg"
+             data-src="images/events/childrens-home-donation.jpg"
              data-title="Community Benevolence Outreach"
              data-category="OUTREACH"
              data-desc="Sharing Christ's love through charitable giving, donations, and community support.">
-          <img src="images/childrens-home-donation.jpg" alt="Community Benevolence Outreach" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/childrens-home-donation.jpg" alt="Community Benevolence Outreach" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">OUTREACH</span>
@@ -965,11 +945,11 @@
 
         <!-- Pin 17: Theatre Play -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/theatre-play.jpg"
+             data-src="images/events/theatre-play.jpg"
              data-title="Kingdom Drama Production"
              data-category="MINISTRY"
              data-desc="Powerful gospel drama and theatrical storytelling depicting biblical truths.">
-          <img src="images/theatre-play.jpg" alt="Kingdom Drama Production" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/theatre-play.jpg" alt="Kingdom Drama Production" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">MINISTRY</span>
@@ -986,11 +966,11 @@
 
         <!-- Pin 18: Church Fellowship 1 -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/church-fellowship-1.jpg"
+             data-src="images/ministries/church-fellowship-1.jpg"
              data-title="Sunday Family Fellowship"
              data-category="COMMUNITY"
              data-desc="Members sharing joyful moments and warm kingdom fellowship after service.">
-          <img src="images/church-fellowship-1.jpg" alt="Sunday Family Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/church-fellowship-1.jpg" alt="Sunday Family Fellowship" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">COMMUNITY</span>
@@ -1007,11 +987,11 @@
 
         <!-- Pin 19: Church Fellowship 2 -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/church-fellowship-2.jpg"
+             data-src="images/ministries/church-fellowship-2.jpg"
              data-title="Kingdom Gathering"
              data-category="COMMUNITY"
              data-desc="Sharing smiles, testimonies, and spiritual encouragement across generations.">
-          <img src="images/church-fellowship-2.jpg" alt="Kingdom Gathering" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/church-fellowship-2.jpg" alt="Kingdom Gathering" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">COMMUNITY</span>
@@ -1028,11 +1008,11 @@
 
         <!-- Pin 20: Birthday honouring -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/birthday-honouring.jpg"
+             data-src="images/events/birthday-honouring.jpg"
              data-title="Honorary Celebration"
              data-category="CELEBRATION"
              data-desc="Celebrating God's grace and faithfulness in the lives of our beloved church members.">
-          <img src="images/birthday-honouring.jpg" alt="Honorary Celebration" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/birthday-honouring.jpg" alt="Honorary Celebration" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">CELEBRATION</span>
@@ -1049,11 +1029,11 @@
 
         <!-- Pin 21: Funeral Thanksgiving -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/funeral-thanksgiving.jpg"
+             data-src="images/events/funeral-thanksgiving.jpg"
              data-title="Memorial Thanksgiving Service"
              data-category="THANKSGIVING"
              data-desc="Giving glory to God for lives dedicated to the gospel and kingdom service.">
-          <img src="images/funeral-thanksgiving.jpg" alt="Memorial Thanksgiving Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/funeral-thanksgiving.jpg" alt="Memorial Thanksgiving Service" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">THANKSGIVING</span>
@@ -1070,11 +1050,11 @@
 
         <!-- Pin 22: Old Lady praising God -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/old-lady-praising-god.jpg"
+             data-src="images/ministries/old-lady-praising-god.jpg"
              data-title="Joy in His Presence"
              data-category="WORSHIP"
              data-desc="Elderly saints expressing unhindered praise and gratitude to the Lord.">
-          <img src="images/old-lady-praising-god.jpg" alt="Joy in His Presence" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/old-lady-praising-god.jpg" alt="Joy in His Presence" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">WORSHIP</span>
@@ -1091,11 +1071,11 @@
 
         <!-- Pin 23: Presentation to head pastor -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/presentation-to-head-pastor.jpg"
+             data-src="images/events/presentation-to-head-pastor.jpg"
              data-title="Pastoral Appreciation Presentation"
              data-category="HONOUR"
              data-desc="Expressing heartfelt gratitude to Rev. Elvis Kwadwo for faithful leadership.">
-          <img src="images/presentation-to-head-pastor.jpg" alt="Pastoral Appreciation Presentation" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/presentation-to-head-pastor.jpg" alt="Pastoral Appreciation Presentation" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">HONOUR</span>
@@ -1112,11 +1092,11 @@
 
         <!-- Pin 24: Scripture Reading -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/scripture-reading.jpg"
+             data-src="images/events/scripture-reading.jpg"
              data-title="Public Reading of Scripture"
              data-category="SERMON"
              data-desc="Declaring Holy Scripture to inspire and anchor the faith of believers.">
-          <img src="images/scripture-reading.jpg" alt="Public Reading of Scripture" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/events/scripture-reading.jpg" alt="Public Reading of Scripture" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">SERMON</span>
@@ -1133,11 +1113,11 @@
 
         <!-- Pin 25: Praises -->
         <div class="break-inside-avoid inline-block w-full group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-navy cursor-pointer gallery-pin hidden gallery-hidden-pin"
-             data-src="images/praises.jpg"
+             data-src="images/ministries/praises.jpg"
              data-title="High Praises & Exaltation"
              data-category="WORSHIP"
              data-desc="Exalting the Lord with songs of victory, clapping, and joyful praise.">
-          <img src="images/praises.jpg" alt="High Praises & Exaltation" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+          <img src="images/ministries/praises.jpg" alt="High Praises & Exaltation" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-gold text-navy font-sora text-[10px] font-bold tracking-wider uppercase">WORSHIP</span>
@@ -1175,7 +1155,7 @@
         <!-- Col 1: Logo & Church Info (lg:col-span-4) -->
         <div class="lg:col-span-4 flex flex-col">
           <a href="index.html" class="flex items-center gap-0 mb-6 no-underline max-w-full" aria-label="True Worshippers A/G — Home">
-            <img src="images/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
+            <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
             <div class="flex flex-col justify-center leading-tight min-w-0">
               <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-wider sm:tracking-widest uppercase truncate">Assemblies of God, Ghana</span>
               <span class="font-sora text-sm sm:text-lg lg:text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
