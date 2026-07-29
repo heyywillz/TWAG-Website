@@ -4,42 +4,42 @@
 
 ---
 
-## 🌟 Features Overview
+## Features Overview
 
-### 🏠 1. Home (`index.html`)
+### 1. Home (`index.html`)
 - **Dynamic Hero Slideshow**: Smooth full-screen hero slider with custom progress bar indicators and auto-play paused on hover (`js/hero.js`).
 - **Church Board Carousel**: Interactive leadership card slider with smooth scroll, touch/mouse drag support, and autoplay (`js/board.js`).
-- **Interactive Lightbox Gallery**: High-resolution photo showcase with category filtering, modal view, counter indicators, and keyboard navigation (Esc, Left/Right arrows) (`js/gallery.js`).
+- **Interactive Lightbox Gallery**: High-resolution photo showcase with category filtering, modal view, counter indicators, and keyboard navigation (`js/gallery.js`).
 
-### ℹ️ 2. About Us (`about.html`)
+### 2. About Us (`about.html`)
 - **Church Mission & Vision**: Core beliefs, leadership structure, and history.
 - **Service Times Accordion**: Expandable interactive accordion showcasing Sunday Worship, Mid-week Deliverance, and Friday Prayer times (`js/about.js`).
 
-### 👥 3. Departments & Ministries (`departments.html`)
+### 3. Departments & Ministries (`departments.html`)
 - **Category Filtering**: Filter department cards by category (Worship, Youth, Women, Men, Children, etc.).
 - **Executive Leadership Modals**: Interactive modal popups displaying executive officers, titles, and photos for over 17 church departments (`js/departments.js`).
 
-### 🎧 4. Devotions (`devotions.html`)
+### 4. Devotions (`devotions.html`)
 - **Spotify Audio Player Embed**: Listen to daily devotions and sermons directly inside the embedded player (`js/devotions.js`).
 - **Share & Link Copy**: One-click sharing modal and direct clipboard copying.
 
-### 📅 5. Events & Live Stream (`events.html`)
+### 5. Events & Live Stream (`events.html`)
 - **Live Sunday Countdown**: Real-time automated countdown timer to the next Sunday 8:30 AM Service (`js/events.js`).
 - **YouTube Embedded Stream**: Direct video player for live services and previous recorded sermons.
 - **Upcoming Events Calendar**: Details on upcoming church conferences, revivals, and community outreach.
 
-### 💛 6. Online Giving (`give.html`)
+### 6. Online Giving (`give.html`)
 - **Interactive Contribution Calculator**: Preset GH₵ amount pills + custom donation entry (`js/give.js`).
 - **Payment Method Switcher**: Instructions and modals for MTN Mobile Money (MoMo) and Ecobank Direct Transfer.
 - **Toast Notifications**: Feedback toasts for copy actions and contribution completion.
 
-### 📞 7. Contact Us (`contact.html`)
+### 7. Contact Us (`contact.html`)
 - **Interactive Contact Form**: Form validation with simulated submission toasts (`js/contact.js`).
 - **Location & Directions**: Address, phone numbers, and map guidance to the main sanctuary in Old Tafo-Abono.
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```text
 TWAG/
@@ -77,7 +77,7 @@ TWAG/
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Core**: HTML5, Vanilla JavaScript (ES6+ Modules)
 - **Styling**: Tailwind CSS (v3 via CDN + custom configuration)
@@ -87,7 +87,7 @@ TWAG/
 
 ---
 
-## 🚀 Running Locally
+## Running Locally
 
 Because this project is a pure static web application, no complex installation or node server build steps are required.
 
@@ -106,7 +106,7 @@ Then visit `http://localhost:8000` in your web browser.
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 This repository is pre-configured for instant static deployment on **Vercel** with clean URLs (`cleanUrls: true` in `vercel.json`).
 
@@ -126,6 +126,6 @@ vercel
 
 ---
 
-## 📄 License & Credits
+## License & Credits
 
 © **True Worshippers Assemblies of God Church**, Old Tafo-Abono, Ghana. All rights reserved.
