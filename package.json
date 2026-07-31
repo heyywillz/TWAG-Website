@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "description": "True Worshippers Assemblies of God Church Website",
+  "homepage": "https://twag-website.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyywillz/TWAG-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heyywillz/TWAG-Website/issues"
+  },
   "scripts": {
     "build": "echo 'Static build ready'"
   }

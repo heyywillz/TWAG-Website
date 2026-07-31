@@ -2,6 +2,9 @@
 
 > The official, modern, and responsive website for **True Worshippers Assemblies of God Church**, located in Old Tafo-Abono, Ghana.
 
+- **Live Website**: [https://twag-website.vercel.app](https://twag-website.vercel.app)
+- **GitHub Repository**: [https://github.com/heyywillz/TWAG-Website](https://github.com/heyywillz/TWAG-Website)
+
 ---
 
 ## Features Overview

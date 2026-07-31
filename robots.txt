@@ -1,0 +1,6 @@
+# robots.txt for True Worshippers Assemblies of God (TWAG)
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://twag-website.vercel.app/sitemap.xml
