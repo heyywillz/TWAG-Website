@@ -250,42 +250,49 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 
           <!-- ─── CARD 1: MTN MOBILE MONEY ─── -->
-          <div class="group relative bg-[#FFB800] text-navy rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between overflow-hidden">
-            <!-- Subtle Light Overlay Shine -->
-            <div class="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-white/25 blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+          <div class="group relative bg-gradient-to-br from-[#1E1908] via-[#2A2209] to-[#0F0C03] border border-amber-500/30 text-white rounded-3xl p-6 sm:p-7 shadow-xl hover:shadow-2xl hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
+            <!-- Subtle Radial Light Flares -->
+            <div class="absolute -top-24 -right-24 w-52 h-52 rounded-full bg-amber-500/15 blur-3xl pointer-events-none group-hover:scale-150 transition-all duration-700"></div>
+            <div class="absolute -bottom-24 -left-24 w-48 h-48 rounded-full bg-amber-400/5 blur-2xl pointer-events-none"></div>
             
             <div>
-              <!-- Card Header / Logo Badge -->
-              <div class="flex items-center justify-between mb-4">
+              <!-- Card Header / Brand & EMV Chip -->
+              <div class="flex items-center justify-between mb-5">
                 <div class="flex items-center gap-3">
-                  <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-none overflow-hidden shrink-0">
-                    <img src="images/logos/MTN Mobile Money.png" alt="MTN Mobile Money Logo" class="w-full h-full object-contain rounded-none" onerror="this.src='images/logos/mtn-momo-logo.png'">
+                  <div class="w-12 h-12 rounded-xl bg-white/10 p-1.5 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0 shadow-sm">
+                    <img src="images/logos/MTN Mobile Money.png" alt="MTN Mobile Money Logo" class="w-full h-full object-contain rounded-lg" onerror="this.src='images/logos/mtn-momo-logo.png'">
                   </div>
                   <div>
-                    <span class="block font-sora text-[10px] font-bold uppercase tracking-wider text-navy/70">Mobile Wallet</span>
-                    <span class="font-sora text-base font-extrabold text-navy">MTN Mobile Money</span>
+                    <span class="block font-sora text-[10px] font-bold uppercase tracking-widest text-amber-400/90">Mobile Money</span>
+                    <h3 class="font-sora text-base sm:text-lg font-extrabold text-white">MTN MoMo Wallet</h3>
                   </div>
                 </div>
-                <span class="px-2.5 py-0.5 rounded-full bg-navy/10 font-sora text-[10px] font-bold text-navy uppercase tracking-wider">MoMo</span>
+                <div class="flex items-center gap-2">
+                  <div class="w-9 h-6 rounded bg-gradient-to-tr from-amber-300 via-amber-400 to-amber-200 border border-amber-500/40 shadow-inner flex items-center justify-center relative overflow-hidden" title="EMV Chip">
+                    <div class="w-full h-[1px] bg-amber-700/40 absolute top-2"></div>
+                    <div class="h-full w-[1px] bg-amber-700/40 absolute left-3"></div>
+                  </div>
+                  <i class="fa-solid fa-wifi rotate-90 text-amber-300/70 text-xs"></i>
+                </div>
               </div>
 
               <!-- Content Fields -->
-              <div class="space-y-3 font-inter text-navy/90">
-                <div class="bg-white/45 backdrop-blur-sm p-3 rounded-xl border border-white/60">
-                  <span class="block font-sora text-[10px] font-bold text-navy/60 uppercase tracking-wider mb-0.5">Account Name</span>
-                  <p class="font-sora text-sm sm:text-base font-bold text-navy">John 10:2 Foundation</p>
+              <div class="space-y-3 font-inter">
+                <div class="bg-white/[0.04] backdrop-blur-md p-3.5 rounded-2xl border border-white/10">
+                  <span class="block font-sora text-[10px] font-bold text-amber-300/80 uppercase tracking-widest mb-0.5">Account Name</span>
+                  <p class="font-sora text-sm sm:text-base font-bold text-white tracking-wide">John 10:2 Foundation</p>
                 </div>
 
-                <div class="bg-white/65 backdrop-blur-md p-3 rounded-xl border border-white/80 shadow-sm flex items-center justify-between gap-3">
-                  <div class="overflow-hidden">
-                    <span class="block font-sora text-[10px] font-bold text-navy/60 uppercase tracking-wider mb-0.5">MoMo Number</span>
-                    <p class="font-sora text-lg sm:text-xl font-black text-navy tracking-wider" id="momo-num-text">059 303 7700</p>
+                <div class="bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent backdrop-blur-md p-4 rounded-2xl border border-amber-500/30 shadow-inner flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block font-sora text-[10px] font-bold text-amber-300/80 uppercase tracking-widest mb-1">MoMo Number</span>
+                    <p class="font-mono text-lg sm:text-xl font-bold text-amber-400 tracking-widest" id="momo-num-text">059 303 7700</p>
                   </div>
                   
                   <button 
                     onclick="copyToClipboard('0593037700', 'momo-copy-btn')" 
                     id="momo-copy-btn"
-                    class="shrink-0 px-3 py-2 rounded-lg bg-navy text-gold hover:bg-navy-secondary font-sora text-[11px] font-bold uppercase tracking-wider transition-all duration-200 flex items-center gap-1.5 shadow-sm hover:scale-105 active:scale-95 cursor-pointer"
+                    class="shrink-0 px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-sora text-xs font-bold uppercase tracking-wider transition-all duration-200 flex items-center gap-1.5 shadow-md hover:scale-105 active:scale-95 cursor-pointer"
                     aria-label="Copy Mobile Money Number"
                   >
                     <i class="fa-regular fa-copy text-xs"></i>
@@ -293,66 +300,76 @@
                   </button>
                 </div>
 
-                <div class="bg-white/45 backdrop-blur-sm p-3 rounded-xl border border-white/60 flex items-center justify-between">
+                <div class="bg-white/[0.04] backdrop-blur-md p-3 rounded-2xl border border-white/10 flex items-center justify-between">
                   <div>
-                    <span class="block font-sora text-[10px] font-bold text-navy/60 uppercase tracking-wider mb-0.5">Network</span>
-                    <p class="font-sora text-xs sm:text-sm font-bold text-navy">MTN Ghana</p>
+                    <span class="block font-sora text-[10px] font-bold text-white/50 uppercase tracking-widest">Network</span>
+                    <p class="font-sora text-xs sm:text-sm font-semibold text-white/90">MTN Ghana</p>
                   </div>
-                  <i class="fa-solid fa-signal text-navy/40 text-base"></i>
+                  <i class="fa-solid fa-signal text-amber-400/70 text-sm"></i>
                 </div>
               </div>
             </div>
 
             <!-- Card Footer Note -->
-            <div class="mt-4 pt-3 border-t border-navy/10 flex items-center gap-2 font-inter text-[11px] text-navy/80">
-              <i class="fa-solid fa-circle-info text-navy"></i>
-              <span>Use Reference: Tithe, Offering, or Support</span>
+            <div class="mt-5 pt-3.5 border-t border-white/10 flex items-center gap-2 font-inter text-xs text-amber-200/70">
+              <i class="fa-solid fa-circle-info text-amber-400"></i>
+              <span>Reference: Tithe, Offering, or Support</span>
             </div>
           </div>
 
 
           <!-- ─── CARD 2: ECOBANK BANK TRANSFER ─── -->
-          <div class="group relative bg-[#00A896] text-white rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between overflow-hidden">
-            <!-- Subtle Light Overlay Shine -->
-            <div class="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-white/20 blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+          <div class="group relative bg-gradient-to-br from-[#061B2A] via-[#0B2A42] to-[#030F19] border border-[#00A896]/30 text-white rounded-3xl p-6 sm:p-7 shadow-xl hover:shadow-2xl hover:border-[#00A896]/60 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
+            <!-- Subtle Radial Light Flares -->
+            <div class="absolute -top-24 -right-24 w-52 h-52 rounded-full bg-[#00A896]/15 blur-3xl pointer-events-none group-hover:scale-150 transition-all duration-700"></div>
+            <div class="absolute -bottom-24 -left-24 w-48 h-48 rounded-full bg-cyan-500/5 blur-2xl pointer-events-none"></div>
 
             <div>
-              <!-- Card Header / Logo Badge -->
-              <div class="flex items-center justify-between mb-4">
+              <!-- Card Header / Brand & EMV Chip -->
+              <div class="flex items-center justify-between mb-5">
                 <div class="flex items-center gap-3">
-                  <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-none overflow-hidden shrink-0">
-                    <img src="images/logos/Ecobank.jpg" alt="Ecobank Logo" class="w-full h-full object-contain rounded-none" onerror="this.src='images/logos/ecobank-logo.png'">
+                  <div class="w-12 h-12 rounded-xl bg-white p-1.5 shadow-sm border border-white/20 flex items-center justify-center shrink-0">
+                    <img src="images/logos/Ecobank.jpg" alt="Ecobank Logo" class="w-full h-full object-contain rounded-lg" onerror="this.src='images/logos/ecobank-logo.png'">
                   </div>
                   <div>
-                    <span class="block font-sora text-[10px] font-bold uppercase tracking-wider text-white/80">Bank Transfer</span>
-                    <span class="font-sora text-base font-extrabold text-white">Ecobank Ghana</span>
+                    <span class="block font-sora text-[10px] font-bold uppercase tracking-widest text-[#38BDF8]/90">Bank Transfer</span>
+                    <h3 class="font-sora text-base sm:text-lg font-extrabold text-white">Ecobank Ghana</h3>
                   </div>
                 </div>
-                <span class="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md font-sora text-[10px] font-bold text-white uppercase tracking-wider">Bank</span>
+                <div class="flex items-center gap-2">
+                  <div class="w-9 h-6 rounded bg-gradient-to-tr from-slate-200 via-white to-slate-300 border border-slate-400/50 shadow-inner flex items-center justify-center relative overflow-hidden" title="EMV Chip">
+                    <div class="w-full h-[1px] bg-slate-400/40 absolute top-2"></div>
+                    <div class="h-full w-[1px] bg-slate-400/40 absolute left-3"></div>
+                  </div>
+                  <i class="fa-solid fa-wifi rotate-90 text-[#38BDF8]/70 text-xs"></i>
+                </div>
               </div>
 
               <!-- Content Fields -->
-              <div class="space-y-3 font-inter text-white">
-                <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/20">
-                  <span class="block font-sora text-[10px] font-bold text-white/70 uppercase tracking-wider mb-0.5">Account Name</span>
-                  <p class="font-sora text-sm sm:text-base font-bold text-white">True Worshippers Assemblies of God</p>
+              <div class="space-y-3 font-inter">
+                <div class="bg-white/[0.04] backdrop-blur-md p-3.5 rounded-2xl border border-white/10">
+                  <span class="block font-sora text-[10px] font-bold text-[#38BDF8]/80 uppercase tracking-widest mb-0.5">Account Name</span>
+                  <p class="font-sora text-sm sm:text-base font-bold text-white tracking-wide">True Worshippers Assemblies of God</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/20">
-                  <span class="block font-sora text-[10px] font-bold text-white/70 uppercase tracking-wider mb-0.5">Branch</span>
-                  <p class="font-sora text-xs sm:text-sm font-bold text-white">Harper Road Branch</p>
+                <div class="bg-white/[0.04] backdrop-blur-md p-3 rounded-2xl border border-white/10 flex items-center justify-between">
+                  <div>
+                    <span class="block font-sora text-[10px] font-bold text-white/50 uppercase tracking-widest">Branch</span>
+                    <p class="font-sora text-xs sm:text-sm font-semibold text-white/90">Harper Road Branch</p>
+                  </div>
+                  <i class="fa-solid fa-building-columns text-[#38BDF8]/70 text-sm"></i>
                 </div>
 
-                <div class="bg-white/20 backdrop-blur-md p-3 rounded-xl border border-white/30 shadow-sm flex items-center justify-between gap-3">
-                  <div class="overflow-hidden">
-                    <span class="block font-sora text-[10px] font-bold text-white/80 uppercase tracking-wider mb-0.5">Account Number</span>
-                    <p class="font-sora text-lg sm:text-xl font-black text-white tracking-wider" id="bank-num-text">144 10021 34701</p>
+                <div class="bg-gradient-to-r from-[#00A896]/15 via-[#00A896]/5 to-transparent backdrop-blur-md p-4 rounded-2xl border border-[#00A896]/30 shadow-inner flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block font-sora text-[10px] font-bold text-[#38BDF8]/80 uppercase tracking-widest mb-1">Account Number</span>
+                    <p class="font-mono text-lg sm:text-xl font-bold text-cyan-300 tracking-widest" id="bank-num-text">144 10021 34701</p>
                   </div>
                   
                   <button 
                     onclick="copyToClipboard('1441002134701', 'bank-copy-btn')" 
                     id="bank-copy-btn"
-                    class="shrink-0 px-3 py-2 rounded-lg bg-gold text-navy hover:bg-gold-secondary font-sora text-[11px] font-bold uppercase tracking-wider transition-all duration-200 flex items-center gap-1.5 shadow-sm hover:scale-105 active:scale-95 cursor-pointer"
+                    class="shrink-0 px-3.5 py-2 rounded-xl bg-[#00A896] hover:bg-[#009282] text-white font-sora text-xs font-bold uppercase tracking-wider transition-all duration-200 flex items-center gap-1.5 shadow-md hover:scale-105 active:scale-95 cursor-pointer"
                     aria-label="Copy Bank Account Number"
                   >
                     <i class="fa-regular fa-copy text-xs"></i>
@@ -363,8 +380,8 @@
             </div>
 
             <!-- Card Footer Note -->
-            <div class="mt-4 pt-3 border-t border-white/20 flex items-center gap-2 font-inter text-[11px] text-white/80">
-              <i class="fa-solid fa-shield-halved text-white"></i>
+            <div class="mt-5 pt-3.5 border-t border-white/10 flex items-center gap-2 font-inter text-xs text-sky-200/70">
+              <i class="fa-solid fa-shield-halved text-[#38BDF8]"></i>
               <span>Direct Bank Deposit / Wire Transfer</span>
             </div>
           </div>
