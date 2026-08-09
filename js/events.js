@@ -30,7 +30,7 @@ function closeShareModal() {
 }
 
 function copyLiveUrlInput(btn) {
-  const liveUrl = 'https://www.youtube.com/live/FmM-iOfXy0Y?si=YIxm048rUsORiFcm';
+  const liveUrl = 'https://www.youtube.com/live/zW2XDNE0pM4?si=1mr8cuXtIdQCmj3d';
   navigator.clipboard.writeText(liveUrl).then(() => {
     const copyBtn = document.getElementById('copy-modal-btn');
     if (copyBtn) {
