@@ -638,10 +638,13 @@
     
     <!-- Background Video Covering 100% Viewport -->
     <video 
+      id="church-video-player"
       autoplay 
       muted 
       loop 
       playsinline 
+      preload="auto"
+      disablePictureInPicture
       class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
     >
       <source src="images/hero/landing-2026.mp4" type="video/mp4">
@@ -659,11 +662,27 @@
       <p class="font-sora text-sm sm:text-lg md:text-xl text-gold-secondary font-medium max-w-2xl mx-auto leading-relaxed mb-5 sm:mb-6 drop-shadow tracking-wide">
         For Authenticity & Greater Exploits
       </p>
-      <div class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white/95 font-sora text-[11px] sm:text-sm font-semibold tracking-wider max-w-full text-center">
+      <div class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-2.5 rounded-none bg-white/10 backdrop-blur-md border border-white/20 text-white/95 font-sora text-[11px] sm:text-sm font-semibold tracking-wider max-w-full text-center">
         <span>HEBREWS 11 &nbsp;•&nbsp; JUDE 1 &nbsp;•&nbsp; JOHN 14:12</span>
       </div>
     </div>
 
+    <script>
+      (function() {
+        var vid = document.getElementById('church-video-player');
+        if (vid) {
+          vid.muted = true;
+          var playVideo = function() {
+            vid.play().catch(function() {});
+          };
+          playVideo();
+          vid.addEventListener('pause', function() {
+            playVideo();
+          });
+          document.addEventListener('touchstart', playVideo, { once: true, passive: true });
+        }
+      })();
+    </script>
   </section>
 
   <!-- ═══════════════ THE GALLERY SECTION (PINTEREST MASONRY) ═══════════════ -->
