@@ -72,15 +72,17 @@ function initBoardSlider() {
     });
   }
 
-  // Pause autoplay when mouse enters slider, resume on leave
-  slider.addEventListener('mouseenter', stopAutoPlay);
-  slider.addEventListener('mouseleave', startAutoPlay);
-
-  // Pause autoplay on touch interaction for mobile devices (iPhone, iPad, etc.)
-  slider.addEventListener('touchstart', stopAutoPlay, { passive: true });
-  slider.addEventListener('touchend', () => {
-    startAutoPlay();
-  }, { passive: true });
+  // Pause autoplay on desktop hover only (disabled on mobile screens)
+  slider.addEventListener('mouseenter', () => {
+    if (window.matchMedia('(hover: hover)').matches) {
+      stopAutoPlay();
+    }
+  });
+  slider.addEventListener('mouseleave', () => {
+    if (window.matchMedia('(hover: hover)').matches) {
+      startAutoPlay();
+    }
+  });
 
   // Pause when page is hidden
   document.addEventListener('visibilitychange', () => {
