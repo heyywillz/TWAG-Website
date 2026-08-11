@@ -14,11 +14,19 @@ function initBoardSlider() {
 
   if (!slider) return;
 
-  const scrollAmount = 384; // Card width + gap
   const autoPlayInterval = 4000; // Auto scroll every 4 seconds
   let timer = null;
 
+  function getScrollAmount() {
+    const firstCard = slider.firstElementChild;
+    if (!firstCard) return 384;
+    const cardWidth = firstCard.offsetWidth;
+    const computedGap = parseFloat(window.getComputedStyle(slider).gap) || 24;
+    return cardWidth + computedGap;
+  }
+
   function scrollNext() {
+    const scrollAmount = getScrollAmount();
     const maxScroll = slider.scrollWidth - slider.clientWidth;
     if (slider.scrollLeft >= maxScroll - 20) {
       // Loop back to start smoothly
@@ -29,6 +37,7 @@ function initBoardSlider() {
   }
 
   function scrollPrev() {
+    const scrollAmount = getScrollAmount();
     if (slider.scrollLeft <= 20) {
       slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
     } else {
@@ -66,6 +75,12 @@ function initBoardSlider() {
   // Pause autoplay when mouse enters slider, resume on leave
   slider.addEventListener('mouseenter', stopAutoPlay);
   slider.addEventListener('mouseleave', startAutoPlay);
+
+  // Pause autoplay on touch interaction for mobile devices (iPhone, iPad, etc.)
+  slider.addEventListener('touchstart', stopAutoPlay, { passive: true });
+  slider.addEventListener('touchend', () => {
+    startAutoPlay();
+  }, { passive: true });
 
   // Pause when page is hidden
   document.addEventListener('visibilitychange', () => {
