@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="True Worshippers A/G | A vibrant Assemblies of God church in Old Tafo-Abono, Kumasi, Ghana. Join us for Sunday worship, Bible studies, and community fellowship.">
-  <meta name="keywords" content="True Worshippers A/G, Assemblies of God Ghana, Old Tafo-Abono church, Kumasi church, Rev. Elvis Kwadwo Sarpong, Sunday Worship Ghana, Christian Fellowship Kumasi, AG Ghana Church">
+  <meta name="keywords" content="True Worshippers A/G, Assemblies of God Ghana, Old Tafo-Abono church, Kumasi church, Rev. Dr. Elvis Kwadwo Sarpong, Sunday Worship Ghana, Christian Fellowship Kumasi, AG Ghana Church">
   <meta name="author" content="True Worshippers A/G">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#121827">
@@ -88,7 +88,7 @@
     },
     "leader": {
       "@type": "Person",
-      "name": "Rev. Elvis Kwadwo Sarpong",
+      "name": "Rev. Dr. Elvis Kwadwo Sarpong",
       "jobTitle": "Lead Pastor"
     },
     "sameAs": [
@@ -127,25 +127,28 @@
 
     /* ── Navbar ── */
     .navbar--hidden { transform: translateY(-100%); }
-    .navbar__link::after {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      left: 18px;
-      right: 18px;
-      height: 1.5px;
-      background-color: #FACC15;
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform 0.35s ease;
+    .navbar__link {
+      transition: color 0.2s ease;
     }
-    .navbar__link:hover::after,
-    .navbar__link--active::after {
-      transform: scaleX(1);
+    .navbar__link:hover {
+      color: #01000F !important;
     }
     .navbar__link--active {
-      color: #FEFEFE;
-      font-weight: 500;
+      color: #01000F !important;
+      font-weight: 600 !important;
+    }
+
+    /* ── Remove all border radius from buttons ── */
+    button,
+    .btn,
+    [role="button"],
+    a[class*="px-"][class*="py-"][class*="bg-"],
+    a.navbar__mobile-cta,
+    #back-to-top,
+    #gallery-see-more-btn,
+    .hero__progress-btn,
+    .hero__progress-fill {
+      border-radius: 0 !important;
     }
 
     /* ── Mobile Menu Toggle Bars ── */
@@ -163,7 +166,7 @@
     .navbar__mobile-menu--open .navbar__mobile-social { opacity: 1 !important; transform: translateX(0) !important; }
 
     /* ── Mobile Active Link ── */
-    .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600 !important; }
+    .navbar__mobile-link--active { color: #fccf1c !important; font-weight: 600 !important; }
 
     .hero__kicker { animation: heroFadeUp 0.8s ease-out 0.3s forwards; }
     .hero__title { animation: heroFadeUp 0.8s ease-out 0.5s forwards; }
@@ -175,36 +178,36 @@
 <body class="font-sora font-normal bg-cream text-navy leading-relaxed overflow-x-hidden">
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
-  <nav class="fixed top-0 left-0 right-0 z-[1000] h-[64px] sm:h-[76px] lg:h-[84px] bg-navy transition-transform duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[rgba(250,204,21,0.25)] after:to-transparent" id="navbar" role="navigation" aria-label="Main navigation">
+  <nav class="fixed top-0 left-0 right-0 z-[1000] h-[64px] sm:h-[76px] lg:h-[84px] bg-white border-b border-borderSubtle/60 shadow-sm transition-transform duration-300 ease-in-out" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="flex items-center justify-between h-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-12">
 
       <!-- Logo & Brand Name -->
       <a href="index.html" class="flex items-center gap-1.5 sm:gap-2 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
         <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-[32px] sm:h-[34px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
         <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
-          <span class="font-sora text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
-          <span class="font-sora text-[14.5px] sm:text-[16px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
+          <span class="font-sora text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-semibold text-navy/70 tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
+          <span class="font-sora text-[14.5px] sm:text-[16px] lg:text-[18px] font-extrabold text-navy tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
         </div>
       </a>
 
       <!-- Desktop Nav Links (Visible md:flex - 768px and up) -->
       <div class="hidden md:flex items-center gap-1 lg:gap-2 xl:gap-3" id="navbar-links">
-        <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="home">Home</a>
-        <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="about">About Us</a>
-        <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="events">Events</a>
-        <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="devotions">Devotions</a>
-        <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="departments">Departments</a>
-        <a href="give.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="give">Give</a>
+        <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="home">Home</a>
+        <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="about">About Us</a>
+        <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="events">Events</a>
+        <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="devotions">Devotions</a>
+        <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="departments">Departments</a>
+        <a href="give.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="give">Give</a>
       </div>
 
       <!-- CTA Button -->
-      <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(250,204,21,0.3)] active:translate-y-0">Contact Us</a>
+      <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-none tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] active:translate-y-0">Contact Us</a>
 
       <!-- Mobile Toggle (Visible on screens < md) -->
-      <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-transparent border-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
-        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
-        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm transition-all duration-300"></span>
+      <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-navy rounded-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white mb-[4px] transition-all duration-300"></span>
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white mb-[4px] transition-all duration-300"></span>
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white transition-all duration-300"></span>
       </button>
     </div>
   </nav>
@@ -227,7 +230,7 @@
       <a href="devotions.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="devotions">Devotions</a>
       <a href="departments.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="departments">Departments</a>
       <a href="give.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="give">Give</a>
-      <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary">Contact Us</a>
+      <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-none tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary">Contact Us</a>
     </div>
 
     <!-- Mobile Social Links -->
@@ -263,14 +266,11 @@
     </div>
 
     <!-- Dark Overlay -->
-    <div class="absolute inset-0 z-[2] bg-gradient-to-b from-[#01000F]/55 via-[#01000F]/70 to-[#01000F]/85"></div>
+    <div class="absolute inset-0 z-[2] bg-gradient-to-b from-[#01000F]/40 via-[#01000F]/55 to-[#01000F]/70"></div>
 
     <!-- Centered Content -->
     <div class="relative z-[3] flex flex-col items-center justify-center h-full pt-[128px] px-6 pb-[80px] text-center max-w-[860px] mx-auto">
-      <p class="hero__kicker inline-flex items-center gap-[8px] font-sora text-[14px] font-semibold uppercase tracking-[3px] text-gold mb-[12px] opacity-0 translate-y-[20px]">
-        Assemblies of God, Old Tafo-Abono
-      </p>
-
+      <p class="hero__kicker font-sora text-[11px] sm:text-xs font-bold text-gold uppercase tracking-wider mb-4 opacity-0 translate-y-[20px]">Assemblies of God, Old Tafo-Abono</p>
       <h1 class="hero__title font-sora text-[clamp(36px,5vw,60px)] font-bold text-white leading-[1.1] mb-[20px] opacity-0 translate-y-[20px]">Welcome to<br>True Worshippers A/G</h1>
 
       <p class="hero__subtitle font-inter text-[clamp(15px,1.8vw,18px)] font-normal text-white/80 leading-[1.7] max-w-[580px] mb-[36px] opacity-0 translate-y-[20px]">
@@ -279,8 +279,8 @@
       </p>
 
       <div class="hero__actions flex items-center justify-center gap-[16px] flex-wrap opacity-0 translate-y-[20px]">
-        <a href="contact.html" class="inline-flex items-center justify-center gap-[8px] px-[32px] py-[14px] font-sora text-[14px] font-semibold rounded-lg tracking-[0.3px] whitespace-nowrap text-navy bg-gold hover:bg-gold-secondary hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(250,204,21,0.3)] transition-all duration-200">Join Us Sunday</a>
-        <a href="events.html#watch-live" class="inline-flex items-center justify-center gap-[8px] px-[32px] py-[14px] font-sora text-[14px] font-semibold rounded-lg tracking-[0.3px] whitespace-nowrap text-white bg-transparent border-[1.5px] border-white/35 hover:border-white hover:bg-white/10 hover:-translate-y-[2px] transition-all duration-200">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-[8px] px-[32px] py-[14px] font-sora text-[14px] font-semibold rounded-none tracking-[0.3px] whitespace-nowrap text-navy bg-gold hover:bg-gold-secondary hover:-translate-y-[2px] transition-all duration-200">Join Us Sunday</a>
+        <a href="events.html#watch-live" class="inline-flex items-center justify-center gap-[8px] px-[32px] py-[14px] font-sora text-[14px] font-semibold rounded-none tracking-[0.3px] whitespace-nowrap text-white bg-transparent border-[1.5px] border-white/35 hover:border-white hover:bg-white/10 hover:-translate-y-[2px] transition-all duration-200">
           <i class="fa-solid fa-play text-[12px]"></i>
           Watch Live
         </a>
@@ -289,20 +289,20 @@
 
     <!-- Progress Indicators -->
     <div class="absolute bottom-[40px] left-1/2 -translate-x-1/2 z-[4] flex items-center gap-[8px]" id="hero-progress">
-      <button class="hero__progress-btn hero__progress-btn--active w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="0" aria-label="Slide 1">
-        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      <button class="hero__progress-btn hero__progress-btn--active w-[32px] h-[4px] bg-white/25 rounded-none cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="0" aria-label="Slide 1">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-none"></span>
       </button>
-      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="1" aria-label="Slide 2">
-        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-none cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="1" aria-label="Slide 2">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-none"></span>
       </button>
-      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="2" aria-label="Slide 3">
-        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-none cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="2" aria-label="Slide 3">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-none"></span>
       </button>
-      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="3" aria-label="Slide 4">
-        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-none cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="3" aria-label="Slide 4">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-none"></span>
       </button>
-      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-sm cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="4" aria-label="Slide 5">
-        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-sm"></span>
+      <button class="hero__progress-btn w-[32px] h-[4px] bg-white/25 rounded-none cursor-pointer transition-all duration-300 overflow-hidden relative p-0 border-none" data-slide="4" aria-label="Slide 5">
+        <span class="hero__progress-fill absolute top-0 left-0 h-full w-0 bg-gold rounded-none"></span>
       </button>
     </div>
 
@@ -315,14 +315,11 @@
 
         <!-- Left Column: Lead Pastor Master Photo Card (Fixed Heights Defining Master Height) -->
         <div class="lg:col-span-5 relative group flex flex-col justify-center items-center lg:items-start shrink-0">
-          <!-- Decorative Background Accent -->
-          <div class="absolute -inset-3 bg-gradient-to-tr from-gold/30 via-navy/20 to-gold/10 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
-
           <!-- Main Image Container with Responsive Height -->
           <div class="relative w-full max-w-[490px] h-[380px] sm:h-[520px] lg:h-[620px] rounded-2xl overflow-hidden shadow-2xl bg-navy">
             <img 
               src="images/leadership/pastor-and-wife.jpg" 
-              alt="Rev. Elvis Kwadwo & Mrs. Cecilia Sarpong" 
+              alt="Rev. Dr. Elvis Kwadwo & Mrs. Cecilia Sarpong" 
               class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
             >
             <!-- Perfect Seamless Overlay Gradient -->
@@ -330,11 +327,11 @@
 
             <!-- Card Content Directly On Image Gradient -->
             <div class="absolute bottom-0 left-0 right-0 p-6 md:p-7 flex flex-col justify-end z-10">
-              <p class="font-sora text-[11px] font-bold text-gold uppercase tracking-[2.5px] mb-2 flex items-center gap-1.5">
+              <p class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-0 flex items-center gap-1.5">
                 Lead Pastor & First Lady
               </p>
               <h3 class="font-sora text-xl sm:text-2xl font-extrabold text-white leading-snug">
-                Rev. Elvis Kwadwo & Mrs. Cecilia Sarpong
+                Rev. Dr. Elvis Kwadwo & Mrs. Cecilia Sarpong
               </h3>
               <p class="font-inter text-xs sm:text-sm text-white/75 mt-2 font-medium">
                 Shepherding True Worshippers A/G since inception
@@ -344,71 +341,49 @@
         </div>
 
         <!-- Right Column: Welcome Message Adapting to Image Height -->
-        <div class="lg:col-span-7 flex flex-col justify-between py-1">
+        <div class="lg:col-span-7 flex flex-col justify-center py-1">
           
           <div>
-            <!-- Kicker -->
-            <div class="inline-block w-max px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-2.5">
-              <span>OUR LEAD PASTOR</span>
-            </div>
-
             <!-- Heading -->
-            <h2 class="font-sora text-3xl md:text-4xl lg:text-[42px] font-bold text-navy leading-[1.2] mb-4">
+            <h2 class="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-[1.2] mb-4">
               A Warm Welcome to<br class="hidden sm:inline">True Worshippers A/G
             </h2>
 
             <!-- Quote Block -->
-            <div class="relative p-5 rounded-2xl bg-surface border border-borderSubtle/60 shadow-sm mb-5">
+            <div class="relative p-5 rounded-2xl bg-surface border border-borderSubtle/60 shadow-sm">
               <i class="fa-solid fa-quote-left text-2xl text-gold/50 mb-2 block"></i>
-              <p class="font-inter text-navy/85 text-sm md:text-base leading-relaxed italic mb-3">
+              <p class="font-inter text-navy/85 text-sm md:text-base leading-relaxed italic">
                 "Whether you are looking for a spiritual home, visiting Old Tafo-Abono for the first time, or searching for a community rooted in prayer and God's Word, we welcome you with open arms. Here at True Worshippers A/G, we believe every life can be transformed through genuine worship and authentic fellowship."
               </p>
-              <div class="flex items-center justify-between pt-3 border-t border-borderSubtle/40">
-                <span class="font-sora text-xs font-bold text-navy">Rev. Elvis Kwadwo</span>
-                <span class="font-inter text-[11px] text-muted font-medium">Head Pastor</span>
-              </div>
             </div>
           </div>
 
-          <!-- Visitor Pillars / Features (Asymmetric 2-Column Bento Layout with Color Contrast) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 mb-5">
+          <!-- Visitor Pillars / Features -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5 mb-4">
             
-            <!-- Left Column: Tall Vertical Featured Card (Biblical Teaching) -->
-            <div class="p-5 rounded-2xl bg-surface border border-borderSubtle/60 hover:border-gold/60 transition-all duration-300 flex flex-col justify-between shadow-sm group">
-              <div>
-                <h4 class="font-sora text-base font-bold text-navy mb-1.5">Biblical Teaching</h4>
-                <p class="font-inter text-xs text-muted leading-relaxed">Grounded in the uncompromised, living Word of God to equip your Christian walk.</p>
-              </div>
-              <div class="pt-3 mt-3 border-t border-borderSubtle/40 flex items-center justify-between">
-                <span class="font-sora text-[10px] font-bold text-navy uppercase tracking-wider">Foundation of Faith</span>
-                <i class="fa-solid fa-arrow-right text-[10px] text-gold"></i>
-              </div>
+            <!-- Pillar 1: Biblical Teaching -->
+            <div class="p-5 rounded-xl bg-surface border border-borderSubtle/60 hover:border-gold/60 transition-all duration-300 shadow-sm">
+              <h4 class="font-sora text-[15px] font-bold text-navy mb-2">Biblical Teaching</h4>
+              <p class="font-inter text-sm text-navy/75 leading-relaxed">Grounded in the uncompromised, living Word of God to equip your Christian walk.</p>
             </div>
 
-            <!-- Right Column: 2 Stacked Horizontal Cards -->
-            <div class="flex flex-col gap-3">
-              <!-- Top Stacked Card: Spirit-Filled Worship (Soft Gold Tinted Card) -->
-              <div class="p-4 rounded-2xl bg-gold/15 border border-gold/40 hover:border-gold transition-all duration-300 flex items-start gap-3 shadow-sm flex-1 group">
-                <div>
-                  <h4 class="font-sora text-xs sm:text-sm font-bold text-navy mb-0.5">Spirit-Filled Worship</h4>
-                  <p class="font-inter text-[11px] text-navy/80 leading-relaxed">Exalting God in spirit and truth through heartfelt praise.</p>
-                </div>
-              </div>
+            <!-- Pillar 2: Spirit-Filled Worship -->
+            <div class="p-5 rounded-xl bg-surface border border-borderSubtle/60 hover:border-gold/60 transition-all duration-300 shadow-sm">
+              <h4 class="font-sora text-[15px] font-bold text-navy mb-2">Spirit-Filled Worship</h4>
+              <p class="font-inter text-sm text-navy/75 leading-relaxed">Exalting God in spirit and truth through heartfelt praise.</p>
+            </div>
 
-              <!-- Bottom Stacked Card: Loving Community (Deep Rich Blue-Black Navy Card) -->
-              <div class="p-4 rounded-2xl bg-navy border border-white/10 hover:border-gold/40 transition-all duration-300 flex items-start gap-3 shadow-md flex-1 group">
-                <div>
-                  <h4 class="font-sora text-xs sm:text-sm font-bold text-gold mb-0.5">Loving Community</h4>
-                  <p class="font-inter text-[11px] text-white/80 leading-relaxed">A welcoming family that cares for you and prays with you.</p>
-                </div>
-              </div>
+            <!-- Pillar 3: Loving Community -->
+            <div class="p-5 rounded-xl bg-surface border border-borderSubtle/60 hover:border-gold/60 transition-all duration-300 shadow-sm">
+              <h4 class="font-sora text-[15px] font-bold text-navy mb-2">Loving Community</h4>
+              <p class="font-inter text-sm text-navy/75 leading-relaxed">A welcoming family that cares for you and prays with you.</p>
             </div>
 
           </div>
 
           <!-- CTA Actions -->
           <div class="flex items-center gap-4 flex-wrap">
-            <a href="about.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 font-sora text-xs font-semibold text-navy bg-gold rounded-lg shadow-md hover:bg-gold-secondary hover:-translate-y-0.5 transition-all">
+            <a href="about.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 font-sora text-xs font-semibold text-navy bg-gold rounded-none shadow-md hover:bg-gold-secondary hover:-translate-y-0.5 transition-all">
               <span>Learn More About Us</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
@@ -424,23 +399,23 @@
   <section class="py-20 md:py-28 bg-surface border-b border-borderSubtle/40 overflow-hidden" id="church-board">
     <div class="max-w-[1280px] mx-auto px-6 md:px-12">
 
-      <!-- Header with Pill Badge & Navigation Arrows -->
+      <!-- Header with Navigation Arrows -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
-          <span class="inline-block w-max px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
-            CHURCH LEADERSHIP
-          </span>
-          <h2 class="font-sora text-3xl md:text-4xl font-bold text-navy leading-tight">
+          <h2 class="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight mb-3">
             Meet Our Church Board
           </h2>
+          <p class="font-inter text-muted text-sm md:text-base leading-relaxed max-w-xl">
+            Faithful men and women called to shepherd, serve, and lead our congregation with integrity and love.
+          </p>
         </div>
 
-        <!-- Circular Navigation Controls -->
+        <!-- Navigation Controls -->
         <div class="flex items-center gap-3 shrink-0">
-          <button id="board-prev" aria-label="Previous board member" class="w-12 h-12 rounded-full border border-borderSubtle bg-cream text-navy hover:bg-navy hover:text-white hover:border-navy flex items-center justify-center transition-all shadow-sm active:scale-95">
+          <button id="board-prev" aria-label="Previous board member" class="w-12 h-12 rounded-none border border-borderSubtle bg-cream text-navy hover:bg-navy hover:text-white hover:border-navy flex items-center justify-center transition-all shadow-sm active:scale-95">
             <i class="fa-solid fa-arrow-left text-sm"></i>
           </button>
-          <button id="board-next" aria-label="Next board member" class="w-12 h-12 rounded-full bg-navy text-white hover:bg-gold hover:text-navy flex items-center justify-center transition-all shadow-sm active:scale-95">
+          <button id="board-next" aria-label="Next board member" class="w-12 h-12 rounded-none bg-navy text-white hover:bg-gold hover:text-navy flex items-center justify-center transition-all shadow-sm active:scale-95">
             <i class="fa-solid fa-arrow-right text-sm"></i>
           </button>
         </div>
@@ -458,7 +433,7 @@
           >
           <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col justify-end z-10">
-            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Pastoral Leadership</span>
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-0">Pastoral Leadership</span>
             <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Pastor Georgina Mensah</h3>
             <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Associate Pastor</p>
             <p class="font-inter text-xs text-white/70 leading-relaxed">Assisting in pastoral care, spiritual counseling, and discipleship across the church family.</p>
@@ -474,7 +449,7 @@
           >
           <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col justify-end z-10">
-            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Diaconate Board</span>
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-0">Diaconate Board</span>
             <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Kingsley Sarfo</h3>
             <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Lead Deacon</p>
             <p class="font-inter text-xs text-white/70 leading-relaxed">Overseeing diaconate ministries, service coordination, and member welfare services.</p>
@@ -490,7 +465,7 @@
           >
           <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col justify-end z-10">
-            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Finance Board</span>
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-0">Finance Board</span>
             <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Moses Yeboah</h3>
             <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Finance</p>
             <p class="font-inter text-xs text-white/70 leading-relaxed">Managing financial stewardship, budgeting, and resource accountability.</p>
@@ -506,7 +481,7 @@
           >
           <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col justify-end z-10">
-            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Events & Operations</span>
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-0">Events & Operations</span>
             <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Jerry Kyei</h3>
             <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Organizer</p>
             <p class="font-inter text-xs text-white/70 leading-relaxed">Coordinating church events, service logistics, and special ministry programs.</p>
@@ -522,7 +497,7 @@
           >
           <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col justify-end z-10">
-            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Administration</span>
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-0">Administration</span>
             <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Emmanuel Fosu</h3>
             <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Secretary</p>
             <p class="font-inter text-xs text-white/70 leading-relaxed">Handling church administration, documentation, and official board records.</p>
@@ -538,31 +513,10 @@
           >
           <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent opacity-95"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col justify-end z-10">
-            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-1">Youth Ministry</span>
+            <span class="font-sora text-[11px] font-bold text-gold uppercase tracking-wider mb-0">Youth Ministry</span>
             <h3 class="font-sora text-xl sm:text-2xl font-bold text-white mb-0.5">Deacon Emmanuel Osei</h3>
             <p class="font-inter text-xs sm:text-sm text-white/80 font-medium mb-2">Youth Pastor</p>
             <p class="font-inter text-xs text-white/70 leading-relaxed">Empowering the youth ministry, young adults, and next-generation leadership.</p>
-          </div>
-        </div>
-
-        <!-- Card 7: Featured Scripture Card on Church Leadership (Last on Slide) -->
-        <div class="snap-center sm:snap-start flex-none w-[calc(100vw-48px)] sm:w-[360px] max-w-[400px] sm:max-w-none h-[400px] sm:h-[460px] rounded-2xl bg-navy p-6 sm:p-8 text-white flex flex-col justify-between shadow-xl relative overflow-hidden">
-          <div>
-            <span class="inline-block px-3.5 py-1.5 rounded-full bg-gold/20 text-gold font-sora text-[11px] font-bold uppercase tracking-wider mb-5 sm:mb-6">
-              SCRIPTURE GUIDE
-            </span>
-            <p class="font-inter text-xs sm:text-base text-white/95 leading-relaxed italic mb-5 sm:mb-6 font-normal">
-              "Be shepherds of God’s flock that is under your care, watching over them not because you must, but because you are willing, as God wants you to be; not pursuing dishonest gain, but eager to serve; not lording it over those entrusted to you, but being examples to the flock."
-            </p>
-            <p class="font-sora text-xs font-bold text-gold tracking-widest uppercase flex items-center gap-2">
-              1 Peter 5:2-3
-            </p>
-          </div>
-
-          <div class="pt-5 sm:pt-6 border-t border-white/10 flex items-center justify-between">
-            <span class="font-sora text-[11px] font-bold text-white/80 uppercase tracking-widest">
-              Assemblies of God
-            </span>
           </div>
         </div>
 
@@ -577,9 +531,6 @@
         
         <!-- Left Column: Theme Artwork Display -->
         <div class="lg:col-span-6 relative group">
-          <!-- Ambient Glow Background Accent -->
-          <div class="absolute -inset-3 bg-gradient-to-tr from-gold/30 via-navy/30 to-gold/20 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-700"></div>
-          
           <!-- Main Theme Image Container -->
           <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-borderSubtle/60 bg-navy">
             <img 
@@ -595,16 +546,11 @@
         <!-- Right Column: Theme Details & Vision -->
         <div class="lg:col-span-6 flex flex-col justify-center">
           
-          <!-- Kicker Tag -->
-          <div class="inline-block w-max px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-4">
-            <span>2026 CHURCH THEME</span>
-          </div>
-
           <!-- Section Heading -->
-          <h2 class="font-sora text-3xl md:text-4xl lg:text-[42px] font-bold text-navy leading-[1.2] mb-3">
+          <h2 class="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-[1.2] mb-3">
             The Faith of Our Fathers
           </h2>
-          <p class="font-sora text-base sm:text-lg font-bold text-gold-secondary uppercase tracking-wider mb-4">
+          <p class="font-sora text-base sm:text-lg font-bold text-gold uppercase tracking-wider mb-4">
             For Authenticity & Greater Exploits
           </p>
 
@@ -657,12 +603,12 @@
       <h2 class="font-sora text-3xl sm:text-5xl md:text-7xl lg:text-[84px] font-bold text-white leading-[1.1] mb-4 sm:mb-5 drop-shadow-2xl uppercase tracking-wider">
         2026<br>THE FAITH OF OUR FATHERS
       </h2>
-      <p class="font-sora text-sm sm:text-lg md:text-xl text-gold-secondary font-medium max-w-2xl mx-auto leading-relaxed mb-5 sm:mb-6 drop-shadow tracking-wide">
+      <p class="font-sora text-sm sm:text-lg md:text-xl text-gold font-medium max-w-2xl mx-auto leading-relaxed mb-2 drop-shadow tracking-wide">
         For Authenticity & Greater Exploits
       </p>
-      <div class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-2.5 rounded-none bg-white/10 backdrop-blur-md border border-white/20 text-white/95 font-sora text-[11px] sm:text-sm font-semibold tracking-wider max-w-full text-center">
-        <span>HEBREWS 11 &nbsp;•&nbsp; JUDE 1 &nbsp;•&nbsp; JOHN 14:12</span>
-      </div>
+      <p class="font-sora text-[11px] sm:text-sm font-semibold text-white/80 tracking-wider text-center">
+        HEBREWS 11 &nbsp;•&nbsp; JUDE 1 &nbsp;•&nbsp; JOHN 14:12
+      </p>
     </div>
 
     <script>
@@ -689,9 +635,6 @@
 
       <!-- Gallery Header -->
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="inline-block w-max px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
-          MOMENTS IN HIS PRESENCE
-        </span>
         <h2 class="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight mb-4">
           Life at True Worshippers A/G
         </h2>
@@ -752,7 +695,7 @@
              data-src="images/ministries/preaching.jpg"
              data-title="Proclaiming the Gospel"
              data-category="SERMON"
-             data-desc="Rev. Elvis Kwadwo preaching the uncompromised Word of God with clarity and power.">
+             data-desc="Rev. Dr. Elvis Kwadwo Sarpong preaching the uncompromised Word of God with clarity and power.">
           <img src="images/ministries/preaching.jpg" alt="Proclaiming the Gospel" loading="lazy" decoding="async" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
@@ -1174,7 +1117,7 @@
              data-src="images/events/presentation-to-head-pastor.jpg"
              data-title="Pastoral Appreciation Presentation"
              data-category="HONOUR"
-             data-desc="Expressing heartfelt gratitude to Rev. Elvis Kwadwo for faithful leadership.">
+             data-desc="Expressing heartfelt gratitude to Rev. Dr. Elvis Kwadwo Sarpong for faithful leadership.">
           <img src="images/events/presentation-to-head-pastor.jpg" alt="Pastoral Appreciation Presentation" loading="lazy" decoding="async" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
           <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between">
             <div class="flex items-center justify-between">
@@ -1185,7 +1128,7 @@
             </div>
             <div>
               <h3 class="font-sora text-base font-bold text-white mb-1">Pastoral Appreciation Presentation</h3>
-              <p class="font-inter text-xs text-white/80 line-clamp-2">Expressing heartfelt gratitude to Rev. Elvis Kwadwo.</p>
+              <p class="font-inter text-xs text-white/80 line-clamp-2">Expressing heartfelt gratitude to Rev. Dr. Elvis Kwadwo Sarpong.</p>
             </div>
           </div>
         </div>
@@ -1236,7 +1179,7 @@
 
       <!-- See More Button Container -->
       <div id="gallery-see-more-container" class="mt-14 text-center">
-        <button id="gallery-see-more-btn" type="button" class="inline-flex items-center justify-center gap-3 px-8 py-4 font-sora text-sm font-bold text-navy bg-gold rounded-full shadow-lg hover:bg-gold-secondary hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group cursor-pointer">
+        <button id="gallery-see-more-btn" type="button" class="inline-flex items-center justify-center gap-3 px-8 py-4 font-sora text-sm font-bold text-navy bg-gold rounded-none shadow-lg hover:bg-gold-secondary hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group cursor-pointer">
           <span>See More Photos</span>
           <i class="fa-solid fa-chevron-down text-xs group-hover:translate-y-0.5 transition-transform"></i>
         </button>
@@ -1257,7 +1200,7 @@
           <a href="index.html" class="flex items-center gap-0 mb-6 no-underline max-w-full" aria-label="True Worshippers A/G — Home">
             <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
             <div class="flex flex-col justify-center leading-tight min-w-0">
-              <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-wider sm:tracking-widest uppercase truncate">Assemblies of God, Ghana</span>
+              <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-normal uppercase truncate">Assemblies of God, Ghana</span>
               <span class="font-sora text-sm sm:text-lg lg:text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
             </div>
           </a>
@@ -1288,7 +1231,7 @@
 
         <!-- Col 2: Quick Links (lg:col-span-2) -->
         <div class="lg:col-span-2 flex flex-col">
-          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Quick Links</h4>
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-wider mb-6">Quick Links</h4>
           <ul class="space-y-3 font-inter text-sm text-white/70">
             <li><a href="index.html" class="hover:text-gold transition-colors inline-block">Home</a></li>
             <li><a href="about.html" class="hover:text-gold transition-colors inline-block">About Us</a></li>
@@ -1300,7 +1243,7 @@
 
         <!-- Col 3: Service Times (lg:col-span-3) -->
         <div class="lg:col-span-3 flex flex-col">
-          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Service Times</h4>
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-wider mb-6">Service Times</h4>
           
           <div class="space-y-4 font-inter text-sm text-white/80">
             <div>
@@ -1322,31 +1265,22 @@
 
         <!-- Col 4: Contact & Location (lg:col-span-3) -->
         <div class="lg:col-span-3 flex flex-col">
-          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Contact Us</h4>
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-wider mb-6">Contact Us</h4>
           
           <div class="space-y-4 font-inter text-sm text-white/80">
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-phone text-gold text-base mt-0.5 shrink-0"></i>
-              <div>
-                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Phone</strong>
-                <a href="tel:+233593037700" class="hover:text-gold transition-colors">+233 59 303 7700</a>
-              </div>
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Phone</strong>
+              <a href="tel:+233593037700" class="hover:text-gold transition-colors">+233 59 303 7700</a>
             </div>
 
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-envelope text-gold text-base mt-0.5 shrink-0"></i>
-              <div>
-                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Email</strong>
-                <a href="mailto:info@trueworshippersag.org" class="hover:text-gold transition-colors break-all">info@trueworshippersag.org</a>
-              </div>
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Email</strong>
+              <a href="mailto:info@trueworshippersag.org" class="hover:text-gold transition-colors break-all">info@trueworshippersag.org</a>
             </div>
 
-            <div class="flex items-start gap-3 pt-2 border-t border-white/10 mt-3">
-              <i class="fa-solid fa-location-dot text-gold text-base mt-0.5 shrink-0"></i>
-              <div>
-                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Address</strong>
-                <span>AK-158-9334, Old Tafo-Abono, Kumasi, Ashanti Region, Ghana</span>
-              </div>
+            <div class="pt-2 border-t border-white/10 mt-3">
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Address</strong>
+              <span>AK-158-9334, Old Tafo-Abono, Kumasi, Ashanti Region, Ghana</span>
             </div>
           </div>
         </div>
@@ -1372,7 +1306,7 @@
     id="back-to-top" 
     onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
     aria-label="Scroll back to top" 
-    class="fixed bottom-6 right-6 z-[990] w-12 h-12 rounded-full bg-navy/90 text-gold border-2 border-gold/40 shadow-2xl flex items-center justify-center cursor-pointer hover:bg-gold hover:text-navy hover:border-gold hover:scale-110 active:scale-95 transition-all duration-300 backdrop-blur-md opacity-0 pointer-events-none translate-y-4"
+    class="fixed bottom-6 right-6 z-[990] w-12 h-12 rounded-none bg-navy/90 text-gold border-2 border-gold/40 shadow-2xl flex items-center justify-center cursor-pointer hover:bg-gold hover:text-navy hover:border-gold hover:scale-110 active:scale-95 transition-all duration-300 backdrop-blur-md opacity-0 pointer-events-none translate-y-4"
   >
     <i class="fa-solid fa-arrow-up text-base"></i>
   </button>
@@ -1384,7 +1318,7 @@
     <div class="relative z-10 max-w-6xl w-full bg-surface rounded-2xl overflow-y-auto lg:overflow-hidden shadow-2xl border border-borderSubtle flex flex-col lg:flex-row max-h-[92vh]">
       
       <!-- Close Button -->
-      <button id="gallery-modal-close" aria-label="Close photo preview" class="absolute top-4 right-4 z-30 w-11 h-11 rounded-full bg-navy/80 text-white hover:bg-gold hover:text-navy flex items-center justify-center transition-all shadow-lg active:scale-95">
+      <button id="gallery-modal-close" aria-label="Close photo preview" class="absolute top-4 right-4 z-30 w-11 h-11 rounded-none bg-navy/80 text-white hover:bg-gold hover:text-navy flex items-center justify-center transition-all shadow-lg active:scale-95">
         <i class="fa-solid fa-xmark text-xl"></i>
       </button>
 
@@ -1392,7 +1326,7 @@
       <div class="lg:w-3/5 xl:w-2/3 bg-navy flex items-center justify-center p-4 sm:p-6 relative min-h-[350px] lg:min-h-[550px] max-h-[65vh] lg:max-h-[85vh] overflow-hidden group">
         
         <!-- Prev Arrow -->
-        <button id="gallery-modal-prev" aria-label="Previous photo" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-navy/70 border border-white/20 text-white hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-xl active:scale-95">
+        <button id="gallery-modal-prev" aria-label="Previous photo" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-none bg-navy/70 border border-white/20 text-white hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-xl active:scale-95">
           <i class="fa-solid fa-chevron-left text-lg"></i>
         </button>
 
@@ -1400,7 +1334,7 @@
         <img id="gallery-modal-img" src="" alt="" class="max-h-full max-w-full object-contain rounded-xl shadow-2xl transition-all duration-300">
 
         <!-- Next Arrow -->
-        <button id="gallery-modal-next" aria-label="Next photo" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-navy/70 border border-white/20 text-white hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-xl active:scale-95">
+        <button id="gallery-modal-next" aria-label="Next photo" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-none bg-navy/70 border border-white/20 text-white hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-xl active:scale-95">
           <i class="fa-solid fa-chevron-right text-lg"></i>
         </button>
 

@@ -14,8 +14,8 @@ module.exports = {
           secondary: '#303181',
         },
         gold: {
-          DEFAULT: '#FACC15',
-          primary: '#FACC15',
+          DEFAULT: '#fccf1c',
+          primary: '#fccf1c',
           secondary: '#FFDB58',
         },
         cream: '#F7F6E4',

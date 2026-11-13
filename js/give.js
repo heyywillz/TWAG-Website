@@ -37,15 +37,16 @@ function showCopySuccess(btnId, text) {
   const btn = document.getElementById(btnId);
   if (btn) {
     const originalHTML = btn.innerHTML;
-    btn.innerHTML = `<i class="fa-solid fa-check text-sm"></i><span>Copied!</span>`;
-    btn.classList.add('bg-green-600', 'text-white');
+    btn.innerHTML = `<i class="fa-solid fa-check text-xs"></i><span>Copied</span>`;
+    btn.classList.add('bg-white', 'text-navy');
+    btn.classList.remove('bg-gold');
 
     setTimeout(() => {
       btn.innerHTML = originalHTML;
-      btn.classList.remove('bg-green-600', 'text-white');
-    }, 2200);
+      btn.classList.remove('bg-white', 'text-navy');
+      btn.classList.add('bg-gold');
+    }, 1800);
   }
-  showToast(`Copied ${text} to clipboard!`, "success");
 }
 
 // Toast Notification System
@@ -54,27 +55,27 @@ function showToast(message, type = "success") {
   if (!container) return;
 
   const toast = document.createElement('div');
-  toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-2xl text-xs font-sora font-semibold shadow-2xl transition-all duration-300 transform translate-y-4 opacity-0 ${
+  toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-2.5 rounded-none text-xs font-sora font-semibold shadow-lg transition-opacity duration-200 opacity-0 ${
     type === "success" 
-      ? "bg-navy text-gold border border-gold/40" 
-      : "bg-red-900 text-white border border-red-500"
+      ? "bg-navy text-white border border-white/20" 
+      : "bg-red-900 text-white"
   }`;
 
   toast.innerHTML = `
-    <i class="${type === 'success' ? 'fa-solid fa-circle-check text-gold' : 'fa-solid fa-circle-exclamation text-red-300'} text-base"></i>
+    <i class="${type === 'success' ? 'fa-solid fa-check text-gold' : 'fa-solid fa-circle-exclamation text-red-300'} text-sm"></i>
     <span>${message}</span>
   `;
 
   container.appendChild(toast);
 
   requestAnimationFrame(() => {
-    toast.classList.remove('translate-y-4', 'opacity-0');
+    toast.classList.remove('opacity-0');
   });
 
   setTimeout(() => {
-    toast.classList.add('translate-y-4', 'opacity-0');
-    setTimeout(() => toast.remove(), 300);
-  }, 3500);
+    toast.classList.add('opacity-0');
+    setTimeout(() => toast.remove(), 200);
+  }, 3000);
 }
 
 // Amount Preset Pill Button Handler
@@ -157,14 +158,10 @@ function handleGivingSubmit(e) {
 
 function openGivingModal() {
   const modal = document.getElementById('giving-modal');
-  const content = document.getElementById('giving-modal-content');
-
-  if (modal && content) {
+  if (modal) {
     modal.classList.remove('hidden');
     requestAnimationFrame(() => {
       modal.classList.remove('opacity-0', 'pointer-events-none');
-      content.classList.remove('scale-95');
-      content.classList.add('scale-100');
     });
     document.body.style.overflow = 'hidden';
   }
@@ -172,17 +169,13 @@ function openGivingModal() {
 
 function closeGivingModal() {
   const modal = document.getElementById('giving-modal');
-  const content = document.getElementById('giving-modal-content');
-
-  if (modal && content) {
+  if (modal) {
     modal.classList.add('opacity-0', 'pointer-events-none');
-    content.classList.remove('scale-100');
-    content.classList.add('scale-95');
 
     setTimeout(() => {
       modal.classList.add('hidden');
       document.body.style.overflow = '';
-    }, 300);
+    }, 200);
   }
 }
 

@@ -110,64 +110,63 @@
     .navbar__mobile-menu--open .navbar__mobile-social { opacity: 1 !important; transform: translateX(0) !important; }
 
     /* ── Mobile Active Link ── */
-    .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600 !important; }
-    .navbar__link::after {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      left: 18px;
-      right: 18px;
-      height: 1.5px;
-      background-color: #FACC15;
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform 0.35s ease;
+    .navbar__mobile-link--active { color: #fccf1c !important; font-weight: 600 !important; }
+    .navbar__link {
+      transition: color 0.2s ease;
     }
-    .navbar__link:hover::after,
-    .navbar__link--active::after {
-      transform: scaleX(1);
+    .navbar__link:hover {
+      color: #01000F !important;
     }
     .navbar__link--active {
-      color: #FEFEFE;
-      font-weight: 500;
+      color: #01000F !important;
+      font-weight: 600 !important;
     }
-    .navbar__mobile-link--active { color: #FACC15 !important; font-weight: 600; }
+
+    /* ── Remove all border radius from buttons ── */
+    button,
+    .btn,
+    [role="button"],
+    a[class*="px-"][class*="py-"][class*="bg-"],
+    a.navbar__mobile-cta,
+    #back-to-top {
+      border-radius: 0 !important;
+    }
   </style>
 
 </head>
 <body class="font-sora font-normal bg-cream text-navy leading-relaxed min-h-screen flex flex-col justify-between pt-[64px] sm:pt-[76px] lg:pt-[84px] overflow-x-hidden">
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
-  <nav class="fixed top-0 left-0 right-0 z-[1000] h-[64px] sm:h-[76px] lg:h-[84px] bg-navy transition-transform duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[rgba(250,204,21,0.25)] after:to-transparent" id="navbar" role="navigation" aria-label="Main navigation">
+  <nav class="fixed top-0 left-0 right-0 z-[1000] h-[64px] sm:h-[76px] lg:h-[84px] bg-white border-b border-borderSubtle/60 shadow-sm transition-transform duration-300 ease-in-out" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="flex items-center justify-between h-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-12">
 
       <!-- Logo & Brand Name -->
       <a href="index.html" class="flex items-center gap-1.5 sm:gap-2 z-[1001] no-underline shrink-0 max-w-[calc(100%-50px)] sm:max-w-none" aria-label="True Worshippers A/G — Home">
         <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-[32px] sm:h-[34px] lg:h-[36px] w-auto transition-transform duration-300 hover:scale-105 shrink-0">
         <div class="flex flex-col justify-center leading-[1.1] overflow-hidden">
-          <span class="font-sora text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-semibold text-white tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
-          <span class="font-sora text-[14.5px] sm:text-[16px] lg:text-[18px] font-extrabold text-white tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
+          <span class="font-sora text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-semibold text-navy/70 tracking-[0.3px] sm:tracking-[0.6px] uppercase truncate">Assemblies of God, Ghana</span>
+          <span class="font-sora text-[14.5px] sm:text-[16px] lg:text-[18px] font-extrabold text-navy tracking-[0.5px] sm:tracking-[1px] uppercase truncate">True Worshipers</span>
         </div>
       </a>
 
       <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-1 lg:gap-2 xl:gap-3" id="navbar-links">
-        <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="home">Home</a>
-        <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="about">About Us</a>
-        <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="events">Events</a>
-        <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="devotions">Devotions</a>
-        <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="departments">Departments</a>
-        <a href="give.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-white/90 tracking-[0.3px] rounded-md whitespace-nowrap transition-colors duration-200 hover:text-white" data-page="give">Give</a>
+        <a href="index.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="home">Home</a>
+        <a href="about.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="about">About Us</a>
+        <a href="events.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="events">Events</a>
+        <a href="devotions.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="devotions">Devotions</a>
+        <a href="departments.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="departments">Departments</a>
+        <a href="give.html" class="navbar__link relative inline-flex items-center px-2.5 lg:px-3.5 xl:px-4 py-2 font-sora text-[12px] lg:text-[13px] xl:text-[14px] font-normal text-slate-600 tracking-[0.3px] whitespace-nowrap transition-colors duration-200 hover:text-navy" data-page="give">Give</a>
       </div>
 
       <!-- CTA Button -->
-      <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(250,204,21,0.3)] active:translate-y-0" data-page="contact">Contact Us</a>
+      <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-4 lg:px-6 py-2.5 ml-2 font-sora text-[11px] lg:text-[13px] font-semibold text-navy bg-gold rounded-none tracking-[0.5px] uppercase whitespace-nowrap transition-all duration-200 hover:bg-gold-secondary hover:-translate-y-[1px] active:translate-y-0" data-page="contact">Contact Us</a>
 
       <!-- Mobile Toggle -->
-      <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-transparent border-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
-        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm mb-[4px] transition-all duration-300"></span>
-        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white rounded-sm transition-all duration-300"></span>
+      <button class="md:hidden flex flex-col justify-center items-center w-[36px] h-[36px] p-0 z-[1001] cursor-pointer bg-navy rounded-none navbar__toggle shrink-0" id="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white mb-[4px] transition-all duration-300"></span>
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white mb-[4px] transition-all duration-300"></span>
+        <span class="navbar__toggle-bar block w-[18px] h-[2px] bg-white transition-all duration-300"></span>
       </button>
     </div>
   </nav>
@@ -190,7 +189,7 @@
       <a href="devotions.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="devotions">Devotions</a>
       <a href="departments.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="departments">Departments</a>
       <a href="give.html" class="navbar__mobile-link flex items-center py-[12px] sm:py-[14px] font-sora text-[14px] sm:text-[16px] font-medium text-white/90 tracking-[0.3px] border-b border-white/[0.06] transition-all duration-200 hover:text-gold hover:pl-[6px]" data-page="give">Give</a>
-      <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-lg tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary" data-page="contact">Contact Us</a>
+      <a href="contact.html" class="navbar__mobile-cta inline-flex items-center justify-center mt-[20px] py-[11px] px-[24px] font-sora text-[12px] sm:text-[13px] font-semibold text-navy bg-gold rounded-none tracking-[0.5px] uppercase transition-colors duration-200 text-center hover:bg-gold-secondary" data-page="contact">Contact Us</a>
     </div>
 
     <!-- Mobile Social Links -->
@@ -230,9 +229,6 @@
         
         <!-- Section Header -->
         <div class="mb-6 text-left">
-          <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
-            FIND US
-          </span>
           <h2 class="font-sora text-xl sm:text-3xl font-extrabold text-navy leading-tight">
             Old Tafo-Abono
           </h2>
@@ -321,9 +317,6 @@
         
         <!-- Section Header -->
         <div class="mb-6 text-center">
-          <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
-            SEND A MESSAGE
-          </span>
           <h2 class="font-sora text-xl sm:text-3xl font-extrabold text-navy leading-tight">
             Contact Form
           </h2>
@@ -410,7 +403,7 @@
             <!-- Submit CTA Button -->
             <button 
               type="submit" 
-              class="w-full py-3 px-5 rounded-lg bg-gold text-navy hover:bg-gold-secondary font-sora text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2.5 cursor-pointer"
+              class="w-full py-3 px-5 rounded-none bg-gold text-navy hover:bg-gold-secondary font-sora text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2.5 cursor-pointer"
             >
               <span>Send Message</span>
               <i class="fa-solid fa-paper-plane text-xs"></i>
@@ -428,9 +421,6 @@
         
         <!-- Section Header -->
         <div class="mb-8 text-left">
-          <span class="inline-block px-4 py-1.5 rounded-full border-2 border-dashed border-navy bg-transparent font-sora text-xs font-bold text-navy uppercase tracking-wider mb-3">
-            FOLLOW US
-          </span>
           <h2 class="font-sora text-xl sm:text-3xl font-extrabold text-navy leading-tight">
             Social Media
           </h2>
@@ -527,7 +517,7 @@
           <a href="index.html" class="flex items-center gap-0 mb-6 no-underline max-w-full" aria-label="True Worshippers A/G — Home">
             <img src="images/logos/twag-logo.png" alt="TWAG Logo" class="h-8 sm:h-10 lg:h-12 w-auto shrink-0">
             <div class="flex flex-col justify-center leading-tight min-w-0">
-              <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-wider sm:tracking-widest uppercase truncate">Assemblies of God, Ghana</span>
+              <span class="font-sora text-[9px] sm:text-xs font-semibold text-gold tracking-normal uppercase truncate">Assemblies of God, Ghana</span>
               <span class="font-sora text-sm sm:text-lg lg:text-xl font-extrabold text-white tracking-wider uppercase">True Worshipers</span>
             </div>
           </a>
@@ -558,7 +548,7 @@
 
         <!-- Col 2: Quick Links (lg:col-span-2) -->
         <div class="lg:col-span-2 flex flex-col">
-          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Quick Links</h4>
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-wider mb-6">Quick Links</h4>
           <ul class="space-y-3 font-inter text-sm text-white/70">
             <li><a href="index.html" class="hover:text-gold transition-colors inline-block">Home</a></li>
             <li><a href="about.html" class="hover:text-gold transition-colors inline-block">About Us</a></li>
@@ -570,7 +560,7 @@
 
         <!-- Col 3: Service Times (lg:col-span-3) -->
         <div class="lg:col-span-3 flex flex-col">
-          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Service Times</h4>
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-wider mb-6">Service Times</h4>
           
           <div class="space-y-4 font-inter text-sm text-white/80">
             <div>
@@ -592,31 +582,22 @@
 
         <!-- Col 4: Contact & Location (lg:col-span-3) -->
         <div class="lg:col-span-3 flex flex-col">
-          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-widest mb-6">Contact Us</h4>
+          <h4 class="font-sora text-sm font-bold text-gold uppercase tracking-wider mb-6">Contact Us</h4>
           
           <div class="space-y-4 font-inter text-sm text-white/80">
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-phone text-gold text-base mt-0.5 shrink-0"></i>
-              <div>
-                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Phone</strong>
-                <a href="tel:+233593037700" class="hover:text-gold transition-colors">+233 59 303 7700</a>
-              </div>
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Phone</strong>
+              <a href="tel:+233593037700" class="hover:text-gold transition-colors">+233 59 303 7700</a>
             </div>
 
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-envelope text-gold text-base mt-0.5 shrink-0"></i>
-              <div>
-                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Email</strong>
-                <a href="mailto:info@trueworshippersag.org" class="hover:text-gold transition-colors break-all">info@trueworshippersag.org</a>
-              </div>
+            <div>
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Email</strong>
+              <a href="mailto:info@trueworshippersag.org" class="hover:text-gold transition-colors break-all">info@trueworshippersag.org</a>
             </div>
 
-            <div class="flex items-start gap-3 pt-2 border-t border-white/10 mt-3">
-              <i class="fa-solid fa-location-dot text-gold text-base mt-0.5 shrink-0"></i>
-              <div>
-                <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Address</strong>
-                <span>AK-158-9334, Old Tafo-Abono, Kumasi, Ashanti Region, Ghana</span>
-              </div>
+            <div class="pt-2 border-t border-white/10 mt-3">
+              <strong class="block text-white font-sora text-xs uppercase tracking-wider mb-0.5">Address</strong>
+              <span>AK-158-9334, Old Tafo-Abono, Kumasi, Ashanti Region, Ghana</span>
             </div>
           </div>
         </div>
@@ -642,7 +623,7 @@
     id="back-to-top" 
     onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
     aria-label="Scroll back to top" 
-    class="fixed bottom-6 right-6 z-[990] w-12 h-12 rounded-full bg-navy/90 text-gold border-2 border-gold/40 shadow-2xl flex items-center justify-center cursor-pointer hover:bg-gold hover:text-navy hover:border-gold hover:scale-110 active:scale-95 transition-all duration-300 backdrop-blur-md opacity-0 pointer-events-none translate-y-4"
+    class="fixed bottom-6 right-6 z-[990] w-12 h-12 rounded-none bg-navy/90 text-gold border-2 border-gold/40 shadow-2xl flex items-center justify-center cursor-pointer hover:bg-gold hover:text-navy hover:border-gold hover:scale-110 active:scale-95 transition-all duration-300 backdrop-blur-md opacity-0 pointer-events-none translate-y-4"
   >
     <i class="fa-solid fa-arrow-up text-base"></i>
   </button>
