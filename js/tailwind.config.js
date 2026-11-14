@@ -18,7 +18,7 @@ if (typeof tailwind !== 'undefined') {
             primary: '#fccf1c',
             secondary: '#FFDB58',
           },
-          cream: '#F7F6E4',
+          cream: '#FAF9F5',
           surface: '#FEFEFE',
           muted: '#475467',
           borderSubtle: '#D0D5DD',
